@@ -14,7 +14,7 @@ The latest local Release compile succeeded. A limited audit found no known 64-by
 
 The Windows preflight workflow now requests a static SDL3 build to remove SDL3.dll from the eventual game executable. The workflow only checks compilation; it does not sign a binary or create a release artifact.
 
-A separate local ROM-free package candidate now includes the first-run extractor, a trimmed Python Software Foundation runtime, and the precompiled game engine. Its package verification and synthetic extractor checks pass, but it is not included in this source repository. The exact game build remains unsigned, runtime parity is unverified, and eight ROM-derived regional selector arrays still need provenance work, so this is not a public release.
+A separate local ROM-free package candidate now includes the first-run extractor, a trimmed Python Software Foundation runtime, and the precompiled game engine. Its package verification and synthetic extractor checks pass, but it is not included in this source repository. The exact game build remains unsigned, runtime parity is unverified, and eight game-specific regional selector arrays still need provenance work, so this is not a public release.
 
 ## Licensing and signing
 
