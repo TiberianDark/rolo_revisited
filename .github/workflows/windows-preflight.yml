@@ -1,0 +1,36 @@
+name: Windows preflight build
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Install vcpkg and SDL3
+        shell: pwsh
+        run: |
+          $vcpkg = Join-Path $env:RUNNER_TEMP "vcpkg"
+          git clone https://github.com/microsoft/vcpkg.git $vcpkg
+          & (Join-Path $vcpkg "bootstrap-vcpkg.bat") -disableMetrics
+          & (Join-Path $vcpkg "vcpkg.exe") install sdl3:x64-windows
+          "VCPKG_ROOT=$vcpkg" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+
+      - name: Configure preflight executable
+        shell: pwsh
+        run: |
+          cmake -S . -B build -A x64 `
+            "-DCMAKE_TOOLCHAIN_FILE=$env:VCPKG_ROOT/scripts/buildsystems/vcpkg.cmake" `
+            -DBUILD_TESTING=OFF `
+            -DROLO_COPY_RUNTIME_PACKS=OFF
+
+      - name: Build native preview
+        run: cmake --build build --config Release --target rolo_native
