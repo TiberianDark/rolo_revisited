@@ -166,6 +166,3 @@ Third-party components include:
 
 No project-wide open-source licence or trusted-publisher signature is claimed.
 
-README organisation was inspired by
-[Futurama: The Game: The Recomp](https://github.com/hiburn8/futurama-the-game-the-recomp)
-and [James Pond 2: Codename RoboCod — Recompiled](https://github.com/griches/JamesPond2RobocodRecomp).
