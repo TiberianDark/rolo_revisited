@@ -1,17 +1,21 @@
 # Rolo Revisited
 
-Private staging repository for the ROM-free native Windows build of Rolo to the Rescue.
+Private development checkpoint for the native Windows Rolo to the Rescue project. This is not a finished release.
 
-## Project goal
+## Intended package
 
-The intended Windows package contains a precompiled native game and a first-run launcher. The player selects their own supported ROM; the launcher validates it, extracts the runtime data locally, and starts the game. The repository and release must not contain the ROM or extracted game assets.
+The goal is a precompiled game that asks the player for their own supported ROM on first launch, extracts runtime resources locally, then starts the game. The repository and release must not contain a ROM or extracted game assets.
 
-## Current status
+## Current checkpoint
 
-This repository is a setup checkpoint and does not yet contain the game source or release files.
+This source snapshot builds a native preview executable with runtime-pack copying disabled. The first-run code currently validates and caches the selected ROM; the full extraction-and-launch flow is not finished and the preview still expects runtime resources.
 
-A clean local source stage rebuilt the x64 Release game executable with runtime asset copying disabled. The build succeeded. A limited scan found zero known 64-byte fingerprints from the resource pack in that executable. The executable was not run; the scan does not prove that transformed or otherwise derived ROM data is absent.
+The latest Release compile succeeded. A limited audit found no known 64-byte fingerprints from the resource pack, but this does not prove that transformed or derived ROM data is absent. The detailed static-table review is in `STATIC_TABLE_REVIEW.md`; eight regional achievement-selector arrays remain flagged. The fresh executable has not passed runtime parity and is blocked by this PC's Windows Application Control policy while unsigned.
 
-The candidate is not ready to distribute: the latest native parity run was blocked by Windows Application Control, the unsigned game executable is blocked by this PC's current policy, and provenance review remains for 19 small static tables.
+This initial source upload omits build output, ROMs, extracted resources, Python caches, and test fixtures. The app can be built with `BUILD_TESTING=OFF`; omitted fixtures are not part of this build.
 
-A project-wide license has not been selected. No release or copyright-clearance claim is made.
+## Licensing and signing
+
+No project-wide license has been selected or approved. No copyright-clearance or release-readiness claim is made.
+
+SignPath Foundation's free signing program requires an OSI-approved license for every component, a maintained and already released project, a documented download page, and verifiable builds from the repository. This private staging repository does not meet those conditions yet.

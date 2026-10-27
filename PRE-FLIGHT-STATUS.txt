@@ -1,0 +1,17 @@
+PRIVATE PRE-FLIGHT COPY — NOT FOR PUBLICATION
+
+This copy is staged for a SignPath/open-source eligibility review. It omits the original project's bin folder and binary test fixtures that contain extracted game data. It does not include a project license, because the rights holder must choose and approve one. A private GitHub repository named nigelwhittaker98-glitch/rolo_revisited exists, but this staged source has not been uploaded to it.
+
+Current checkpoint (2026-10-27):
+- A fresh Release build succeeds with runtime-pack copying disabled.
+- The updated executable audit reports 18 static-array declarations, zero known 64-byte pack fingerprints, and release_ready=false.
+- The detailed 19-entry review is in STATIC_TABLE_REVIEW.md. The duplicate campaign selector array has been removed; eight regional achievement selector arrays still have unresolved game-data provenance.
+- Runtime parity has not been demonstrated for this fresh executable. Do not replace the known-good original build with it.
+- The unsigned executable remains blocked by this PC's Windows Application Control policy. Do not disable the protection.
+
+Publication blockers:
+- No project license has been approved by the rights holder.
+- Regional achievement selector provenance and broader transformed-data audit are incomplete.
+- A trusted publisher certificate is not available; signing eligibility is not established.
+
+Do not distribute this pre-flight copy as a finished release.
