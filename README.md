@@ -8,6 +8,10 @@ The intended Windows package contains a precompiled native game and a first-run 
 
 ## Current status
 
-This repository is a setup checkpoint and contains no game source or release files yet. The candidate build is not ready to distribute: the latest native parity run was blocked by Windows Application Control, the unsigned game executable is blocked by this PC's current policy, and provenance review remains for 19 small static tables.
+This repository is a setup checkpoint and does not yet contain the game source or release files.
+
+A clean local source stage rebuilt the x64 Release game executable with runtime asset copying disabled. The build succeeded. The executable was not run, and this does not verify game parity.
+
+The candidate is not ready to distribute: the latest native parity run was blocked by Windows Application Control, the unsigned game executable is blocked by this PC's current policy, and provenance review remains for 19 small static tables.
 
 A project-wide license has not been selected. No release or copyright-clearance claim is made.
