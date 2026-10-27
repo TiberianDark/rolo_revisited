@@ -1,17 +1,28 @@
-PRIVATE PRE-FLIGHT COPY — NOT FOR PUBLICATION
+PRIVATE DEVELOPMENT CHECKPOINT - 27 OCTOBER 2026
 
-This copy is staged for a SignPath/open-source eligibility review. It omits the original project's bin folder and binary test fixtures that contain extracted game data. It does not include a project license, because the rights holder must choose and approve one. A private GitHub repository named nigelwhittaker98-glitch/rolo_revisited exists, but this staged source has not been uploaded to it.
+The source and extractor template are in nigelwhittaker98-glitch/rolo_revisited.
+README.md now documents playing, controls, source builds and known limitations.
 
-Current checkpoint (2026-10-27):
-- A fresh Release build succeeds with runtime-pack copying disabled.
-- The updated executable audit reports 18 static-array declarations, zero known 64-byte pack fingerprints, and release_ready=false.
-- The detailed 19-entry review is in STATIC_TABLE_REVIEW.md. The duplicate campaign selector array has been removed; eight regional achievement selector arrays still have unresolved game-data provenance.
-- Runtime parity has not been demonstrated for this fresh executable. Do not replace the known-good original build with it.
-- The unsigned executable remains blocked by this PC's Windows Application Control policy. Do not disable the protection.
+Verified locally:
+- Release engine compilation and direct EXE launch on Windows.
+- Native ROM picker and bundled Python extraction, without PowerShell scripts.
+- Fresh extraction: 514 resources, 1,225,363 bytes, plus eight graphics packs.
+- Byte-for-byte reserialization of all 514 loaded array resources.
+- Intro Start reveals the title; Start on the title opens the native campaign.
+- World-map entry and entry into level 1 in the Windows UI.
+- The complete package assembler passes locally with the PSF runtime.
 
-Publication blockers:
-- No project license has been approved by the rights holder.
-- Regional achievement selector provenance and broader transformed-data audit are incomplete.
-- A trusted publisher certificate is not available; signing eligibility is not established.
+The new GitHub workflow assembles a full Windows development package. A successful
+runner build is not a ROM-driven gameplay test of the downloaded artifact.
 
-Do not distribute this pre-flight copy as a finished release.
+Still open:
+- Extended level-1 completion assertion: Smoke exit missing. It fails in both
+  the previous and updated engines; gameplay/test assumptions need investigation.
+- Eight regional achievement-selector lists and broader provenance review.
+- Project-wide licensing and public-release readiness.
+
+Current local binaries run while unsigned. Earlier claims that signing prevented
+the current local EXE from running were incorrect. No Windows protections were
+disabled, and no trusted publisher signature is claimed.
+
+See docs/STATUS.md and STATIC_TABLE_REVIEW.md. This remains a development candidate.

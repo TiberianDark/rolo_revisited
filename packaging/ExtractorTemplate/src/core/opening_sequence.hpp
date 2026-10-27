@@ -27,6 +27,13 @@ struct OpeningSequence{
  enum class Phase{EA,Copyright,Entrance,Photo,Title};Phase phase=Phase::EA;unsigned ticks{},phase_ticks{};EntranceState entrance;OpeningDisplay display;std::array<std::uint8_t,65536> work{};StartupAnimationFrame startup;NativePaletteEffects colours;
  OpeningSequence(){build_startup_image_scene(opening_data::startup,work,0,display);startup.scroll=226;startup.divider=0;colours.colours=opening_data::colour;colours.inhibited_c48d=0;}
  void reset(){*this=OpeningSequence{};}
+ // Start during the intro reveals the title; another press starts the game.
+ bool press_start(){
+  if(phase==Phase::Title)return true;
+  phase=Phase::Title;phase_ticks=0;
+  colours=NativePaletteEffects{};colours.colours=opening_data::photo;colours.inhibited_c48d=0;
+  return false;
+ }
  void step(){++ticks;++phase_ticks;
   if(phase==Phase::EA){StartupAnimationScene scene(work,display);update_startup_animation_frame(startup,scene);if(startup.done){phase=Phase::Copyright;phase_ticks=0;}return;}
   if(phase==Phase::Copyright){if(phase_ticks>=180){phase=Phase::Entrance;phase_ticks=0;colours.colours.fill(0);colours.begin_level_palette(opening_data::colour);}return;}

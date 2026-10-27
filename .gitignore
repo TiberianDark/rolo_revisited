@@ -1,25 +1,29 @@
-# User-supplied ROMs and local extraction inputs
-local/rolo.md
+# User ROMs and extracted data
+local/
 *.rom
+*.gen
 *.sfc
 *.smc
-
-# Extracted ROM resources and generated game data
 assets/extracted/
 *.rla
 *.bin
+*.sav
+RoloResources.path
 
-# Local build and package outputs
+# Generated builds, runtime binaries and archives
 build/
 build-*/
+dist/
 CMakeFiles/
 CMakeCache.txt
 *.exe
 *.dll
+*.pyd
 *.pdb
+*.zip
 outputs/
 migration/
 
-# Python runtime caches
+# Python caches
 __pycache__/
 *.py[cod]

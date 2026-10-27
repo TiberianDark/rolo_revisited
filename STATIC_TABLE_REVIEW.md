@@ -7,7 +7,7 @@ Scope: the 19 array declarations reported by the preflight binary audit before t
 - **8 regional achievement selector arrays:** game-specific indices for the regional jigsaw/animal achievement checks. They do not byte-match the ROM in the recorded scan, but their provenance is game-derived. Keep flagged until the selectors can be produced from the user-supplied ROM or the extraction/derivation is documented well enough to establish their source.
 - **1 campaign percentage array:** eliminated. Its 70 values had exactly the same 70 distinct IDs as the four regional piece arrays; order differed, but percentage computation only counts set bits. The code now uses the regional lists as the single source.
 - **10 remaining declarations:** ordinary translated runtime logic, native-authored metadata, zero initialization, or a deterministic math lookup; they are not resource payload arrays. Their detailed classification is below.
-- Fresh Release build succeeded. The candidate scanner now reports **18** declarations, **0** known 64-byte resource fingerprints, and `release_ready: false`. The fingerprint scan is limited and does not prove absence of transformed data. No runtime parity claim is made here.
+- Fresh Release build succeeded. The candidate scanner now reports **18** declarations, **0** known 64-byte resource fingerprints, and `release_ready: false`. The fingerprint scan is limited and does not prove absence of transformed data. Later checks verified byte-for-byte reserialization of all 514 external array resources and local direct startup. These checks do not establish complete gameplay parity or copyright clearance.
 
 ## Per-declaration decisions
 
@@ -36,3 +36,4 @@ Scope: the 19 array declarations reported by the preflight binary audit before t
 ## Remaining action before release claims
 
 The regional achievement selectors (#1–8) are the only items in this batch still marked as game-specific data rather than clearly generic logic or native-authored content. Exact-byte scanning is not enough to certify their provenance. The resource-free executable audit remains explicitly **not release-ready** until the broader review also covers generated scalar tables, strings, code-derived data, and the extraction output.
+

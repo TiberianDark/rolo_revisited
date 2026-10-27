@@ -5,7 +5,7 @@
 #include "host_gamepad.hpp"
 #include "host_music.hpp"
 #include "host_presentation.hpp"
-#include "host_rom.hpp"
+#include "host_resource_setup.hpp"
 #include "host_widescreen.hpp"
 #include "host_renderer.hpp"
 #include "host_issue_capture.hpp"
@@ -61,10 +61,11 @@ struct PreviewTexture {
 };
 int run_preview(int argc,char** argv,std::string& start_map,HostDisplay& display) {
     bool handoff_test=false;
-    std::string asset_path,smoke_path;int fps=60,browse_level=-1;std::uint16_t start_level=0;bool four_k=false;bool& widescreen=host_widescreen;bool static_preview=false,map_preview=false,player_preview=false,enemy_preview=false;
+    std::string asset_path,smoke_path;int fps=60,browse_level=-1;std::uint16_t start_level=0;bool four_k=false;bool& widescreen=host_widescreen;bool static_preview=false,map_preview=false,player_preview=false,enemy_preview=false,native_campaign=false;
     for (int i=1;i<argc;++i) {
         const std::string option=argv[i];
         if(option=="--handoff-test"){handoff_test=true;continue;}
+        if(option=="--campaign"){native_campaign=true;static_preview=map_preview=player_preview=enemy_preview=true;continue;}
         if(option=="--resources-ready")continue;
         if(option=="--resource-root"&&i+1<argc){++i;continue;}
         if(option=="--debug-flight"){host_debug_flight=true;continue;}
@@ -130,8 +131,14 @@ int run_preview(int argc,char** argv,std::string& start_map,HostDisplay& display
             std::vector<PreviewTexture> textures;
             std::vector<PreviewTexture> player_textures;
             const auto background_path=std::filesystem::path(asset_path).parent_path()/"background.bmp";
-            const bool map_background=map_preview && std::filesystem::exists(background_path);
-            if(static_preview) {
+            const bool map_background=native_campaign || (map_preview && std::filesystem::exists(background_path));
+            if(native_campaign) {
+                // Native terrain comes from the external pack, without preview BMP files.
+                // Retain map dimensions for the existing pan/reset controls.
+                const auto level=rolo::all_native_level_data::level(1);
+                textures.push_back({4,0,0,level.width,level.height,{SDL_CreateTexture(renderer.get(),SDL_PIXELFORMAT_RGBA32,SDL_TEXTUREACCESS_STATIC,1,1),SDL_DestroyTexture}});
+                textures.push_back({5,0,0,512,272,{nullptr,SDL_DestroyTexture}});
+            } else if(static_preview) {
                 const auto foreground_path=map_background?(std::filesystem::path(asset_path).parent_path()/"foreground-alpha.bmp").string():asset_path;
                 std::unique_ptr<SDL_Surface,decltype(&SDL_DestroySurface)> surface(SDL_LoadBMP(foreground_path.c_str()),SDL_DestroySurface);
                 if(!surface || (map_preview?(surface->w<320||surface->h<160||surface->w>8192||surface->h>8192):(surface->w!=320||surface->h!=160))) result=1;
@@ -197,6 +204,7 @@ int run_preview(int argc,char** argv,std::string& start_map,HostDisplay& display
             rolo::WorldLevelAdmission world_admission;
             bool world_level_pending=false;
             rolo::PlayerInputMapping world_buttons;
+            std::uint8_t world_button_latch=0;
             auto world_camera_state=rolo::initialize_world_camera(world_cursor,1280,1280);
             std::unique_ptr<rolo::WorldRouteMap> world_routes;
             auto initialize_world_routes=[&]{
@@ -204,7 +212,7 @@ int run_preview(int argc,char** argv,std::string& start_map,HostDisplay& display
                 world_level_pending=false;world_palette_cycle={};
                 for(unsigned n=0;n<64;++n)world_palette[n]=rolo::world_map_word(rolo::world_map_data::palette,n*2);
                 world_route_state.anchor_y=world_route_state.snapshot_y=world_cursor.y;
-                world_buttons={};world_camera_state=rolo::initialize_world_camera(world_cursor,1280,1280);
+                world_buttons={};world_button_latch=0;world_camera_state=rolo::initialize_world_camera(world_cursor,1280,1280);
                 world_routes=std::make_unique<rolo::WorldRouteMap>(campaign_flags);
                 const auto position=rolo::world_camera_integer(world_camera_state);world_routes->stream(position.x,position.y);
             };
@@ -1119,16 +1127,21 @@ int run_preview(int argc,char** argv,std::string& start_map,HostDisplay& display
                             continue;
                         }
                         if(!map_preview&&event.key.key==SDLK_RETURN){
-                            auto folder=std::filesystem::absolute(asset_path).parent_path();
-                            for(unsigned depth=0;depth<7&&!folder.empty();++depth){
-                                const auto candidate=folder/"assets/extracted/maps/map-01/foreground.bmp";
-                                if(std::filesystem::exists(candidate)){start_map=candidate.string();running=false;break;}
-                                const auto parent=folder.parent_path();if(parent==folder)break;folder=parent;
+                            if(opening&&!opening->press_start()){
+                                music.play(2,true);accumulator=0;
+                                continue;
                             }
-                            if(start_map.empty())SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR,"Start game","Level assets could not be found. Keep the extracted assets beside the project.",window.get());
+                            start_map="native-campaign";
+                            running=false;
                             continue;
                         }
-                        if(world_map_scene&&(event.key.key==SDLK_RETURN||event.key.key==SDLK_SPACE))continue;
+                        if(world_map_scene){
+                            if(event.key.key==SDLK_SPACE)world_button_latch|=16;
+                            if(event.key.key==SDLK_Z)world_button_latch|=32;
+                            if(event.key.key==SDLK_X)world_button_latch|=64;
+                            if(event.key.key==SDLK_RETURN)world_button_latch|=128;
+                            if(event.key.key==SDLK_RETURN||event.key.key==SDLK_SPACE)continue;
+                        }
                         if(enemy_preview&&!world_map_scene&&transport_host&&transport_host->busy()&&
                            (event.key.key==SDLK_RETURN||event.key.key==SDLK_P||event.key.key==SDLK_R))continue;
                         if(enemy_preview&&!world_map_scene&&event.key.key==SDLK_RETURN&&(!menu_host||!menu_host->active)){
@@ -1181,7 +1194,8 @@ int run_preview(int argc,char** argv,std::string& start_map,HostDisplay& display
                     accumulator+=elapsed;while(accumulator>=1.0/fps){
                         timing.step();
                         const auto keys=gamepad.keys();
-                        rolo::map_player_input(world_buttons,static_cast<std::uint8_t>((keys[SDL_SCANCODE_UP]?1:0)|(keys[SDL_SCANCODE_DOWN]?2:0)|(keys[SDL_SCANCODE_LEFT]?4:0)|(keys[SDL_SCANCODE_RIGHT]?8:0)|(keys[SDL_SCANCODE_SPACE]?16:0)|(keys[SDL_SCANCODE_Z]?32:0)|(keys[SDL_SCANCODE_X]?64:0)|(keys[SDL_SCANCODE_RETURN]?128:0)));
+                        rolo::map_player_input(world_buttons,static_cast<std::uint8_t>(world_button_latch|(keys[SDL_SCANCODE_UP]?1:0)|(keys[SDL_SCANCODE_DOWN]?2:0)|(keys[SDL_SCANCODE_LEFT]?4:0)|(keys[SDL_SCANCODE_RIGHT]?8:0)|(keys[SDL_SCANCODE_SPACE]?16:0)|(keys[SDL_SCANCODE_Z]?32:0)|(keys[SDL_SCANCODE_X]?64:0)|(keys[SDL_SCANCODE_RETURN]?128:0)));
+                        world_button_latch=0;
                         rolo::update_world_route(world_actors->actor(),world_route_state,{world_buttons.mapped[0],world_buttons.mapped[1],world_buttons.mapped[2],world_buttons.mapped[3]},*world_routes);
                         world_actors->update_bunny(world_route_state.pause,{world_buttons.mapped[0],world_buttons.mapped[1],world_buttons.mapped[2],world_buttons.mapped[3]});
                         world_cursor.x=world_route_state.snapshot_x;world_cursor.y=world_route_state.snapshot_y;
@@ -1240,18 +1254,28 @@ int run_preview(int argc,char** argv,std::string& start_map,HostDisplay& display
     return result;
 }
 int main(int argc,char** argv){
+    bool smoke=false;
+    for(int i=1;i<argc;++i)if(std::string(argv[i])=="--smoke-test")smoke=true;
     try {
     const char* base_path=SDL_GetBasePath();
     if(!base_path)throw std::runtime_error("Cannot determine game directory");
-    host_data_root=std::filesystem::path(base_path);
-    for(int i=1;i<argc;++i){const std::string arg=argv[i];if(arg=="--resource-root"&&i+1<argc)host_data_root=std::filesystem::absolute(argv[i+1]);}
-    rolo::resources::initialize(host_data_root);
+    const auto app_root=std::filesystem::path(base_path);
+    bool explicit_resource_root=false;
+    for(int i=1;i<argc;++i){const std::string arg=argv[i];if(arg=="--resource-root"&&i+1<argc){host_data_root=std::filesystem::absolute(argv[++i]);explicit_resource_root=true;}}
+    if(!explicit_resource_root)host_data_root=rolo::saved_resource_root(app_root);
+    try {
+        rolo::resources::initialize(host_data_root);
+        rolo::check_external_asset_files(host_data_root);
+    } catch(const std::exception&) {
+        if(explicit_resource_root)throw;
+        if(!rolo::prepare_external_resources(app_root,host_data_root))return 0;
+        rolo::resources::initialize(host_data_root);
+        rolo::check_external_asset_files(host_data_root);
+    }
     host_renderer=rolo::load_renderer_choice();
-    bool smoke=false,handoff_test=false;std::string smoke_folder,cadence="60";
-    bool resources_ready=false;
-    for(int i=1;i<argc;++i){const std::string arg=argv[i];if(arg=="--smoke-test"&&i+1<argc){smoke=true;smoke_folder=argv[i+1];}if(arg=="--handoff-test")handoff_test=true;if(arg=="--fps"&&i+1<argc)cadence=argv[i+1];if(arg=="--resources-ready")resources_ready=true;}
+    bool handoff_test=false;std::string smoke_folder,cadence="60";
+    for(int i=1;i<argc;++i){const std::string arg=argv[i];if(arg=="--smoke-test"&&i+1<argc){smoke_folder=argv[i+1];}if(arg=="--handoff-test")handoff_test=true;if(arg=="--fps"&&i+1<argc)cadence=argv[i+1];}
     if(handoff_test&&!smoke)return 2;
-    if(!smoke&&!resources_ready&&!rolo::ensure_verified_rom())return 0;
     std::string start_map;
     HostDisplay display;
     const auto result=run_preview(argc,argv,start_map,display);
@@ -1260,7 +1284,10 @@ int main(int argc,char** argv){
     const auto window_id=SDL_GetWindowID(display.window.get());auto* renderer=display.renderer.get();
     int x=0,y=0,width=0,height=0;SDL_GetWindowPosition(display.window.get(),&x,&y);SDL_GetWindowSize(display.window.get(),&width,&height);
     const auto monitor=SDL_GetDisplayForWindow(display.window.get());const auto flags=SDL_GetWindowFlags(display.window.get());
-    std::vector<std::string> args{argv[0],"--enemy-preview",start_map,"--fps",cadence};
+    std::vector<std::string> args{argv[0]};
+    if(start_map=="native-campaign")args.push_back("--campaign");
+    else {args.push_back("--enemy-preview");args.push_back(start_map);}
+    args.push_back("--fps");args.push_back(cadence);
     if(handoff_test){args.push_back("--smoke-test");args.push_back(smoke_folder);args.push_back("--handoff-test");}
     std::vector<char*> game_args;for(auto&arg:args)game_args.push_back(arg.data());
     std::string unused;
@@ -1274,6 +1301,7 @@ int main(int argc,char** argv){
     return game_result;
     } catch(const std::exception& error) {
         std::fprintf(stderr,"Native preview error: %s\n",error.what());
+        if(!smoke)SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR,"Rolo could not start",error.what(),nullptr);
         SDL_Quit();return 1;
     }
 }

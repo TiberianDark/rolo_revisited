@@ -1,4 +1,4 @@
 @echo off
 setlocal
-powershell.exe -NoProfile -STA -File "%~dp0RoloLauncher.ps1"
+"%~dp0RoloGame.exe" %*
 exit /b %errorlevel%

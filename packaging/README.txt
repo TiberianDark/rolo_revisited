@@ -1,18 +1,34 @@
-Rolo to the Rescue — ROM-free build candidate v2
+Rolo to the Rescue - direct-launch ROM-free candidate
 
-This folder contains a precompiled native game engine and a first-run extractor. It does not include a ROM or extracted game resources. On first launch, Start-Rolo.cmd asks for the supported 512 KiB ROM, checks its length and SHA-256, extracts the runtime resources into the current Windows account's LocalAppData folder, verifies the complete 514-resource pack, then starts RoloGame.exe. The ROM is read directly and is never modified. Temporary working files are removed after setup. No compilation is performed on the player's computer.
+Extract the complete download into one folder and double-click RoloGame.exe.
+Keep the runtime and ExtractorTemplate folders beside it.
 
-The resource loader passed eight native checks. A native parity check loaded all 514 arrays from the external pack and reserialized them byte-for-byte. Eleven synthetic codec and extraction tests and eight pack corruption/path-safety tests also passed. The pack verifier confirmed 514 resources totaling 1,225,363 bytes.
+On first launch the EXE opens a Windows ROM picker. It validates the supported
+512 KiB ROM, extracts 514 runtime resources and eight graphics packs, verifies
+the results, then opens the game. Subsequent launches find the saved resources
+automatically. Start-Rolo.cmd is an optional shortcut to the same EXE.
+No rebuilding or PowerShell script execution is required on the player's PC.
 
-The embedded extractor runtime is CPython 3.13.16 from the Python Software Foundation. Its official license is included at runtime\python\LICENSE.txt.
+Enter during the intro reveals the title screen. Press Enter on the title
+screen to start the campaign; Space enters a level from the world map.
 
-The game executable and SDL3.dll are unsigned. Windows Application Control blocked a prior game build before it ran; this exact executable has not been launched on that protected PC. The project still needs a trusted signing path for that Windows configuration. Eight game-specific regional selector arrays also need provenance review. The technical scan and successful resource parity test do not establish copyright clearance.
+Saved resources normally live in LocalAppData\RoloToTheRescue\resources-v1.
+An optional local RoloResources.path file can point to an existing resource
+folder. Distribution archives omit that machine-specific locator.
 
-Files:
-- RoloGame.exe and SDL3.dll: precompiled game runtime and SDL dependency.
-- Start-Rolo.cmd and RoloLauncher.ps1: first-run selection, extraction, validation and launch.
-- ExtractorTemplate: source and scripts used to extract resources from the ROM.
-- runtime\python: trimmed PSF Python runtime, with license.
-- verify_pack.py: resource integrity verification.
+The native title-to-world-map handoff passed, preserving the same window and
+renderer. Gameplay rendered and ran 200 updates using the external pack with
+no project BMP files. A separate level-completion smoke assertion still fails
+with "Smoke exit missing" in both the prior and updated game executables.
+This existing completion issue has not been fixed by the startup changes.
 
-This is a test candidate, not a public release. It is unsigned and is not cleared for publication.
+Fresh extraction verified 514 resources totaling 1,225,363 bytes, plus all
+eight graphics packs. The game and SDL3.dll are unsigned. The current local
+EXE runs on Windows; the separately produced GitHub EXE still needs its own
+runtime check. The Python runtime is CPython 3.13.16 from the Python Software
+Foundation, with its license at runtime\python\LICENSE.txt.
+
+This candidate contains no ROM or extracted resource payload files. Eight
+game-specific regional selector lists and the broader provenance/licensing
+review remain unresolved. This is not a cleared public release.
+

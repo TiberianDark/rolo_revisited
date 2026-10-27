@@ -1,23 +1,171 @@
 # Rolo Revisited
 
-Private development checkpoint for the native Windows Rolo to the Rescue project. This is not a finished release.
+[![Windows development build](https://github.com/nigelwhittaker98-glitch/rolo_revisited/actions/workflows/windows-preflight.yml/badge.svg)](https://github.com/nigelwhittaker98-glitch/rolo_revisited/actions/workflows/windows-preflight.yml)
+![Platform: Windows x64](https://img.shields.io/badge/platform-Windows%20x64-0078D4)
+![Status: in development](https://img.shields.io/badge/status-in%20development-orange)
 
-## Intended package
+A native Windows project for **Rolo to the Rescue**, the Mega Drive / Genesis game.
+The game runs through C++ gameplay code, with SDL3 for the desktop window and input,
+and YMFM for FM sound synthesis.
 
-The goal is a precompiled game that asks the player for their own supported ROM on first launch, extracts runtime resources locally, then starts the game. The repository and release must not contain a ROM or extracted game assets.
+The aim is simple: open a precompiled program, choose your own ROM once, and play.
+The EXE extracts the resources it needs on your PC and finds them automatically
+on later launches. You do not compile anything to play a packaged build.
 
-## Current checkpoint
+**This is an experimental development build.** Direct launching, ROM extraction,
+the title screen, world-map entry and entering level 1 have been checked locally.
+A full playthrough and complete parity with the original game are not established.
 
-The uploaded snapshot contains the CMake build file, native source, bundled YMFM source and its BSD license, plus the preflight status and static-table review. It excludes the test suite, extraction tools, ROMs, extracted resources, compiled output and Python caches. The app can be compiled with `BUILD_TESTING=OFF`, but the first-run code currently validates and caches the selected ROM; the full extraction-and-launch flow is not finished and the preview still expects runtime resources.
+## Contents
 
-The latest local Release compile succeeded. A limited audit found no known 64-byte fingerprints from the resource pack, but this does not prove that transformed or derived ROM data is absent. Eight regional achievement-selector arrays remain flagged. The fresh executable has not passed runtime parity and is blocked by this PC's Windows Application Control policy while unsigned.
+- [What it includes](#what-it-includes)
+- [Your own ROM](#your-own-rom)
+- [Download and play](#download-and-play)
+- [Controls](#controls)
+- [Saved data](#saved-data)
+- [Development status](#development-status)
+- [Building from source](#building-from-source)
+- [Reporting a problem](#reporting-a-problem)
+- [Credits and licences](#credits-and-licences)
 
-The Windows preflight workflow now requests a static SDL3 build to remove SDL3.dll from the eventual game executable. The workflow uploads an unsigned preview executable for verification; it does not sign or publish a release.
+## What it includes
 
-The repository now includes the first-run launcher and extractor scripts under `packaging/`. A local ROM-free candidate passed pack validation, 11 synthetic extraction checks, 8 pack corruption/path-safety checks, 8 native loader checks, and byte-for-byte parity for all 514 resource arrays. A Windows static-SDL build also passes on GitHub Actions. The game executable remains unsigned; a prior build was blocked by Windows Application Control. Eight game-specific regional selector arrays still need provenance review, so this is not a public release.
+- **Direct EXE launch.** A Windows file picker asks for the supported ROM when
+  resources are missing; extraction runs before the game opens.
+- **The opening and title screen.** Enter during the intro reveals the title;
+  another Enter starts the campaign.
+- **Native world-map and level rendering.** Starting the game uses the external
+  resource pack instead of searching the original project for preview BMP files.
+- **Display options.** The desktop host includes widescreen, fullscreen, VSync
+  and a choice of graphics renderer.
+- **Keyboard and SDL gamepad input.** Controller mappings are provided through SDL3.
+- **Local progress and achievements.** The current host can save world-map progress
+  and record its local achievement state.
 
-## Licensing and signing
+These describe the current implementation, not a guarantee that every scene or
+gameplay path is complete. See the [status notes](docs/STATUS.md).
 
-No project-wide license has been selected or approved. No copyright-clearance or release-readiness claim is made.
+## Your own ROM
 
-SignPath Foundation's free signing program requires an OSI-approved license for every component, a maintained and already released project, a documented download page, and verifiable builds from the repository. This private staging repository does not meet those conditions yet.
+You must supply your own **512 KiB Mega Drive / Genesis Rolo to the Rescue ROM**.
+Only the revision matching the following SHA-256 is currently supported:
+
+```text
+9478d47cc1883df42f3714ea485aedd71b541274eb45a3aa7c49f4a3518305e9
+```
+
+The file is checked by its contents, not its name. Renaming a different revision
+will not make it compatible. The picker lists `.bin`, `.md` and `.gen` files.
+
+No ROM or extracted runtime payload files are included in the development package.
+The extractor reads the selected ROM, generates resources locally and leaves the
+original file unchanged. Source provenance review is still in progress; this is
+not a claim that every game-derived constant has been cleared for publication.
+
+## Download and play
+
+There is **no public release yet**. Repository collaborators can obtain development
+packages from [GitHub Actions](https://github.com/nigelwhittaker98-glitch/rolo_revisited/actions/workflows/windows-preflight.yml).
+
+1. Open a **successful** Windows development build and download its
+   `rolo-revisited-windows-dev` artifact. Choose a run from the current source;
+   older runs uploaded only an engine EXE.
+2. Extract the whole ZIP into a folder. Keep `runtime`, `ExtractorTemplate`,
+   `prepare_resources.py` and the other supplied files beside the game.
+3. Double-click **RoloGame.exe**. On first launch, choose your supported ROM and
+   allow setup to finish. The game verifies 514 runtime resources and eight graphics
+   packs before opening. No CMD launcher, PowerShell script or local rebuild is needed.
+4. Press **Enter** to reveal the title screen, **Enter** on the title to start,
+   then **Space** on the world map to enter a level.
+
+Later launches reuse the verified resources. The bundled Python runtime is used
+only for setup; players do not need to install Python separately.
+
+Development binaries are unsigned. The current local build has run on Windows;
+that does not establish reputation or acceptance on every Windows configuration.
+The project does not require disabling Windows protections.
+
+## Controls
+
+| Action | Keyboard |
+|---|---|
+| Reveal title / start from title | Enter |
+| Move / navigate world-map routes | Arrow keys |
+| Jump / enter a level from the map | Space |
+| Action input | X |
+| Companion menu during gameplay | Enter |
+| Pause during gameplay | P |
+| Display options | F8 |
+| Local achievements | F7 |
+| Toggle fullscreen | F11 |
+| Save / load world-map progress | F5 / F9 |
+
+SDL gamepads use the D-pad or left stick for movement, the south face button for
+Space, west/east face buttons for Z/X, and Start for Enter. Gamepad behaviour across
+different devices still needs broader playtesting.
+
+## Saved data
+
+Resources normally live in:
+
+```text
+%LOCALAPPDATA%\RoloToTheRescue\resources-v1
+```
+
+That folder also holds `rolo-progress.sav`, `rolo-achievements.sav` and diagnostic
+logs generated by the host. A failed extraction writes `setup.log` in its parent
+folder. Renderer preferences use SDL's `NativeRolo/RoloToTheRescue` preference folder.
+
+An optional local `RoloResources.path` file beside the EXE can point to an existing
+resource directory. It is a machine setting and is excluded from downloadable packages.
+
+## Development status
+
+Local checks have verified fresh extraction, all 514 array resources reserialized
+byte for byte, direct Windows launching, title input, the title-to-map handoff,
+and entering level 1. The exact binary built by GitHub needs its own runtime check.
+
+An extended level-1 completion test currently stops at **`Smoke exit missing`**:
+it cannot find the expected exit actor. The previous EXE fails the same check.
+Whether the fault is in gameplay or the test's assumptions remains unresolved.
+
+Eight regional achievement-selector lists and the broader source provenance and
+licensing review also remain open. A project-wide licence has not been selected.
+The repository remains a private development checkpoint while that work continues.
+
+See [docs/STATUS.md](docs/STATUS.md) for the tested scope and outstanding work.
+
+## Building from source
+
+The Windows build uses CMake, an MSVC C++20 toolchain and SDL3. The packaging step
+adds the extractor and a CPython runtime; building the engine alone does not make
+a complete first-run download.
+
+See [docs/BUILDING.md](docs/BUILDING.md) for source-build and packaging instructions.
+The [Windows workflow](.github/workflows/windows-preflight.yml) performs both steps
+without supplying a ROM to the runner.
+
+## Reporting a problem
+
+Please include the build or commit, what you pressed, what you expected and the
+exact error message. A screenshot and the relevant part of `setup.log` can help.
+**Do not attach your ROM or extracted resource files.** Review logs before sharing
+them because paths can contain your Windows account name.
+
+## Credits and licences
+
+*Rolo to the Rescue* was developed by Vectordean and published by Electronic Arts.
+The original game's characters, artwork, music and other content belong to their
+respective rights holders. This project is not affiliated with those rights holders.
+
+Third-party components include:
+
+- [SDL3](https://libsdl.org/) — zlib licence; text in [packaging/LICENSES/SDL3-LICENSE.txt](packaging/LICENSES/SDL3-LICENSE.txt).
+- [YMFM](https://github.com/aaronsgiles/ymfm) by Aaron Giles — BSD 3-Clause; [licence text](third_party/ymfm/LICENSE).
+- [CPython](https://www.python.org/) — Python Software Foundation licence; the runtime's licence is included in packaged builds.
+
+No project-wide open-source licence or trusted-publisher signature is claimed.
+
+README organisation was inspired by
+[Futurama: The Game: The Recomp](https://github.com/hiburn8/futurama-the-game-the-recomp)
+and [James Pond 2: Codename RoboCod — Recompiled](https://github.com/griches/JamesPond2RobocodRecomp).
