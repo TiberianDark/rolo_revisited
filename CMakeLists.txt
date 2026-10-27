@@ -1306,7 +1306,9 @@ endif()
 
 
 
-add_executable(rolo_resource_parity_tests tests/resource_parity_tests.cpp)
-target_link_libraries(rolo_resource_parity_tests PRIVATE rolo_core bcrypt)
-add_executable(rolo_resource_loader_tests tests/resource_loader_tests.cpp)
-target_link_libraries(rolo_resource_loader_tests PRIVATE rolo_core bcrypt)
+if(BUILD_TESTING)
+  add_executable(rolo_resource_parity_tests tests/resource_parity_tests.cpp)
+  target_link_libraries(rolo_resource_parity_tests PRIVATE rolo_core bcrypt)
+  add_executable(rolo_resource_loader_tests tests/resource_loader_tests.cpp)
+  target_link_libraries(rolo_resource_loader_tests PRIVATE rolo_core bcrypt)
+endif()
