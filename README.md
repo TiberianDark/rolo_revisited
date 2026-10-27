@@ -8,11 +8,11 @@ The goal is a precompiled game that asks the player for their own supported ROM 
 
 ## Current checkpoint
 
-This source snapshot builds a native preview executable with runtime-pack copying disabled. The first-run code currently validates and caches the selected ROM; the full extraction-and-launch flow is not finished and the preview still expects runtime resources.
+The uploaded snapshot contains the CMake build file, native source, bundled YMFM source and its BSD license, plus the preflight status and static-table review. It excludes the test suite, extraction tools, ROMs, extracted resources, compiled output and Python caches. The app can be compiled with `BUILD_TESTING=OFF`, but the first-run code currently validates and caches the selected ROM; the full extraction-and-launch flow is not finished and the preview still expects runtime resources.
 
-The latest Release compile succeeded. A limited audit found no known 64-byte fingerprints from the resource pack, but this does not prove that transformed or derived ROM data is absent. The detailed static-table review is in `STATIC_TABLE_REVIEW.md`; eight regional achievement-selector arrays remain flagged. The fresh executable has not passed runtime parity and is blocked by this PC's Windows Application Control policy while unsigned.
+The latest local Release compile succeeded. A limited audit found no known 64-byte fingerprints from the resource pack, but this does not prove that transformed or derived ROM data is absent. Eight regional achievement-selector arrays remain flagged. The fresh executable has not passed runtime parity and is blocked by this PC's Windows Application Control policy while unsigned.
 
-This initial source upload omits build output, ROMs, extracted resources, Python caches, and test fixtures. The app can be built with `BUILD_TESTING=OFF`; omitted fixtures are not part of this build.
+A Windows preflight build workflow has been added. It builds the preview only; it is not a release or signing workflow.
 
 ## Licensing and signing
 
