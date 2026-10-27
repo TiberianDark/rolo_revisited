@@ -1,0 +1,19 @@
+"""Bounce caller sequencing and complete marker-factory allocator handoff."""
+import hashlib,json
+from pathlib import Path
+from inventory_rom import ROM_HASH
+from m68k_static import Decoder
+p=Path(__file__).resolve().parents[1];root=p.parents[1];rom=(p/'local/rolo.md').read_bytes();assert hashlib.sha256(rom).hexdigest()==ROM_HASH
+inv=json.loads((p/'docs/stage9/inventory.json').read_text(encoding='utf-8'));accepted={a for x in inv['routines'] for a in x['blocks']};records=[];pins={};tests={}
+groups=[('bounce-callers','bounce_callers_verification_tests',['src/core/actor_bounce_motion.hpp','src/core/actor_motion.hpp','src/core/animation.hpp','src/core/actor_definition.hpp','src/core/actor_allocation.hpp','src/core/actor_state.hpp','tests/bounce_callers_verification_tests.cpp'],[(0xb714,0xb726,'Unconditionally initialize bounce, reload live current definition after RNG, publish default callback then tail-dispatch native callback; no post-callback overwrites.'),(0xb726,0xb782,'Inactive117.1 gate; initialize46 once, gravity/integration/landing. Clamp integerX signed against32 then live width-32, preserving fractions. Livegroundbit restores callback from live definition and clears46.')]),('spawn-factory','spawn_factory_verification_tests',['src/core/actor_spawn_factory.hpp','src/core/actor_allocation.hpp','src/core/actor_initialization.hpp','src/core/actor_state.hpp','tests/spawn_factory_verification_tests.cpp'],[(0x4a48,0x4a84,'Parameter bit0 chooses facing and is cleared before doubled WORD table offset; X=recordX+8, Y=((row+2)<<3)+1, fractionszero. Facing uses wrapped subtraction N, not signed endpoint compare. Marker copied to allocator marker without clearing incoming resource context. Return complete allocator result unchanged.')])]
+for name,test,sources,specs in groups:
+ rp=root/f'work/{name}-results.json';r=json.loads(rp.read_text(encoding='utf-8-sig'));assert r==dict(passed=True,**{f'{start:04X}':524288 for start,end,c in specs});exe=root/f'work/{test}.exe';assert exe.stat().st_mtime>=max((p/s).stat().st_mtime for s in sources)
+ pins.update({s:hashlib.sha256((p/s).read_bytes()).hexdigest() for s in sources});tests[name]=dict(executable_sha256=hashlib.sha256(exe.read_bytes()).hexdigest(),results_sha256=hashlib.sha256(rp.read_bytes()).hexdigest())
+ for start,end,contract in specs:
+  at=start;items=[]
+  while at<end:
+   assert at in accepted;i=Decoder(rom,at).decode();items.append(i);at+=i['size']
+  assert at==end
+  records.append(dict(address=start,hex=f'{start:06X}',end_exclusive=end,original_bytes=rom[start:end].hex(),instruction_evidence=items,verification_status='verified',status='verified green: local bounce/spawn caller',native_sources=[sources[0]],checked_cases=524288,contract=contract,proof='All65536 seeds/WORD positions across8 fixtures per entry. Independent caller branch/order and spawn argument model; full actor pool, RNG, callbacks, width and ordered service trace compared. Landing can change definition and width before subsequent reads; tail callback changes persist. Spawn request checks all valid table parameters and wrapped facing/position/context; combined allocator checks empty/success/resource failure and original result. Previously green RNG/bounce-init/motion/allocator reused as child contracts.',scope='Local valid stable actor key and immutable table definitions; spawn parameter0..16383 valid signed table offset, one-child allocator fixtures and original marker handle service. Callback and landing are explicit observable handoffs. CPU ABI, all caller selector domains and arbitrary scene behaviour remain external.'))
+report=dict(rom_sha256=ROM_HASH,source_sha256=pins,records=records,native_test_evidence=tests)
+(p/'docs/stage9/bounce-spawn-verification.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8');print('B714/B726/4A48 verified.')

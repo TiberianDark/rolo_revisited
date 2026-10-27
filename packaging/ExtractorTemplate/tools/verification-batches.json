@@ -1,0 +1,1651 @@
+{
+  "scope": "Current workspace focused verification batches; select related changed groups only. Not a whole-game fidelity or installer manifest.",
+  "groups": [
+    {
+      "name": "acceleration-bunny",
+      "scripts": [
+        "work/verify-acceleration-bunny.ps1"
+      ],
+      "registrar": "tools/verify_acceleration_bunny.py",
+      "report": "docs/stage9/acceleration-bunny-verification.json",
+      "registrar_sha256": "186fc32c6eaa943ca628cf567425e76fca85f25016418905c8cd4d1ed46c057f",
+      "script_sha256": {
+        "work/verify-acceleration-bunny.ps1": "5d9ce1865c41aba9e7a86055e36a01ae52d3ec836ad035cd5840bd6597c17d5f"
+      }
+    },
+    {
+      "name": "actor-allocation",
+      "scripts": [
+        "work/verify-actor-allocation.ps1"
+      ],
+      "registrar": "tools/verify_actor_allocation.py",
+      "report": "docs/stage9/actor-allocation-verification.json",
+      "registrar_sha256": "cc7aa83ce58e43722c9e7acb99abc9fdf1f39844a8a435773b4698cad6f42ac8",
+      "script_sha256": {
+        "work/verify-actor-allocation.ps1": "e322383c3e8f0fbce236e857a3cc4053bd518463a05e3391a92ba8a63721eabd"
+      }
+    },
+    {
+      "name": "actor-common-callbacks",
+      "scripts": [
+        "work/verify-actor-common-callbacks.ps1"
+      ],
+      "registrar": "tools/verify_actor_common_callbacks.py",
+      "report": "docs/stage9/actor-common-callbacks-verification.json",
+      "registrar_sha256": "1315b37efef938586de7c0b65382e524424782d7e4beeac838137718462380b7",
+      "script_sha256": {
+        "work/verify-actor-common-callbacks.ps1": "289eb6c52a8dca0de7c8b90c2d6fd6cb3de2125526c82eaefb0e39ace6573ba8"
+      }
+    },
+    {
+      "name": "actor-common-state",
+      "scripts": [
+        "work/verify-actor-common-state.ps1"
+      ],
+      "registrar": "tools/verify_actor_common_state.py",
+      "report": "docs/stage9/actor-common-state-verification.json",
+      "registrar_sha256": "55a93465f105648e3faa88857509dac4ef84677a95747e73813fdf92b8e5e61e",
+      "script_sha256": {
+        "work/verify-actor-common-state.ps1": "973178ccc8f86cc491a63c9ba913c9d42c72977af685688aeadae1696d0cd053"
+      }
+    },
+    {
+      "name": "actor-corner-motion",
+      "scripts": [
+        "work/verify-actor-corner-motion.ps1"
+      ],
+      "registrar": "tools/verify_actor_corner_motion.py",
+      "report": "docs/stage9/actor-corner-motion-verification.json",
+      "registrar_sha256": "4481856ad9c2dd7f38c95a869627c1169099bdad5d631e903a128f1c75d74027",
+      "script_sha256": {
+        "work/verify-actor-corner-motion.ps1": "3335b2ca21150c43b0d3f7096310a9847480a646bf563eedbe173dc870542d54"
+      }
+    },
+    {
+      "name": "actor-lifecycle",
+      "scripts": [
+        "work/verify-actor-lifecycle.ps1"
+      ],
+      "registrar": "tools/verify_actor_lifecycle.py",
+      "report": "docs/stage9/actor-lifecycle-verification.json",
+      "registrar_sha256": "76c0b7e227888ec43e99ca3829a4e99e547326ff3d28bf9538c9c0c1b17d8bc8",
+      "script_sha256": {
+        "work/verify-actor-lifecycle.ps1": "cca278c843a1f7f8142dae06f1ddf80ef26cff49d96748aaaf058e28604fda2d"
+      }
+    },
+    {
+      "name": "actor-schedule",
+      "scripts": [
+        "work/verify-actor-schedule.ps1"
+      ],
+      "registrar": "tools/verify_actor_schedule.py",
+      "report": "docs/stage9/actor-schedule-verification.json",
+      "registrar_sha256": "cfa185798f6115bc0abd80dd64ec4609e780311b84f6d4fdebc1d97c78afb84c",
+      "script_sha256": {
+        "work/verify-actor-schedule.ps1": "fee5f1459c03c89629db18beae5f239610451291eb4f8e486700d93c504f31b0"
+      }
+    },
+    {
+      "name": "animation-controls",
+      "scripts": [
+        "work/verify-animation-controls.ps1"
+      ],
+      "registrar": "tools/verify_animation_controls.py",
+      "report": "docs/stage9/animation-controls-verification.json",
+      "registrar_sha256": "9a9ab36f08ffb3f0dd931297cc6110295601bd4c8cefbdc3c3e23c93ecb6a5f8",
+      "script_sha256": {
+        "work/verify-animation-controls.ps1": "a563520b06e40b4cac7a94772e4bb4ac833395d8c3bc24a9dc600bd46638832f"
+      }
+    },
+    {
+      "name": "animation-sound-control",
+      "scripts": [
+        "work/verify-animation-sound-control.ps1"
+      ],
+      "registrar": "tools/verify_animation_sound_control.py",
+      "report": "docs/stage9/animation-sound-control-verification.json",
+      "registrar_sha256": "6639d384829a2739c7232b57e8dece0210a71d743fa4863087559a29ea5ea704",
+      "script_sha256": {
+        "work/verify-animation-sound-control.ps1": "afcf70e43da13fe288752a4b7d77bc9b5db7dbfcba0a640effca6b399a65b168"
+      }
+    },
+    {
+      "name": "camera-batch",
+      "scripts": [
+        "work/verify-camera-batch.ps1"
+      ],
+      "registrar": "tools/verify_camera_batch.py",
+      "report": "docs/stage9/camera-batch-verification.json",
+      "registrar_sha256": "eaf7c94baaece3e4cd9611c12e5a21d74eb350a32cffc114e2f1c5c19578d90e",
+      "script_sha256": {
+        "work/verify-camera-batch.ps1": "5ca71f059256fa39e31191774bb9769c9bea874a4dcdb867d06dd1288129f1e1"
+      }
+    },
+    {
+      "name": "collision-entries",
+      "scripts": [
+        "work/verify-collision-entries.ps1"
+      ],
+      "registrar": "tools/verify_collision_entries.py",
+      "report": "docs/stage9/collision-entries-verification.json",
+      "registrar_sha256": "f109b7a6da9f43feb61fbe046f5bfd2082a4dc82db9cde9803748d6abd06c747",
+      "script_sha256": {
+        "work/verify-collision-entries.ps1": "196ea705c5b6d81a993915b80a92c97ebe9874eb3e1d24056e0690506425754b"
+      }
+    },
+    {
+      "name": "collision-followups",
+      "scripts": [
+        "work/verify-collision-followups.ps1"
+      ],
+      "registrar": "tools/verify_collision_followups.py",
+      "report": "docs/stage9/collision-followups-verification.json",
+      "registrar_sha256": "8b8cdaf421f36a6021615fb59d240037b15942f43741c880b5e021d149167211",
+      "script_sha256": {
+        "work/verify-collision-followups.ps1": "8c00d8ab6777cb5849738e935fb62d605be75f9fd8cbae66821c3097825e18c8"
+      }
+    },
+    {
+      "name": "companion-follow",
+      "scripts": [
+        "work/verify-companion-follow.ps1"
+      ],
+      "registrar": "tools/verify_companion_follow.py",
+      "report": "docs/stage9/companion-follow-verification.json",
+      "registrar_sha256": "da04e84861070d08a40a2153807d94986fbe81986b4be4507b0142e391f412d7",
+      "script_sha256": {
+        "work/verify-companion-follow.ps1": "d5cd3c9e35c47f290abde43d6d080ca41f13c7a23ea186c300d85fcc333b1606"
+      }
+    },
+    {
+      "name": "companion-modes",
+      "scripts": [
+        "work/verify-companion-modes.ps1"
+      ],
+      "registrar": "tools/verify_companion_modes.py",
+      "report": "docs/stage9/companion-modes-verification.json",
+      "registrar_sha256": "95cbc0c63e78db66d0d11c92bfdad1688ae6f45b9ea8c3b61254d21561408379",
+      "script_sha256": {
+        "work/verify-companion-modes.ps1": "3c097d857cf7e39b3aaea5c314f31ab8372f9160ce8213d6bbd92ead87b2abbc"
+      }
+    },
+    {
+      "name": "companion-waiting",
+      "scripts": [
+        "work/verify-companion-waiting.ps1"
+      ],
+      "registrar": "tools/verify_companion_waiting.py",
+      "report": "docs/stage9/companion-waiting-verification.json",
+      "registrar_sha256": "8c708081a99a708380f3d72ee7162a5d5f8489fc026e2675b5551844d8cc4c7e",
+      "script_sha256": {
+        "work/verify-companion-waiting.ps1": "7cedee306679389558bcfa8a0470e4836a193637e9327a03823b910c17ac5548"
+      }
+    },
+    {
+      "name": "direction-vector",
+      "scripts": [
+        "work/verify-direction-vector.ps1"
+      ],
+      "registrar": "tools/verify_direction_vector.py",
+      "report": "docs/stage9/direction-vector-verification.json",
+      "registrar_sha256": "2c3860afd79c33256bc6df2bd636a83e87be5e29477cfb893ccf4d78c3187c2f",
+      "script_sha256": {
+        "work/verify-direction-vector.ps1": "09914e3547fea37f0fee076406626ff656ea6b9cf0c1dd63fa4bac88c619fff2"
+      }
+    },
+    {
+      "name": "display-resource-reset",
+      "scripts": [
+        "work/verify-display-resource-reset.ps1"
+      ],
+      "registrar": "tools/verify_display_resource_reset.py",
+      "report": "docs/stage9/display-resource-reset-verification.json",
+      "registrar_sha256": "6acdcbe732397680c1ffa41069f6e803882d47125530a0c8a14e9be08636cf3c",
+      "script_sha256": {
+        "work/verify-display-resource-reset.ps1": "9be3b374029c3e5aa21e4974d623ffd824b6f379c0df1e0a3536baa7bfd0bfe6"
+      }
+    },
+    {
+      "name": "graphics-pool",
+      "scripts": [
+        "work/verify-graphics-pool.ps1"
+      ],
+      "registrar": "tools/verify_graphics_pool.py",
+      "report": "docs/stage9/graphics-pool-verification.json",
+      "registrar_sha256": "0087b0f3bd5d85ead8cfb16cc1722c884f4dfdcea876496db3b177a9b181938c",
+      "script_sha256": {
+        "work/verify-graphics-pool.ps1": "4a80aa871a293880b21d9aa3314f511960eae4b2c12d53f097ecdc5ccdcb5ec7"
+      }
+    },
+    {
+      "name": "held-release",
+      "scripts": [
+        "work/verify-held-release.ps1"
+      ],
+      "registrar": "tools/verify_held_release.py",
+      "report": "docs/stage9/held-release-verification.json",
+      "registrar_sha256": "47984eab3e2bc4d9ff9bc62539ccaaead54f67f03030332f22025130e39ba157",
+      "script_sha256": {
+        "work/verify-held-release.ps1": "ebc67e50f4bde4c1f10d8f208717b393963f7541f6111148d5c1a717c4c07151"
+      }
+    },
+    {
+      "name": "input-impact-scroll",
+      "scripts": [
+        "work/verify-input-impact-scroll.ps1"
+      ],
+      "registrar": "tools/verify_input_impact_scroll.py",
+      "report": "docs/stage9/input-impact-scroll-verification.json",
+      "registrar_sha256": "ce40c5803171ca33cf9149479ec1cc1e3f6efd5450c234f9835946fea78e966b",
+      "script_sha256": {
+        "work/verify-input-impact-scroll.ps1": "f157740ee87cf0bec377bf83d554fe6269d06850b57cd8d07b86f28590fbdbdc"
+      }
+    },
+    {
+      "name": "marker-queues",
+      "scripts": [
+        "work/verify-marker-queues.ps1"
+      ],
+      "registrar": "tools/verify_marker_queues.py",
+      "report": "docs/stage9/marker-queues-verification.json",
+      "registrar_sha256": "77a09e9feaf4e2a332619f826a536b53ddf20b28f9367efc9ddb7e7853028361",
+      "script_sha256": {
+        "work/verify-marker-queues.ps1": "36b09c7592ee691699879c19390f6c420d72ae63fe02d803b63ce95b4a9f5647"
+      }
+    },
+    {
+      "name": "menu-control",
+      "scripts": [
+        "work/verify-menu-control.ps1"
+      ],
+      "registrar": "tools/verify_menu_control.py",
+      "report": "docs/stage9/menu-control-verification.json",
+      "registrar_sha256": "af1674666e55e57e75ab8c9e31d20fcda66a02b091909a9f15b51debe47a1687",
+      "script_sha256": {
+        "work/verify-menu-control.ps1": "e3206249f0c061737a698cb75f5d178554b9fb9ad410a0a7e0cf45d1ae729acf"
+      }
+    },
+    {
+      "name": "palette-batch",
+      "scripts": [
+        "work/verify-palette-batch.ps1"
+      ],
+      "registrar": "tools/verify_palette_batch.py",
+      "report": "docs/stage9/palette-batch-verification.json",
+      "registrar_sha256": "92ef18c3ef0aee58678ce468d3482dbbfe96e40c3866ce8406655856b488f2c4",
+      "script_sha256": {
+        "work/verify-palette-batch.ps1": "5f05d16ee50a5557d83508217bfea7d0a3eae547271368516fc2aba107789845"
+      }
+    },
+    {
+      "name": "phase-decimal-descriptor",
+      "scripts": [
+        "work/verify-phase-decimal-descriptor.ps1"
+      ],
+      "registrar": "tools/verify_phase_decimal_descriptor.py",
+      "report": "docs/stage9/phase-decimal-descriptor-verification.json",
+      "registrar_sha256": "37a6ba3f653b80250b156b4ab6625a6873ad46ad55b69c8284c2842b8a9adb7e",
+      "script_sha256": {
+        "work/verify-phase-decimal-descriptor.ps1": "884d250050452707340a337bf1e40f438ad854c0d23cb8c7f4be36591d63602e"
+      }
+    },
+    {
+      "name": "platform-contact",
+      "scripts": [
+        "work/verify-platform-contact.ps1"
+      ],
+      "registrar": "tools/verify_platform_contact.py",
+      "report": "docs/stage9/platform-contact-verification.json",
+      "registrar_sha256": "12a664b577dd32e98b347d07659712b0bf57960aab9936344a61d00501973e05",
+      "script_sha256": {
+        "work/verify-platform-contact.ps1": "817bf281a63837cbf277d77b175ee61a0eddfe3203b4af758823baecb07a2ab6"
+      }
+    },
+    {
+      "name": "player-ceiling",
+      "scripts": [
+        "work/verify-player-ceiling.ps1"
+      ],
+      "registrar": "tools/verify_player_ceiling.py",
+      "report": "docs/stage9/player-ceiling-verification.json",
+      "registrar_sha256": "633ac07a4bc86f6b3f3eb7e918386447c6fb07228574248974d4dea2f224acea",
+      "script_sha256": {
+        "work/verify-player-ceiling.ps1": "ee96bed5dc0c7e7a9003f7080d48a95f093e89f2be8842be0fa65225c119240e"
+      }
+    },
+    {
+      "name": "player-contact-resolution",
+      "scripts": [
+        "work/verify-player-contact-resolution.ps1"
+      ],
+      "registrar": "tools/verify_player_contact_resolution.py",
+      "report": "docs/stage9/player-contact-resolution-verification.json",
+      "registrar_sha256": "a80d178b7995383b097772458b631fadda229542023686e20c053db928e51abc",
+      "script_sha256": {
+        "work/verify-player-contact-resolution.ps1": "407aa96d2bea6fe80edc6a282e7c2cb8a254e74fd8ee2bb4bdcba9feed7dbcdd"
+      }
+    },
+    {
+      "name": "player-floor",
+      "scripts": [
+        "work/verify-player-floor.ps1"
+      ],
+      "registrar": "tools/verify_player_floor.py",
+      "report": "docs/stage9/player-floor-verification.json",
+      "registrar_sha256": "11edcb81494ecd6c8f2b13b7461e2207e2318ea5375ec54b9da912eaaadf1b8b",
+      "script_sha256": {
+        "work/verify-player-floor.ps1": "85d001de3749c9af8eb9bf6d52fba0214d651f0bf7e85907f531a9aaa2fbaf56"
+      }
+    },
+    {
+      "name": "player-presentation",
+      "scripts": [
+        "work/verify-player-presentation.ps1"
+      ],
+      "registrar": "tools/verify_player_presentation.py",
+      "report": "docs/stage9/player-presentation-verification.json",
+      "registrar_sha256": "1f19862caaa2c83b442649ec9c09fbae6c0df6aad99b8b4b0c9f2b4ce71c4e2a",
+      "script_sha256": {
+        "work/verify-player-presentation.ps1": "ca30da43ecd6fdd2ff7782f5da7b764093177dcb77e428a6e7f3b6ad335aee5a"
+      }
+    },
+    {
+      "name": "post-motion",
+      "scripts": [
+        "work/verify-post-motion.ps1"
+      ],
+      "registrar": "tools/verify_post_motion.py",
+      "report": "docs/stage9/post-motion-verification.json",
+      "registrar_sha256": "942ef780c94145a51c8e06e72b41bd5b022e9b6b9f6bb0602957ca46b3a8aafa",
+      "script_sha256": {
+        "work/verify-post-motion.ps1": "d777dfc8ae608e167aed4218e7f64c2eb41e7700460e9de02933342cc4080208"
+      }
+    },
+    {
+      "name": "quad-mapping",
+      "scripts": [
+        "work/verify-quad-mapping.ps1"
+      ],
+      "registrar": "tools/verify_quad_mapping.py",
+      "report": "docs/stage9/quad-mapping-verification.json",
+      "registrar_sha256": "aa52737a7da963d7b21373d93e931f420a3892c2b0f6d49ad6571f2420f02334",
+      "script_sha256": {
+        "work/verify-quad-mapping.ps1": "510a67a2ed253f17784d5353d1cfd0413f6ae96da310126513a7e081e3cd2c64"
+      }
+    },
+    {
+      "name": "terrain-camera",
+      "scripts": [
+        "work/verify-terrain-camera.ps1"
+      ],
+      "registrar": "tools/verify_terrain_camera.py",
+      "report": "docs/stage9/terrain-camera-verification.json",
+      "registrar_sha256": "afe95f15a128df853c239cc3b900cb454cc01d6d87e892f90cab560a7e5619e9",
+      "script_sha256": {
+        "work/verify-terrain-camera.ps1": "24a152908de8c63c4f522e2e0bb3ccfac56ad28ec438a0caae0be2374b188219"
+      }
+    },
+    {
+      "name": "terrain-macro",
+      "scripts": [
+        "work/verify-terrain-macro.ps1"
+      ],
+      "registrar": "tools/verify_terrain_macro.py",
+      "report": "docs/stage9/terrain-macro-verification.json",
+      "registrar_sha256": "26aa28d8b6c54bed6116e5913b237f7d25aa3261514653a15a0d98f96011266a",
+      "script_sha256": {
+        "work/verify-terrain-macro.ps1": "1bd58ad0b68415125d74468e6eb866eaac58f1a8e6262cded8f61f5bb285a5a7"
+      }
+    },
+    {
+      "name": "terrain-response",
+      "scripts": [
+        "work/verify-terrain-response.ps1"
+      ],
+      "registrar": "tools/verify_terrain_response.py",
+      "report": "docs/stage9/terrain-response-verification.json",
+      "registrar_sha256": "179032fdd607a0874a34a5999ba39d5efaa973a7281a516e1d574536664c35d8",
+      "script_sha256": {
+        "work/verify-terrain-response.ps1": "21bf4e57e2101c1461c31e4ac0b1cd5683b1c5507c91ae82d4b7e75f93b44802"
+      }
+    },
+    {
+      "name": "terrain-stream-batch",
+      "scripts": [
+        "work/verify-terrain-stream-batch.ps1"
+      ],
+      "registrar": "tools/verify_terrain_stream_batch.py",
+      "report": "docs/stage9/terrain-stream-batch-verification.json",
+      "registrar_sha256": "2a28a9097e01dab86e4e9ad29bfd7cab091086f705063ec6dfaeb7c6f03544b4",
+      "script_sha256": {
+        "work/verify-terrain-stream-batch.ps1": "49a7e482c3adda82be929e5a3c1e28e4b034d3e8ef2a77126cca1658ed2e02ec"
+      }
+    },
+    {
+      "name": "transporter-alignment",
+      "scripts": [
+        "work/verify-transporter-alignment.ps1"
+      ],
+      "registrar": "tools/verify_transporter_alignment.py",
+      "report": "docs/stage9/transporter-alignment-verification.json",
+      "registrar_sha256": "ca933c224e42edea9a8edd6d0843a8def4eb4d81c0e70f357aace37af032b8d0",
+      "script_sha256": {
+        "work/verify-transporter-alignment.ps1": "054d78e4e37f577898497efa609a3690786252034b2a902c76296a92cb89892f"
+      }
+    },
+    {
+      "name": "trigger-dispatch",
+      "scripts": [
+        "work/verify-trigger-dispatch.ps1"
+      ],
+      "registrar": "tools/verify_trigger_dispatch.py",
+      "report": "docs/stage9/trigger-dispatch-verification.json",
+      "registrar_sha256": "0ef4687aba419bfa572d4fb7650941ab943a5dc5ca101e984a9fe2f398d9f0fe",
+      "script_sha256": {
+        "work/verify-trigger-dispatch.ps1": "7da5ecb69cce02d568fe685da37d1d9934fa5a0fb137a3a82416bc6bede919ca"
+      }
+    },
+    {
+      "name": "visual-effects",
+      "scripts": [
+        "work/verify-visual-effects.ps1"
+      ],
+      "registrar": "tools/verify_visual_effects.py",
+      "report": "docs/stage9/visual-effects-verification.json",
+      "registrar_sha256": "8a119645272e3b7e8bc68ffe5129296a7cc5e149cd551d7574d3689dc8198c1c",
+      "script_sha256": {
+        "work/verify-visual-effects.ps1": "33ecef1af354fb3efe4a488f94ac0638e1aa44c3776f3a16de52479cb36e95b0"
+      }
+    },
+    {
+      "name": "world-jigsaw",
+      "scripts": [
+        "work/verify-world-jigsaw.ps1"
+      ],
+      "registrar": "tools/verify_world_jigsaw.py",
+      "report": "docs/stage9/world-jigsaw-verification.json",
+      "registrar_sha256": "1f65e71a3e062c15e0a01523cc45511bdd85ebce26880e50358ac2f65007063e",
+      "script_sha256": {
+        "work/verify-world-jigsaw.ps1": "1c99a07822147d0cc8d060a6e4c84efa367dd0494b0065dc7df947a8b3fb91cd"
+      }
+    },
+    {
+      "name": "world-route",
+      "scripts": [
+        "work/verify-world-route.ps1"
+      ],
+      "registrar": "tools/verify_world_route.py",
+      "report": "docs/stage9/world-route-verification.json",
+      "registrar_sha256": "9234938308379daf557b60b6cbe8d42b859859411113a81fc3bd08e1abd779d7",
+      "script_sha256": {
+        "work/verify-world-route.ps1": "616470c8895f0117ebfd28ee8517e8a4b3120c7ee67d296bb77ec1c4da90b9ec"
+      }
+    },
+    {
+      "name": "world-shared",
+      "scripts": [
+        "work/verify-world-shared.ps1"
+      ],
+      "registrar": "tools/verify_world_shared.py",
+      "report": "docs/stage9/world-shared-verification.json",
+      "registrar_sha256": "aff4346b5ef503a71fb424b341cb435e5226ced35807e63acfc75f52a92d8668",
+      "script_sha256": {
+        "work/verify-world-shared.ps1": "73f58aa527a8214b7245c5898b02987b833a60d5fce865ae49b51a647654a666"
+      }
+    },
+    {
+      "name": "bounce-spawn",
+      "scripts": [
+        "work/verify-bounce-callers.ps1",
+        "work/verify-spawn-factory.ps1"
+      ],
+      "registrar": "tools/verify_bounce_spawn.py",
+      "report": "docs/stage9/bounce-spawn-verification.json",
+      "registrar_sha256": "e2907043da7f75ca52c6562469724389336b043ed69565deb1002f1dc948a939",
+      "script_sha256": {
+        "work/verify-bounce-callers.ps1": "66b0bc2126cf394d6e7784b59d7f0bfbc737a60602c314151d72345de191ce21",
+        "work/verify-spawn-factory.ps1": "4fadc08943ada6f007fb9c6931272483aeedde7ac45d4e9a1eae41319b7f50cc"
+      }
+    },
+    {
+      "name": "animation-extra-controls",
+      "scripts": [
+        "work/verify-animation-extra-controls.ps1"
+      ],
+      "registrar": "tools/verify_animation_extra_controls.py",
+      "report": "docs/stage9/animation-extra-controls-verification.json",
+      "registrar_sha256": "7adb9e67653617add9e190dca345733f4481e4ca613be4796fd7ca693aa2903a",
+      "script_sha256": {
+        "work/verify-animation-extra-controls.ps1": "734edc40c5a167f3e71e2882b88539be54e58a0a326c6c7a4a5a7870a6f3f02b"
+      }
+    },
+    {
+      "name": "actor-displacement",
+      "scripts": [
+        "work/verify-actor-displacement.ps1"
+      ],
+      "registrar": "tools/verify_actor_displacement.py",
+      "report": "docs/stage9/actor-displacement-verification.json",
+      "registrar_sha256": "7ccb43549c10ee2c2751d25e3249faf434b729863677ffc88ff2fdaba14ae9a2",
+      "script_sha256": {
+        "work/verify-actor-displacement.ps1": "d439312aec26a38ca6cdcece3dda5fce8bf79e608697dcef94f3f71a183efb01"
+      }
+    },
+    {
+      "name": "actor-anchor-follow",
+      "scripts": [
+        "work/verify-actor-anchor-follow.ps1"
+      ],
+      "registrar": "tools/verify_actor_anchor_follow.py",
+      "report": "docs/stage9/actor-anchor-follow-verification.json",
+      "registrar_sha256": "15415fc431ab31b8be96503ac76ede8dd311465a3c05c76919ba80e8aa0617ea",
+      "script_sha256": {
+        "work/verify-actor-anchor-follow.ps1": "9e59765d00fd0e30107c50b59ae4856717cee85bdfdb334ea1351df31a438a0b"
+      }
+    },
+    {
+      "name": "spawn-branch-family",
+      "scripts": [
+        "work/verify-spawn-branch-family.ps1"
+      ],
+      "registrar": "tools/verify_spawn_branch_family.py",
+      "report": "docs/stage9/spawn-branch-family-verification.json",
+      "registrar_sha256": "e99ec5c614bcdb7f5970d3fb110f42cbb51568219c019caecc8a09c01513df51",
+      "script_sha256": {
+        "work/verify-spawn-branch-family.ps1": "33bf4cff7874b71f3ad19925d02465ac3dbcb615b94174a6055963a969a558d9"
+      }
+    },
+    {
+      "name": "actor-wave-motion",
+      "scripts": [
+        "work/verify-actor-wave-motion.ps1"
+      ],
+      "registrar": "tools/verify_actor_wave_motion.py",
+      "report": "docs/stage9/actor-wave-motion-verification.json",
+      "registrar_sha256": "fdba341efa792799c024ae06d4014ffdb2021e8eeb90e7c405b8141dda8e7a2c",
+      "script_sha256": {
+        "work/verify-actor-wave-motion.ps1": "2b61164f0fece3eb43d3d5b2a53092f31a11c1df3c39ded4f78c63dc4f14a14b"
+      }
+    },
+    {
+      "name": "actor-platform-family",
+      "scripts": [
+        "work/verify-actor-platform-family.ps1"
+      ],
+      "registrar": "tools/verify_actor_platform_family.py",
+      "report": "docs/stage9/actor-platform-family-verification.json",
+      "registrar_sha256": "ce8a8ecb3442c9fa39d99e01c762abb0fdb80e6f80a68ebc4782e7b9a7e7f93a",
+      "script_sha256": {
+        "work/verify-actor-platform-family.ps1": "36ed0acb28c573dbe5a2ef465c76159f73c5593f409f80bc6089a51acdfa0b44"
+      }
+    },
+    {
+      "name": "shared-frame-services",
+      "scripts": [
+        "work/verify-shared-frame-services.ps1"
+      ],
+      "registrar": "tools/verify_shared_frame_services.py",
+      "report": "docs/stage9/shared-frame-services-verification.json",
+      "registrar_sha256": "b68fdff5ba71156f84241e3cf47ce02af01ca9f38153baf8f8ddccd4e5996a75",
+      "script_sha256": {
+        "work/verify-shared-frame-services.ps1": "fc19afdac533588166e3c9c2aac40cf843fa450b4c62db3c0bba90e6fb84d18a"
+      }
+    },
+    {
+      "name": "actor-contact-family",
+      "scripts": [
+        "work/verify-actor-contact-family.ps1"
+      ],
+      "registrar": "tools/verify_actor_contact_family.py",
+      "report": "docs/stage9/actor-contact-family-verification.json",
+      "registrar_sha256": "3d6a719503509a14474450d1d5dd389353f75885e87ab343b52a87fba65a68c4",
+      "script_sha256": {
+        "work/verify-actor-contact-family.ps1": "8e11e2d1b6b407dc0ef976af225350f454f2f09739ee7f267cf2f9f0d90b3d03"
+      }
+    },
+    {
+      "name": "level-frame-orchestration",
+      "scripts": [
+        "work/verify-level-frame-orchestration.ps1"
+      ],
+      "registrar": "tools/verify_level_frame_orchestration.py",
+      "report": "docs/stage9/level-frame-orchestration-verification.json",
+      "registrar_sha256": "4b29b4c515e8357a7a8ea7b82c30b5cdb357daf54d8ba43c2bc91554af75efc7",
+      "script_sha256": {
+        "work/verify-level-frame-orchestration.ps1": "2745ba65b7af6afde1da4ae0583316b79fe029a94edbad69b27dc40959cf20a3"
+      }
+    },
+    {
+      "name": "direct-player-contact",
+      "scripts": [
+        "work/verify-direct-player-contact.ps1"
+      ],
+      "registrar": "tools/verify_direct_player_contact.py",
+      "report": "docs/stage9/direct-player-contact-verification.json",
+      "registrar_sha256": "5c36372e25b576cfac23a7ea031706139334c0f45661fe9d897676cb5dfc3376",
+      "script_sha256": {
+        "work/verify-direct-player-contact.ps1": "30a5621f1a850930ea0c2825e8659e3ddb51560e60f62f2a88b7fc780119802b"
+      }
+    },
+    {
+      "name": "actor-rider-platforms",
+      "scripts": [
+        "work/verify-actor-rider-platforms.ps1"
+      ],
+      "registrar": "tools/verify_actor_rider_platforms.py",
+      "report": "docs/stage9/actor-rider-platforms-verification.json",
+      "registrar_sha256": "0357d2e28c468a789dae18b80fce4270dd3fc89107580338dcd7390fed8f07b3",
+      "script_sha256": {
+        "work/verify-actor-rider-platforms.ps1": "9f8949a01d59c5d0e8b1ab7602e38fbde39bb2a71a12eaff8d1d5532baf64bd8"
+      }
+    },
+    {
+      "name": "actor-triggered-platforms",
+      "scripts": [
+        "work/verify-actor-triggered-platforms.ps1"
+      ],
+      "registrar": "tools/verify_actor_triggered_platforms.py",
+      "report": "docs/stage9/actor-triggered-platforms-verification.json",
+      "registrar_sha256": "e63bf27fe26f997814b5a3acb740db36fc461ed26c1405a9d0f421372c1a3373",
+      "script_sha256": {
+        "work/verify-actor-triggered-platforms.ps1": "a59984d813da2e90f558c0a6de34fd6677faa24b18b7bee78dedab6d75315678"
+      }
+    },
+    {
+      "name": "actor-bounce-chain-platforms",
+      "scripts": [
+        "work/verify-actor-bounce-chain-platforms.ps1"
+      ],
+      "registrar": "tools/verify_actor_bounce_chain_platforms.py",
+      "report": "docs/stage9/actor-bounce-chain-platforms-verification.json",
+      "registrar_sha256": "9be867c2ef6a58d2de6f16cd45c1d7b06604e4a38a2a50e3928e3fa214e84386",
+      "script_sha256": {
+        "work/verify-actor-bounce-chain-platforms.ps1": "7e0479e4d7c713c98fb445724d64e91fdcfafd78a87663ae15ba73e119d7cd9c"
+      }
+    },
+    {
+      "name": "actor-platform-dispatch",
+      "scripts": [
+        "work/verify-actor-platform-dispatch.ps1"
+      ],
+      "registrar": "tools/verify_actor_platform_dispatch.py",
+      "report": "docs/stage9/actor-platform-dispatch-verification.json",
+      "registrar_sha256": "f8a80b0bd7b4c0462cd01e3c34f8717d694a31b22c4efcaed13611cb5581d475",
+      "script_sha256": {
+        "work/verify-actor-platform-dispatch.ps1": "77216d59d6f34e4931a20a984af39e5f5e3900468f2965f4f0033e25e3b2dd18"
+      }
+    },
+    {
+      "name": "platform-surface",
+      "scripts": [
+        "work/verify-platform-surface.ps1"
+      ],
+      "registrar": "tools/verify_platform_surface.py",
+      "report": "docs/stage9/platform-surface-verification.json",
+      "registrar_sha256": "3d8a84c42f4c62a8bb5f3684dabd59aca8e41df13bb3cf83d1f97d5e316033c7",
+      "script_sha256": {
+        "work/verify-platform-surface.ps1": "3d1bde4d8b1d6c923df0bb51d8d92e75341a15fec89808885ec3ecd7da6d0e30"
+      }
+    },
+    {
+      "name": "display-port-publication",
+      "scripts": [
+        "work/verify-display-port-publication.ps1"
+      ],
+      "registrar": "tools/verify_display_port_publication.py",
+      "report": "docs/stage9/display-port-publication-verification.json",
+      "registrar_sha256": "ed38eb151a6e3cb6526d498e0ee1629ccf79e2ccf55d1cb7f60b9c22fa12a288",
+      "script_sha256": {
+        "work/verify-display-port-publication.ps1": "a3add83ff49d4f1ad96ad8c353d79cbbde3002de870120d7ec67ede7bb650583"
+      }
+    },
+    {
+      "name": "backward-asset-codec",
+      "scripts": [
+        "work/verify-backward-asset-codec.ps1"
+      ],
+      "registrar": "tools/verify_backward_asset_codec.py",
+      "report": "docs/stage9/backward-asset-codec-verification.json",
+      "registrar_sha256": "cd507dc0708f7d8d7b0a3609e57e530086870d1d8e1552b75f30948c06ec7d6a",
+      "script_sha256": {
+        "work/verify-backward-asset-codec.ps1": "37f16bf11e16cc716e317127cc34b84c3fef9235856ad98be33d9e7416a7d4d8"
+      }
+    },
+    {
+      "name": "player-startup-followup",
+      "scripts": [
+        "work/verify-player-startup-followup.ps1"
+      ],
+      "registrar": "tools/verify_player_startup_followup.py",
+      "report": "docs/stage9/player-startup-followup-verification.json",
+      "registrar_sha256": "806241bd18c78926d15378e633c0c5e8c67b79e087551103f4ed65b6ed4cc904",
+      "script_sha256": {
+        "work/verify-player-startup-followup.ps1": "bf2b7d577ff7ad346d8d4fbcb0d3d3c50e068a5c96f39fbc273257408624108a"
+      }
+    },
+    {
+      "name": "actor-pursuit-family",
+      "scripts": [
+        "work/verify-actor-pursuit-family.ps1"
+      ],
+      "registrar": "tools/verify_actor_pursuit_family.py",
+      "report": "docs/stage9/actor-pursuit-family-verification.json",
+      "registrar_sha256": "eff942cef5eb2975fd81c856fc5268f3ac5986867bd3687e61b0c83fa79ea04f",
+      "script_sha256": {
+        "work/verify-actor-pursuit-family.ps1": "4a6c6ea47704afb263685fee94c186affc860edf201dcb1ada721b99bc95838a"
+      }
+    },
+    {
+      "name": "actor-scene-rewards",
+      "scripts": [
+        "work/verify-actor-scene-rewards.ps1"
+      ],
+      "registrar": "tools/verify_actor_scene_rewards.py",
+      "report": "docs/stage9/actor-scene-rewards-verification.json",
+      "registrar_sha256": "448c36bb603f737915118505a902ed5816eeab7f4a605b874ee3b4f7d4c23465",
+      "script_sha256": {
+        "work/verify-actor-scene-rewards.ps1": "dd372cc4b4244699a2721216ce76de55516d2b8bff2f5f07c73e842e32b440ac"
+      }
+    },
+    {
+      "name": "sprite-frame-publication",
+      "scripts": [
+        "work/verify-sprite-frame-publication.ps1"
+      ],
+      "registrar": "tools/verify_sprite_frame_publication.py",
+      "report": "docs/stage9/sprite-frame-publication-verification.json",
+      "registrar_sha256": "fa722d3dafe7d5a3155ce526c1ef144afc5d768e08469f8356bf5609b772b9ec",
+      "script_sha256": {
+        "work/verify-sprite-frame-publication.ps1": "59c69e8c63b56d4a735ba10947d337716114e8ac726463482bcfb040dfdfb501"
+      }
+    },
+    {
+      "name": "anchor-follow-offset",
+      "scripts": [
+        "work/verify-anchor-follow-offset.ps1"
+      ],
+      "registrar": "tools/verify_anchor_follow_offset.py",
+      "report": "docs/stage9/anchor-follow-offset-verification.json",
+      "registrar_sha256": "6e731690b2027d92899726f88f7df361243dc4b5552bebc7b809b47af2736f87",
+      "script_sha256": {
+        "work/verify-anchor-follow-offset.ps1": "d9e7fd20dffcf15ef1934dc69b78ff8c8e6a54c422a6ebe57882263f94aa1840"
+      }
+    },
+    {
+      "name": "actor-injury-dispatch",
+      "scripts": [
+        "work/verify-actor-injury-dispatch.ps1"
+      ],
+      "registrar": "tools/verify_actor_injury_dispatch.py",
+      "report": "docs/stage9/actor-injury-dispatch-verification.json",
+      "registrar_sha256": "2f1ec691360c8d9d1bf23c9c9a2b5ef757b2179a8c90821b23058c83331aaca5",
+      "script_sha256": {
+        "work/verify-actor-injury-dispatch.ps1": "d100fb6d36cc00c6cc1e641bc2950671658d55fd3b05dc7074d754aae1c26909"
+      }
+    },
+    {
+      "name": "actor-phase-mechanism",
+      "scripts": [
+        "work/verify-actor-phase-mechanism.ps1"
+      ],
+      "registrar": "tools/verify_actor_phase_mechanism.py",
+      "report": "docs/stage9/actor-phase-mechanism-verification.json",
+      "registrar_sha256": "e4078d5297fba35af931f0861c3168043dc5a09de94796e23e1e5a67b5d12dd5",
+      "script_sha256": {
+        "work/verify-actor-phase-mechanism.ps1": "a99e5177f7f829b9d30c444b79dcb3b290a4a2abe280192a792dec7981cdcd2a"
+      }
+    },
+    {
+      "name": "actor-probe-patrol",
+      "scripts": [
+        "work/verify-actor-probe-patrol.ps1"
+      ],
+      "registrar": "tools/verify_actor_probe_patrol.py",
+      "report": "docs/stage9/actor-probe-patrol-verification.json",
+      "registrar_sha256": "1273cd9d76bee26ee2c6af5c6fa1258401f342fb5159fb9799f4ad1afeea9ce5",
+      "script_sha256": {
+        "work/verify-actor-probe-patrol.ps1": "057dceab06858e2c773732fe69487202baaf13f5304abac9c439d5cd1e3df759"
+      }
+    },
+    {
+      "name": "actor-orbit-leap",
+      "scripts": [
+        "work/verify-actor-orbit-leap.ps1"
+      ],
+      "registrar": "tools/verify_actor_orbit_leap.py",
+      "report": "docs/stage9/actor-orbit-leap-verification.json",
+      "registrar_sha256": "4cd75f827773d4e56a359f6403432818415b348b0b956d5b49c6b3c1baeb9d64",
+      "script_sha256": {
+        "work/verify-actor-orbit-leap.ps1": "6136337f2f9d9fcf70d89c1e7663388c1f36b9a8ce3bdb4b68971ac8b0b831be"
+      }
+    },
+    {
+      "name": "actor-rescue-presentation",
+      "scripts": [
+        "work/verify-actor-rescue-presentation.ps1"
+      ],
+      "registrar": "tools/verify_actor_rescue_presentation.py",
+      "report": "docs/stage9/actor-rescue-presentation-verification.json",
+      "registrar_sha256": "5b2dfa96323a0fbddba1561e4ac19a2d53e11efedf0ad9e6c0fd85b2c04bb0e2",
+      "script_sha256": {
+        "work/verify-actor-rescue-presentation.ps1": "e14094f0dc07012402511b0db841047f401f231868c981255fd9a6a330d71107"
+      }
+    },
+    {
+      "name": "actor-facing-emitter",
+      "scripts": [
+        "work/verify-actor-facing-emitter.ps1"
+      ],
+      "registrar": "tools/verify_actor_facing_emitter.py",
+      "report": "docs/stage9/actor-facing-emitter-verification.json",
+      "registrar_sha256": "728f273a6337c0b7b4d5bf836927f9b79cdd537e0c8c4c14d2744339b980ac7f",
+      "script_sha256": {
+        "work/verify-actor-facing-emitter.ps1": "dbae35b25d812f070a386073342d301c3ffff23c86e09ba47dc44c01b015fb58"
+      }
+    },
+    {
+      "name": "player-side-entries",
+      "scripts": [
+        "work/verify-player-side-entries.ps1"
+      ],
+      "registrar": "tools/verify_player_side_entries.py",
+      "report": "docs/stage9/player-side-entries-verification.json",
+      "registrar_sha256": "f8944e72440bef719b207d658e0a47aa3b5a146b1e23d91386e804c69c4e9f69",
+      "script_sha256": {
+        "work/verify-player-side-entries.ps1": "2bb58ffe6b9e038e110a73c979fd4a58669724dc5d907f68a99692113e10906b"
+      }
+    },
+    {
+      "name": "controlled-actor-transition",
+      "scripts": [
+        "work/verify-controlled-actor-transition.ps1"
+      ],
+      "registrar": "tools/verify_controlled_actor_transition.py",
+      "report": "docs/stage9/controlled-actor-transition-verification.json",
+      "registrar_sha256": "ea8e3d18f717a86a3df9cbfc728f2840d494c15c81d049c81fe35981d5274c5b",
+      "script_sha256": {
+        "work/verify-controlled-actor-transition.ps1": "b9c38c2a6cf9c5c5c52e6fbb38c7af7e0d54774c50e263cc3c3432edab5c9b30"
+      }
+    },
+    {
+      "name": "companion-entry-contracts",
+      "scripts": [
+        "work/verify-companion-entry-contracts.ps1"
+      ],
+      "registrar": "tools/verify_companion_entry_contracts.py",
+      "report": "docs/stage9/companion-entry-contracts-verification.json",
+      "registrar_sha256": "ecc7d91c35f5de07d064b228eae14b99678d6472067d2221a74efba0ddfa2a37",
+      "script_sha256": {
+        "work/verify-companion-entry-contracts.ps1": "c7374956d6f329b0cd1b3cc1ab83961513dcba10707d5b050378de97167225f7"
+      }
+    },
+    {
+      "name": "palette-entry-contracts",
+      "scripts": [
+        "work/verify-palette-entry-contracts.ps1"
+      ],
+      "registrar": "tools/verify_palette_entry_contracts.py",
+      "report": "docs/stage9/palette-entry-contracts-verification.json",
+      "registrar_sha256": "1be3a75fedd691d6d948a7da5bafbeabcfa97bfe31140b6af1fc0ca777eff053",
+      "script_sha256": {
+        "work/verify-palette-entry-contracts.ps1": "c132501ee0511ccdfede6b689cf4427e626152f2fb0c35774632917a64bab0cf"
+      }
+    },
+    {
+      "name": "input-transfer-entries",
+      "scripts": [
+        "work/verify-input-transfer-entries.ps1"
+      ],
+      "registrar": "tools/verify_input_transfer_entries.py",
+      "report": "docs/stage9/input-transfer-entries-verification.json",
+      "registrar_sha256": "6d23c6eb1165ee645956b80194757d3a1c0df8ec209f81357224b67adbfd0add",
+      "script_sha256": {
+        "work/verify-input-transfer-entries.ps1": "40273fbdde9bfe768705d66cd68d0aef33eca655c6d89b856755953ea39ca605"
+      }
+    },
+    {
+      "name": "actor-phase-emitters",
+      "scripts": [
+        "work/verify-actor-phase-emitters.ps1"
+      ],
+      "registrar": "tools/verify_actor_phase_emitters.py",
+      "report": "docs/stage9/actor-phase-emitters-verification.json",
+      "registrar_sha256": "fcc7e848b29570d997ec58bd0cdc54dae144c873049c35c5f0b75d388e909160",
+      "script_sha256": {
+        "work/verify-actor-phase-emitters.ps1": "da0ab9ebe565f74a391115b3d41fdcbfba74375976251d4956899a123e3f0108"
+      }
+    },
+    {
+      "name": "actor-graphic-phases",
+      "scripts": [
+        "work/verify-actor-graphic-phases.ps1"
+      ],
+      "registrar": "tools/verify_actor_graphic_phases.py",
+      "report": "docs/stage9/actor-graphic-phases-verification.json",
+      "registrar_sha256": "df59482ab952885aefb31d4e0e649709eb91c2de660bea7cddd909a7fdddd650",
+      "script_sha256": {
+        "work/verify-actor-graphic-phases.ps1": "a42c728f86f8786456c90e455aa0de5493fdb7f2577da4fe8d4812ee1accfeb2"
+      }
+    },
+    {
+      "name": "level-map-entries",
+      "scripts": [
+        "work/verify-level-map-entries.ps1"
+      ],
+      "registrar": "tools/verify_level_map_entries.py",
+      "report": "docs/stage9/level-map-entries-verification.json",
+      "registrar_sha256": "a2d2ba824b0b701d2a726c99e0d175e51389b3c314cb40781506df536e5835a0",
+      "script_sha256": {
+        "work/verify-level-map-entries.ps1": "96ef9eb69e088ee8ce94be2f01903d4a4b8f869bec73f17f3dc6f839135cb8cd"
+      }
+    },
+    {
+      "name": "macro-reward-entries",
+      "scripts": [
+        "work/verify-macro-reward-entries.ps1"
+      ],
+      "registrar": "tools/verify_macro_reward_entries.py",
+      "report": "docs/stage9/macro-reward-entries-verification.json",
+      "registrar_sha256": "ae771c56377758b19db5e8b50796d99e6a7dc5e9ebc6d6a89beaf1c724b4e114",
+      "script_sha256": {
+        "work/verify-macro-reward-entries.ps1": "17fc087f2d28d64e0e93ed4c2f04dfcaf7d6e68eb4b7333a5467ff30c0557298"
+      }
+    },
+    {
+      "name": "actor-remaining-motion",
+      "scripts": [
+        "work/verify-actor-remaining-motion.ps1"
+      ],
+      "registrar": "tools/verify_actor_remaining_motion.py",
+      "report": "docs/stage9/actor-remaining-motion-verification.json",
+      "registrar_sha256": "fee6c7dfc32c969988f77ffe99731e6e42a689d082bdfe5ba989360ac62babd5",
+      "script_sha256": {
+        "work/verify-actor-remaining-motion.ps1": "6e4ff58c438a402d77dbf8a106bef0a82e315374e5821e0233914fc5ee264f29"
+      }
+    },
+    {
+      "name": "linked-actor-families",
+      "scripts": [
+        "work/verify-linked-actor-families.ps1"
+      ],
+      "registrar": "tools/verify_linked_actor_families.py",
+      "report": "docs/stage9/linked-actor-families-verification.json",
+      "registrar_sha256": "467f1ed3892cd549f6ac655f0325d7a6bb9ac2e070b0b944ac1a3ca331bb51c5",
+      "script_sha256": {
+        "work/verify-linked-actor-families.ps1": "25e6bfc2e45c192891975d4caf82fcb6e9042981d01978368498b47b4d827f5c"
+      }
+    },
+    {
+      "name": "macro-graphics-entries",
+      "scripts": [
+        "work/verify-macro-graphics-entries.ps1"
+      ],
+      "registrar": "tools/verify_macro_graphics_entries.py",
+      "report": "docs/stage9/macro-graphics-entries-verification.json",
+      "registrar_sha256": "84d60b0fb3c29af88b43beb999ef756fbcddbe7fd4f4db1e1fda7545653443d1",
+      "script_sha256": {
+        "work/verify-macro-graphics-entries.ps1": "5952c572865e60616a46685f22eba8eeac1aa0d68b7e9f480ad507006969f764"
+      }
+    },
+    {
+      "name": "sprite-bucket-entries",
+      "scripts": [
+        "work/verify-sprite-bucket-entries.ps1"
+      ],
+      "registrar": "tools/verify_sprite_bucket_entries.py",
+      "report": "docs/stage9/sprite-bucket-entries-verification.json",
+      "registrar_sha256": "0c16243848ebd59935389a375abc3c0ba7cca6a6fd198d4b44f1f1897d0046fb",
+      "script_sha256": {
+        "work/verify-sprite-bucket-entries.ps1": "8a44d36aa152f239c45398b7cb7840e7a7c049e8813cf535893ce4025b6bdf2e"
+      }
+    },
+    {
+      "name": "level-menu-publication",
+      "scripts": [
+        "work/verify-level-menu-publication.ps1"
+      ],
+      "registrar": "tools/verify_level_menu_publication.py",
+      "report": "docs/stage9/level-menu-publication-verification.json",
+      "registrar_sha256": "d17e9ca797440bfaf00c4c1816951537f10a7b9908a3748aaf2d4861270ab382",
+      "script_sha256": {
+        "work/verify-level-menu-publication.ps1": "814f0a3e5298443906debffe82e68ddadfcc87c13e9642d5f576cace61b5c8cd"
+      }
+    },
+    {
+      "name": "world-container-binding",
+      "scripts": [
+        "work/verify-world-container-binding.ps1"
+      ],
+      "registrar": "tools/verify_container_update.py",
+      "report": "docs/stage9/container-update-verification.json",
+      "registrar_sha256": "0fc95f80b5865df93baafcdea5ef92670d972cd36f5f5d5fab7fcaf8a656fac9",
+      "script_sha256": {
+        "work/verify-world-container-binding.ps1": "a50772123d99c02d7b3d358d937bf2a72d0478a8ffaa60096961f293775ee730"
+      }
+    },
+    {
+      "name": "world-exit-binding",
+      "scripts": [
+        "work/verify-world-exit-binding.ps1"
+      ],
+      "registrar": "tools/verify_level_exit.py",
+      "report": "docs/stage9/level-exit-verification.json",
+      "registrar_sha256": "35804754e5755010f8c0e92ae7326490d052ac13bb416fb23dc42a60effc9d94",
+      "script_sha256": {
+        "work/verify-world-exit-binding.ps1": "f29e90440b7145209a1b7a4f2e4b7d00a6c59ed2e0eaf64e85a44a5770007cd9"
+      }
+    },
+    {
+      "name": "world-key-binding",
+      "scripts": [
+        "work/verify-world-key-binding.ps1"
+      ],
+      "registrar": "tools/verify_key_actor.py",
+      "report": "docs/stage9/key-actor-verification.json",
+      "registrar_sha256": "cee426b47c8372df2996104113d5f4ab37c373c508e3c55c246dea1de9dc8b5a",
+      "script_sha256": {
+        "work/verify-world-key-binding.ps1": "55e8f68f213c92352ba534eaf08f0c5d23a74c1dd7163c92dd78aba776b7e334"
+      }
+    },
+    {
+      "name": "world-piece-binding",
+      "scripts": [
+        "work/verify-world-piece-binding.ps1"
+      ],
+      "registrar": "tools/verify_piece_collection.py",
+      "report": "docs/stage9/piece-collection-verification.json",
+      "registrar_sha256": "7014f901a10d399cecefd90cf86048d43d5e00a6e035aae1a53d59d200fbb6e3",
+      "script_sha256": {
+        "work/verify-world-piece-binding.ps1": "9958afab75b459c1af5a79349ac6147abac38658b1a7f18279e2fa16251abcd5"
+      }
+    },
+    {
+      "name": "text-strip-publication",
+      "scripts": [
+        "work/verify-text-strip-publication.ps1"
+      ],
+      "registrar": "tools/verify_text_strip_publication.py",
+      "report": "docs/stage9/text-strip-publication-verification.json",
+      "registrar_sha256": "d238efcd48077b830590dd644ced7cedc738fffe3dc7c97dd4429778a996c4c9",
+      "script_sha256": {
+        "work/verify-text-strip-publication.ps1": "9a4531fea083b6dd4d861c858571a2c2b037837bfa0bea00854c8e4ec932fae6"
+      }
+    },
+    {
+      "name": "text-tile-publication",
+      "scripts": [
+        "work/verify-text-tile-publication.ps1"
+      ],
+      "registrar": "tools/verify_text_tile_publication.py",
+      "report": "docs/stage9/text-tile-publication-verification.json",
+      "registrar_sha256": "b9b9199fd810c5b9c2b354dc1a18ebd1c561e2002cd85d122a025b2b0b792d38",
+      "script_sha256": {
+        "work/verify-text-tile-publication.ps1": "261cd0af46feb20812c2165cfeb7e88c9386b46b58b511cbb62c254044ebcabd"
+      }
+    },
+    {
+      "name": "campaign-node-completion",
+      "scripts": [
+        "work/verify-campaign-node-completion.ps1"
+      ],
+      "registrar": "tools/verify_campaign_node_completion.py",
+      "report": "docs/stage9/campaign-node-completion-verification.json",
+      "registrar_sha256": "87bf786e1405a004ea1c2e162c84e87fd1a646761284a6ad4ab7ecbb23644a84",
+      "script_sha256": {
+        "work/verify-campaign-node-completion.ps1": "de4169b6c47199f195433d71d3a55bdc70eb74a7cdb97173d72d7342a6ee9eae"
+      }
+    },
+    {
+      "name": "screen-text-controls",
+      "scripts": [
+        "work/verify-screen-text-controls.ps1"
+      ],
+      "registrar": "tools/verify_screen_text_controls.py",
+      "report": "docs/stage9/screen-text-controls-verification.json",
+      "registrar_sha256": "5e8cf31ba1b660565f446a9608303baf23c12538090ee0f1de215ddd3a9e0774",
+      "script_sha256": {
+        "work/verify-screen-text-controls.ps1": "be24059633686e867e84f9d20aa5fd28590ae498aa3c157d01ad83c9481872f0"
+      }
+    },
+    {
+      "name": "text-numeric-sprites",
+      "scripts": [
+        "work/verify-text-numeric-sprites.ps1"
+      ],
+      "registrar": "tools/verify_text_numeric_sprites.py",
+      "report": "docs/stage9/text-numeric-sprites-verification.json",
+      "registrar_sha256": "73b463db2f9de56d19de8bd778c837b60446c01e338689d71ef006c6ebf050e6",
+      "script_sha256": {
+        "work/verify-text-numeric-sprites.ps1": "8ec3ec4057962203fb523adcdc6dc28087d2020b8de37b9f09565c070abe2f7a"
+      }
+    },
+    {
+      "name": "actor-phase-ending",
+      "scripts": [
+        "work/verify-actor-phase-ending.ps1"
+      ],
+      "registrar": "tools/verify_actor_phase_ending.py",
+      "report": "docs/stage9/actor-phase-ending-verification.json",
+      "registrar_sha256": "b4630be73f702489c62b9ee507945ffaf0fc60fd5d8b6c976a1aacaea56b5733",
+      "script_sha256": {
+        "work/verify-actor-phase-ending.ps1": "5288e09bd753e647c346504ff533ab4e5c040764c191a9a672c5ca868eee8ea3"
+      }
+    },
+    {
+      "name": "startup-display-contracts",
+      "scripts": [
+        "work/verify-startup-display-contracts.ps1"
+      ],
+      "registrar": "tools/verify_startup_display_contracts.py",
+      "report": "docs/stage9/startup-display-contracts-verification.json",
+      "registrar_sha256": "5de487fee53ce4ba953004452d1355e5da9ab1910425bf11c8946d750b6db65e",
+      "script_sha256": {
+        "work/verify-startup-display-contracts.ps1": "97df533dba4aa5ed40870848e42855610d5e5e942494e4488f220781a2e15057"
+      }
+    },
+    {
+      "name": "companion-return-entries",
+      "scripts": [
+        "work/verify-companion-return-entries.ps1"
+      ],
+      "registrar": "tools/verify_companion_return_entries.py",
+      "report": "docs/stage9/companion-return-entries-verification.json",
+      "registrar_sha256": "bf2ed2ceb517ae2f684fd195f8cbc1740cc81c038354002d3c4a6ed5079f12d0",
+      "script_sha256": {
+        "work/verify-companion-return-entries.ps1": "aab2b1199d33ee4c03bead73e78c1fbc0d13cbdd8604abe073d4454aef3d76d3"
+      }
+    },
+    {
+      "name": "indexed-shared-access",
+      "scripts": [
+        "work/verify-indexed-shared-access.ps1"
+      ],
+      "registrar": "tools/verify_indexed_shared_access.py",
+      "report": "docs/stage9/indexed-shared-access-verification.json",
+      "registrar_sha256": "82e8602dd88539e6f69e1a38480a65b2850a1b55bceaca379037c2c174781d24",
+      "script_sha256": {
+        "work/verify-indexed-shared-access.ps1": "8c0c707601bca357bb0e3758835e60f4df9d3365ee8ce3578b2f797efbae70a2"
+      }
+    },
+    {
+      "name": "actor-choreography-chain",
+      "scripts": [
+        "work/verify-actor-choreography-chain.ps1"
+      ],
+      "registrar": "tools/verify_actor_choreography_chain.py",
+      "report": "docs/stage9/actor-choreography-chain-verification.json",
+      "registrar_sha256": "c8b57f0095fe4a13611c38f62c78c13ec6a2593b6afe922080a9bf9a4a2bb11c",
+      "script_sha256": {
+        "work/verify-actor-choreography-chain.ps1": "88dbb717c89972fd6558c6d1dc318ed6ee21e4c5b70d2230d1a15955ff490915"
+      }
+    },
+    {
+      "name": "audio-interface-state",
+      "scripts": [
+        "work/verify-audio-interface-state.ps1"
+      ],
+      "registrar": "tools/verify_audio_interface_state.py",
+      "report": "docs/stage9/audio-interface-state-verification.json",
+      "registrar_sha256": "4e8a6a37e3f0b58727f419721e5c1de58a202ef66a000ab89ed49690f8a2be75",
+      "script_sha256": {
+        "work/verify-audio-interface-state.ps1": "332c9b35e5e40f7d47734d6d9f4a7df37220e0324c3d8e07e13b3230f5096db3"
+      }
+    },
+    {
+      "name": "entrance-actor-entries",
+      "scripts": [
+        "work/verify-entrance-actor-entries.ps1"
+      ],
+      "registrar": "tools/verify_entrance_actor_entries.py",
+      "report": "docs/stage9/entrance-actor-entries-verification.json",
+      "registrar_sha256": "b2cf0571ce4445104f1afbc04545344031aceeadcdf824b76689f3467b1f178a",
+      "script_sha256": {
+        "work/verify-entrance-actor-entries.ps1": "ecfdc578a3abbc4231c909f34558383c7d14975d2a60564dabb70635e93d9d47"
+      }
+    },
+    {
+      "name": "scene-control-entries",
+      "scripts": [
+        "work/verify-scene-control-entries.ps1"
+      ],
+      "registrar": "tools/verify_scene_control_entries.py",
+      "report": "docs/stage9/scene-control-entries-verification.json",
+      "registrar_sha256": "b3f8da525e146396c57d7107e9f65d78be1a9747ec1db7871e2dfadfe5a5eed6",
+      "script_sha256": {
+        "work/verify-scene-control-entries.ps1": "0942b746b53657d0c7d09a13cc2ab7e7e79f60374d192c7f8bf3f1aca0e66592"
+      }
+    },
+    {
+      "name": "ending-scene-entries",
+      "scripts": [
+        "work/verify-ending-scene-entries.ps1"
+      ],
+      "registrar": "tools/verify_ending_scene_entries.py",
+      "report": "docs/stage9/ending-scene-entries-verification.json",
+      "registrar_sha256": "21c1c1b6b35efe98fa6222ac7591cb84b3c2e0b5f63411739b7808ba2bbb3a9f",
+      "script_sha256": {
+        "work/verify-ending-scene-entries.ps1": "1b67bf8080922c42645be15083a0f3782ac177ca774bcd661ddc91914cbc8632"
+      }
+    },
+    {
+      "name": "map-record-scan",
+      "scripts": [
+        "work/verify-map-record-scan.ps1"
+      ],
+      "registrar": "tools/verify_map_record_scan.py",
+      "report": "docs/stage9/map-record-scan-verification.json",
+      "registrar_sha256": "b7f2717c0fe3c440c8785a54ec1c2e7cacea8bdf45b6e92c70b64cdcb62c6e64",
+      "script_sha256": {
+        "work/verify-map-record-scan.ps1": "a7b5a979207dbecd9050d98c4b1bee967c40acaba460cd283563810125e10be2"
+      }
+    },
+    {
+      "name": "background-font-entries",
+      "scripts": [
+        "work/verify-background-font-entries.ps1"
+      ],
+      "registrar": "tools/verify_background_font_entries.py",
+      "report": "docs/stage9/background-font-entries-verification.json",
+      "registrar_sha256": "d2bf169e03d39185d0c5581c3e42f291722842d5a2aa300cbdf307b1fb49699e",
+      "script_sha256": {
+        "work/verify-background-font-entries.ps1": "e88348b06c03e56232ef5dbc1a3b3fabc0324500399d606c6b015fc6926e1230"
+      }
+    },
+    {
+      "name": "frame-input-setup-entries",
+      "scripts": [
+        "work/verify-frame-input-setup-entries.ps1"
+      ],
+      "registrar": "tools/verify_frame_input_setup_entries.py",
+      "report": "docs/stage9/frame-input-setup-entries-verification.json",
+      "registrar_sha256": "63371d3d9f60539e443024df02fe7764e20d28081647ae229da0c86b7d22b6d8",
+      "script_sha256": {
+        "work/verify-frame-input-setup-entries.ps1": "06227c8097846de5d183f3dd3deb8cdf157a8f2ee9cf9000d215dff06e44c162"
+      }
+    },
+    {
+      "name": "graphic-actor-shared-entries",
+      "scripts": [
+        "work/verify-graphic-actor-shared-entries.ps1"
+      ],
+      "registrar": "tools/verify_graphic_actor_shared_entries.py",
+      "report": "docs/stage9/graphic-actor-shared-entries-verification.json",
+      "registrar_sha256": "9f565a2558fcb40357fa5562790f73b1272bdccc98c12961ccb0438ed9f0ff19",
+      "script_sha256": {
+        "work/verify-graphic-actor-shared-entries.ps1": "6a4ab04dfa437824db5efa938512444d5b9d084e0e758e4679eee9b711868a85"
+      }
+    },
+    {
+      "name": "debug-menu-music-entries",
+      "scripts": [
+        "work/verify-debug-menu-music-entries.ps1"
+      ],
+      "registrar": "tools/verify_debug_menu_music_entries.py",
+      "report": "docs/stage9/debug-menu-music-entries-verification.json",
+      "registrar_sha256": "a194d076acd13360f376282257d012de7074cc2c14a554f5704710857be980ea",
+      "script_sha256": {
+        "work/verify-debug-menu-music-entries.ps1": "f7267162c36825393c69ee160fab4143737635a4fbff580a10b5423a4a2af943"
+      }
+    },
+    {
+      "name": "actor-lifecycle-stage-entries",
+      "scripts": [
+        "work/verify-actor-lifecycle-stage-entries.ps1"
+      ],
+      "registrar": "tools/verify_actor_lifecycle_stage_entries.py",
+      "report": "docs/stage9/actor-lifecycle-stage-entries-verification.json",
+      "registrar_sha256": "d3aa1010445b8f67aebc8b0ddf2220331be41b57ef163984e68fa33999763c30",
+      "script_sha256": {
+        "work/verify-actor-lifecycle-stage-entries.ps1": "dcc7ddb970312e862fbe983b00c9d8cd5e2c399827e59a75d50908e4515cf36c"
+      }
+    },
+    {
+      "name": "renderer-checksum-contracts",
+      "scripts": [
+        "work/verify-renderer-checksum-contracts.ps1"
+      ],
+      "registrar": "tools/verify_renderer_checksum_contracts.py",
+      "report": "docs/stage9/renderer-checksum-contracts-verification.json",
+      "registrar_sha256": "47417fd0dc8186ee8cd403d2f317ebfa668c4925cbf650273a88c1086e264038",
+      "script_sha256": {
+        "work/verify-renderer-checksum-contracts.ps1": "d32f73d8293804733d092a07c73a85220d3e67f8fc480494e77ba55eadebd3b6"
+      }
+    },
+    {
+      "name": "sound-effect-submission",
+      "scripts": [
+        "work/verify-sound-effect-submission.ps1"
+      ],
+      "registrar": "tools/verify_sound_effect_submission.py",
+      "report": "docs/stage9/sound-effect-submission-verification.json",
+      "registrar_sha256": "7f386bf187d925aa67c7cfad09d5e3b7a46e531684a0891240cc78eb36da9957",
+      "script_sha256": {
+        "work/verify-sound-effect-submission.ps1": "b8bc2bd998b06e78a55901639cf01ad097b7ee792900e031480ad76fcdfec3d2"
+      }
+    },
+    {
+      "name": "startup-pattern-publication",
+      "scripts": [
+        "work/verify-startup-pattern-publication.ps1"
+      ],
+      "registrar": "tools/verify_startup_pattern_publication.py",
+      "report": "docs/stage9/startup-pattern-publication-verification.json",
+      "registrar_sha256": "43ec32673974d1f367ab07312b46005689d34dbb79b4d7f34cdfb785346cbd60",
+      "script_sha256": {
+        "work/verify-startup-pattern-publication.ps1": "eebc01216da3df87b9c5d9170c499aad30af0ecc1a3c539214e64cb5cc57275e"
+      }
+    },
+    {
+      "name": "menu-palette-transitions",
+      "scripts": [
+        "work/verify-menu-palette-transitions.ps1"
+      ],
+      "registrar": "tools/verify_menu_palette_transitions.py",
+      "report": "docs/stage9/menu-palette-transitions-verification.json",
+      "registrar_sha256": "8019c51b91c36a69a7d3c167a726049995e9f8924e973a90dd1df551b7a2f85d",
+      "script_sha256": {
+        "work/verify-menu-palette-transitions.ps1": "960a648e56c8d4caa2ddfeb370cc080f6c8f68f605c7fb5cf40ca0db7768ed2c"
+      }
+    },
+    {
+      "name": "scene-actor-factories",
+      "scripts": [
+        "work/verify-scene-actor-factories.ps1"
+      ],
+      "registrar": "tools/verify_scene_actor_factories.py",
+      "report": "docs/stage9/scene-actor-factories-verification.json",
+      "registrar_sha256": "7e5f3bafa6df17ae927cf9d30bf671d629dbb5cf4206d6e3deb9c9994fdb453d",
+      "script_sha256": {
+        "work/verify-scene-actor-factories.ps1": "a7fb7cfacd83facec1341f6e7899d10a8c9522ba1b3ea2a519693198d41bcf72"
+      }
+    },
+    {
+      "name": "actor-capture-phases",
+      "scripts": [
+        "work/verify-actor-capture-phases.ps1"
+      ],
+      "registrar": "tools/verify_actor_capture_phases.py",
+      "report": "docs/stage9/actor-capture-phases-verification.json",
+      "registrar_sha256": "19885b277f447e36c5b5157495347c26f8358d2519e494b1940d38ade09412f4",
+      "script_sha256": {
+        "work/verify-actor-capture-phases.ps1": "b1302502ec3c3a0d35764a1d135da218c5a7aeb786de86d79bfef490f89e70c1"
+      }
+    },
+    {
+      "name": "sound-stream-loading",
+      "scripts": [
+        "work/verify-sound-stream-loading.ps1"
+      ],
+      "registrar": "tools/verify_sound_stream_loading.py",
+      "report": "docs/stage9/sound-stream-loading-verification.json",
+      "registrar_sha256": "861f7e665930becae6119069f6352299551b448f3c6724d58ad83f9300288601",
+      "script_sha256": {
+        "work/verify-sound-stream-loading.ps1": "f194d2dcca93e29d73f3ec168aae99194119652fbe8624148ce0fd49211de96b"
+      }
+    },
+    {
+      "name": "music-selection",
+      "scripts": [
+        "work/verify-music-selection.ps1"
+      ],
+      "registrar": "tools/verify_music_selection.py",
+      "report": "docs/stage9/music-selection-verification.json",
+      "registrar_sha256": "83f93a60a7202024f6aa6583fe841409e8752450026ebebfba94e37b925aa970",
+      "script_sha256": {
+        "work/verify-music-selection.ps1": "a7e0ce5ab147568d59c3da18d20e219b047fcb05e1395177555b3a771d8407a7"
+      }
+    },
+    {
+      "name": "startup-layout-entries",
+      "scripts": [
+        "work/verify-startup-layout-entries.ps1"
+      ],
+      "registrar": "tools/verify_startup_layout_entries.py",
+      "report": "docs/stage9/startup-layout-entries-verification.json",
+      "registrar_sha256": "018cc4bbd7d5f7922bf8d8b1677d80aad77e8b29f7b7a0d54da43bd537a26707",
+      "script_sha256": {
+        "work/verify-startup-layout-entries.ps1": "5f463eeb3b5051f765bdaf7dba41b65079673dceba2a393e05a788713e16fbe2"
+      }
+    },
+    {
+      "name": "game-over-text",
+      "scripts": [
+        "work/verify-game-over-text.ps1"
+      ],
+      "registrar": "tools/verify_game_over_text.py",
+      "report": "docs/stage9/game-over-text-verification.json",
+      "registrar_sha256": "aa96b80d2f2f7a3745cc54fb26584aa9c68f82c3ee840ef03fab2bea1ce5d513",
+      "script_sha256": {
+        "work/verify-game-over-text.ps1": "47127715695ffe82aeda951194a06b914a40cfae568a45feac44809438edc772"
+      }
+    },
+    {
+      "name": "enemy-phase-entries",
+      "scripts": [
+        "work/verify-enemy-phase-entries.ps1"
+      ],
+      "registrar": "tools/verify_enemy_phase_entries.py",
+      "report": "docs/stage9/enemy-phase-entries-verification.json",
+      "registrar_sha256": "c3c3a6fe223c374553c9762299c4f94d4e7f884dc8724e5d5a2057371643a0f9",
+      "script_sha256": {
+        "work/verify-enemy-phase-entries.ps1": "a4c6ed93fca56b3ff3da500ea1c3ccceaccfa39e91c17fcc33d01165c19e1231"
+      }
+    },
+    {
+      "name": "screen-asset-entries",
+      "scripts": [
+        "work/verify-screen-asset-entries.ps1"
+      ],
+      "registrar": "tools/verify_screen_asset_entries.py",
+      "report": "docs/stage9/screen-asset-entries-verification.json",
+      "registrar_sha256": "5e8dade5a967ac6c548fea0a22eb4088eafe172e1f78456743b41933d928d9df",
+      "script_sha256": {
+        "work/verify-screen-asset-entries.ps1": "d882487e38b1eaf7042699cad4e084997e29798b788575a5b865f8341c46892b"
+      }
+    },
+    {
+      "name": "text-palette-entries",
+      "scripts": [
+        "work/verify-text-palette-entries.ps1"
+      ],
+      "registrar": "tools/verify_text_palette_entries.py",
+      "report": "docs/stage9/text-palette-entries-verification.json",
+      "registrar_sha256": "87173cc5aba215f01a50ff2fbc9873b0aecbd0cfbb70058fdbde6588f0945636",
+      "script_sha256": {
+        "work/verify-text-palette-entries.ps1": "93441df48f2464eedcfc735fc4fc7fc46e50957f61e067a5fbf8f182dd87ac95"
+      }
+    },
+    {
+      "name": "animation-spawn-entries",
+      "scripts": [
+        "work/verify-animation-spawn-entries.ps1"
+      ],
+      "registrar": "tools/verify_animation_spawn_entries.py",
+      "report": "docs/stage9/animation-spawn-entries-verification.json",
+      "registrar_sha256": "d6e1024045a82227bc1c29481251d9b54ea48b4add4da8916bded3775692038d",
+      "script_sha256": {
+        "work/verify-animation-spawn-entries.ps1": "7fd2feb87a613be0a54650529ae1738c3662a9999d426557294cc1dd17054035"
+      }
+    },
+    {
+      "name": "startup-pixel-range",
+      "scripts": [
+        "work/verify-startup-pixel-range.ps1"
+      ],
+      "registrar": "tools/verify_startup_pixel_range.py",
+      "report": "docs/stage9/startup-pixel-range-verification.json",
+      "registrar_sha256": "bf9f2e7ecfbad9e3ff3408ade6018866c86bf36126108a21d6772b40cc451634",
+      "script_sha256": {
+        "work/verify-startup-pixel-range.ps1": "96d8ea345eb2ae8878af828ef2ebc6ffea86c2b2ef21432c69014c5fad3db519"
+      }
+    },
+    {
+      "name": "front-end-frame-entries",
+      "scripts": [
+        "work/verify-front-end-frame-entries.ps1"
+      ],
+      "registrar": "tools/verify_front_end_frame_entries.py",
+      "report": "docs/stage9/front-end-frame-entries-verification.json",
+      "registrar_sha256": "9db693b4516d54c6cebb58f506a96cf51a3c26ccbe3a7cb33b33cbf10ec1b59a",
+      "script_sha256": {
+        "work/verify-front-end-frame-entries.ps1": "2287a1dc95481adde36de03f4c57b459a9f530e80b565063e5466df874b9c811"
+      }
+    },
+    {
+      "name": "map-publication-entries",
+      "scripts": [
+        "work/verify-map-publication-entries.ps1"
+      ],
+      "registrar": "tools/verify_map_publication_entries.py",
+      "report": "docs/stage9/map-publication-entries-verification.json",
+      "registrar_sha256": "c6e3fef9c906b8234f6c8a172c53c05f50f24d7e47a26c77b094783f25a41c7d",
+      "script_sha256": {
+        "work/verify-map-publication-entries.ps1": "11f5b46159242fd1923487d051b6fb076564ef34cef1c93e371d01f0e9ef3bde"
+      }
+    },
+    {
+      "name": "choreography-creation",
+      "scripts": [
+        "work/verify-choreography-creation.ps1"
+      ],
+      "registrar": "tools/verify_choreography_creation.py",
+      "report": "docs/stage9/choreography-creation-verification.json",
+      "registrar_sha256": "83cbd1e37f5a69060436ab006ea6c6f28328f1219bfb7793b4277950e2b92ae7",
+      "script_sha256": {
+        "work/verify-choreography-creation.ps1": "c3c30db273582b2e1adc8c782028f7e9854efa7ced25efa545fa9d11e59c02d7"
+      }
+    },
+    {
+      "name": "scripted-player-scene",
+      "scripts": [
+        "work/verify-scripted-player-scene.ps1"
+      ],
+      "registrar": "tools/verify_scripted_player_scene.py",
+      "report": "docs/stage9/scripted-player-scene-verification.json",
+      "registrar_sha256": "7e408cf2bd77e6fe567a7b7fdd7fb40076bea53c9b03db3b05adc38921499352",
+      "script_sha256": {
+        "work/verify-scripted-player-scene.ps1": "4a17ab399db3435384c01ee28c384eeb5ef43c07f49c97ffc1367b9b993f21ec"
+      }
+    },
+    {
+      "name": "player-presentation-entry",
+      "scripts": [
+        "work/verify-player-presentation-entry.ps1"
+      ],
+      "registrar": "tools/verify_player_presentation_entry.py",
+      "report": "docs/stage9/player-presentation-entry-verification.json",
+      "registrar_sha256": "d17984b2c0c127466341b57a6740fe6877b48554ecf3954f98b49d3600068d64",
+      "script_sha256": {
+        "work/verify-player-presentation-entry.ps1": "42c85a8e2dffa23c01d98d77e6173905834ed703607b4cba550ff69e01402a1f"
+      }
+    },
+    {
+      "name": "startup-reset-entries",
+      "scripts": [
+        "work/verify-startup-reset-entries.ps1"
+      ],
+      "registrar": "tools/verify_startup_reset_entries.py",
+      "report": "docs/stage9/startup-reset-entries-verification.json",
+      "registrar_sha256": "9c476f19b5e668f54793859dea8692752a58624ed40102094690722a7870481c",
+      "script_sha256": {
+        "work/verify-startup-reset-entries.ps1": "439aa8efcfa51e5be19514a9d68a11fbec5576eff19d33ceb04d41c07e268ee6"
+      }
+    },
+    {
+      "name": "screen-text-dispatch",
+      "scripts": [
+        "work/verify-screen-text-dispatch.ps1"
+      ],
+      "registrar": "tools/verify_screen_text_dispatch.py",
+      "report": "docs/stage9/screen-text-dispatch-verification.json",
+      "registrar_sha256": "eeaa1f96418bbbfa5f5454a74b6939b62e6ea23ad723d20cdfa49433deeab2b1",
+      "script_sha256": {
+        "work/verify-screen-text-dispatch.ps1": "e0b0edfb2c820b6a34d1a61ef060bc3f5d60af098cfaad31b4267bc4125db365"
+      }
+    },
+    {
+      "name": "startup-image-codec",
+      "scripts": [
+        "work/verify-startup-image-codec.ps1"
+      ],
+      "registrar": "tools/verify_startup_image_codec.py",
+      "report": "docs/stage9/startup-image-codec-verification.json",
+      "registrar_sha256": "354472aefb762d11790bffaa4642c78a245d20128b9dec6d8ddf63e19380ca3b",
+      "script_sha256": {
+        "work/verify-startup-image-codec.ps1": "18f9fd67b221a4aa0c5a112e5f2d8d7cbc15f45d508f52bb2760fb640abb431f"
+      }
+    },
+    {
+      "name": "startup-logo-raster",
+      "scripts": [
+        "work/verify-startup-logo-raster.ps1"
+      ],
+      "registrar": "tools/verify_startup_logo_raster.py",
+      "report": "docs/stage9/startup-logo-raster-verification.json",
+      "registrar_sha256": "282a88cdb39f77a913353e26ec65d764089065c88b5c65d32d8577fea0e73958",
+      "script_sha256": {
+        "work/verify-startup-logo-raster.ps1": "11127162512d99d59b459d574ecfc02cb5a4668b872520efdcd5b9505a1ebf87"
+      }
+    },
+    {
+      "name": "startup-image-scene",
+      "scripts": [
+        "work/verify-startup-image-scene.ps1"
+      ],
+      "registrar": "tools/verify_startup_image_scene.py",
+      "report": "docs/stage9/startup-image-scene-verification.json",
+      "registrar_sha256": "4a880af66e65860b7f85a3c1303bd9fc4a763214d0c8971afb4f2f16d7d9dd26",
+      "script_sha256": {
+        "work/verify-startup-image-scene.ps1": "fe7e57e6a38601ab05ab0b586cae87fbeb9820c548835bb00fc028431e1e30bf"
+      }
+    },
+    {
+      "name": "fatal-diagnostic",
+      "scripts": [
+        "work/verify-fatal-diagnostic.ps1"
+      ],
+      "registrar": "tools/verify_fatal_diagnostic.py",
+      "report": "docs/stage9/fatal-diagnostic-verification.json",
+      "registrar_sha256": "0335fd5ac29e7b07d12972356d3ca07b5b507841591c0cbe19fcb26756e82329",
+      "script_sha256": {
+        "work/verify-fatal-diagnostic.ps1": "c742f99b39d1c63033bd1a7e5d5347711b02883e9ab30777f7f04420089d58ea"
+      }
+    },
+    {
+      "name": "startup-animation-scene",
+      "scripts": [
+        "work/verify-startup-animation-scene.ps1"
+      ],
+      "registrar": "tools/verify_startup_animation_scene.py",
+      "report": "docs/stage9/startup-animation-scene-verification.json",
+      "registrar_sha256": "ab6efed2f5377a4dcc40704ef6f848298780674ba036b3a8f1664b4f7a862bde",
+      "script_sha256": {
+        "work/verify-startup-animation-scene.ps1": "a4ea8b06ccdff4d3236490f3392b6e6217711d42254529ae31ab9cdd988c3aa2"
+      }
+    },
+    {
+      "name": "cold-boot-initialization",
+      "scripts": [
+        "work/verify-cold-boot-initialization.ps1"
+      ],
+      "registrar": "tools/verify_cold_boot_initialization.py",
+      "report": "docs/stage9/cold-boot-initialization-verification.json",
+      "registrar_sha256": "03e36a3eb62d223ab1189fdb9c6ed4e9cba901ee1b5aba57dfb2ebf7b5c9e8c4",
+      "script_sha256": {
+        "work/verify-cold-boot-initialization.ps1": "65b0cff1d2205624fe60ff9c32db98717ba469986d65625c3fc8a31fc102bebb"
+      }
+    },
+    {
+      "name": "native-event-boundary",
+      "scripts": [
+        "work/verify-native-event-boundary.ps1"
+      ],
+      "registrar": "tools/verify_native_event_boundary.py",
+      "report": "docs/stage9/native-event-boundary-verification.json",
+      "registrar_sha256": "1b0f5a5b07cc9d4d10372456e10d6cefb8a6a2b3d019d876259f0aacfaf719cc",
+      "script_sha256": {
+        "work/verify-native-event-boundary.ps1": "3bcc769610c55ca516ffb9ae5d6bfe54cf37d5be404663f1e63b8a267ad464e3"
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+"""Pinned local native contract evidence; static ROM decoding only."""
+import hashlib,json,re
+from pathlib import Path
+from inventory_rom import ROM_HASH
+from m68k_static import Decoder
+CONFIG=json.loads('{\n  "name": "screen_text_controls",\n  "title": "screen text operand and handoff contracts",\n  "sources": [\n    "src/core/screen_text_controls.hpp",\n    "tests/screen_text_controls_verification_tests.cpp"\n  ],\n  "results": {\n    "passed": true,\n    "cases": 67840\n  },\n  "cases": 67840,\n  "specs": [\n    {\n      "address": 28148,\n      "ranges": [\n        [\n          28148,\n          28152\n        ],\n        [\n          28184,\n          28198\n        ]\n      ],\n      "contract": "Clear active textsourceLONG and modeBYTE, retainotherstate."\n    },\n    {\n      "address": 28152,\n      "ranges": [\n        [\n          28152,\n          28156\n        ],\n        [\n          28208,\n          28224\n        ]\n      ],\n      "contract": "Read2BYTEoperands into lowBYTEofX/YWORDs, retainhighbytes, returnpostreadtextcursor for6DA8continuation."\n    },\n    {\n      "address": 28160,\n      "ranges": [\n        [\n          28160,\n          28164\n        ],\n        [\n          28396,\n          28410\n        ]\n      ],\n      "contract": "Read1delayBYTE, savepostreadsource, returnwithoutchangingmode."\n    },\n    {\n      "address": 28164,\n      "ranges": [\n        [\n          28164,\n          28168\n        ],\n        [\n          28418,\n          28438\n        ]\n      ],\n      "contract": "Read4bigendianBYTEpointer, returnfullLONGtarget for6DA8continuation."\n    },\n    {\n      "address": 28168,\n      "ranges": [\n        [\n          28168,\n          28172\n        ],\n        [\n          28438,\n          28476\n        ]\n      ],\n      "contract": "Alignincomingpointer via(+1)&~1, loadLONGwaitvalue, savepostreadsource, mode1,counterWORD0."\n    },\n    {\n      "address": 28172,\n      "ranges": [\n        [\n          28172,\n          28176\n        ],\n        [\n          28476,\n          28598\n        ]\n      ],\n      "contract": "Readx/y/widthBYTEs, lastBYTE=width*8-1 wrap, savesource/mode2; exactfill0/840/04FF/40000000 thenoriginalROMbarrectangle atC000+y*128+x*2, width0retains256cells."\n    },\n    {\n      "address": 28176,\n      "ranges": [\n        [\n          28176,\n          28180\n        ],\n        [\n          28598,\n          28672\n        ]\n      ],\n      "contract": "Savecurrenttextsource, original5slotdemoindex incrementswith4to0wrap; clear2BYTE+WORDwork, originaltable selectsWORDlevel andfollowingdata+3; invoke1BD8handoff."\n    }\n  ],\n  "data_pins": [\n    [\n      28672,\n      "0004a34c0004a4600004a3ba0004a5ba0004a50e"\n    ],\n    [\n      304842,\n      "0000000100020003000400050006000700080009000a000b000c000d000e000f0010001100120013001400150016001700180019001a001b001c001d001e001f00200021002200230024002500260027ffffffffffffffffffffffffffffffff000000000000000000000000000000000000000000000000010101010101010100000000010101010101010102020202000000010101010102020202020303030000010101010202020203030303040400000101010202020303030404040505000001010202020303040404050506060000010102020303040405050606070700010102020303040405050606070708000101020203040405050607070808090001010203030405050607070809090a000101020304040506070708090a0a0b0001020203040506060708090a0a0b0c00010203030405060708090a0a0b0c0d00010203040506070708090a0b0c0d0e000102030405060708090a0b0c0d0e0f0001020304050608090a0b0c0d0e0fff0001020405060708090a0c0d0e0fffff00010304050608090a0b0d0e0fffffff000203040607080a0b0c0e0fffffffff000203050608090b0c0e0fffffffffff0002040507090a0c0e0fffffffffffff00020406080a0c0e0fffffffffffffff01030507090b0d0fffffffffffffffff010306080b0d0fffffffffffffffffff0104070a0d0fffffffffffffffffffff"\n    ],\n    [\n      303948,\n      "0004ff"\n    ],\n    [\n      304224,\n      "0014ff"\n    ],\n    [\n      304058,\n      "0002ff"\n    ],\n    [\n      304570,\n      "0038ff"\n    ],\n    [\n      304398,\n      "000aff"\n    ]\n  ],\n  "proof": "Reviewedoriginal branchslots anddisjointbodies, explicit6DA8taildatareturn. Optimizedassertions67840cases:all65536position/delay/pointerbitpatterns and4alignmententries;all256barwidths with4edgecoordinatepairs,actualROMtiledata/typed664Cpacketcomparison;5originaldemotablesx256workfills. Reviewcaughtindex4resetmistake, correctednativeandexpectedwrap, onefocusedrerun afterchange passed. NoROMexecution.",\n  "scope": "Native screen-text data operands and explicit service/output contracts; notan instruction interpreter. Readableboundedoperandspans, immutableoriginalROMresources,demoselector0..4.6DA8parsercontinuationand1BD8scenerebuild remainserviceboundaries, notwholeprogramfidelity; devicewrites typedpackets nothardwareCPUports. Barpublication uses verified664C helper."\n}')
+p=Path(__file__).resolve().parents[1];root=p.parents[1];rom=(p/'local/rolo.md').read_bytes();assert hashlib.sha256(rom).hexdigest()==ROM_HASH
+slug=CONFIG['name'].replace('_','-');result=root/('work/'+slug+'-results.json');r=json.loads(result.read_text(encoding='utf-8-sig'));assert r==CONFIG['results']
+sources=list(CONFIG['sources']);pending=list(sources)
+while pending:
+ source=pending.pop()
+ for include in re.findall(r'#include "(core/[^"\n]+)"',(p/source).read_text(encoding='utf-8')):
+  child='src/'+include
+  if child not in sources:sources.append(child);pending.append(child)
+exe=root/('work/'+CONFIG['name']+'_verification_tests.exe');assert exe.stat().st_mtime>=max((p/s).stat().st_mtime for s in sources)
+sources+=CONFIG.get('dependencies',[])
+for at,expected in CONFIG.get('data_pins',[]):assert rom[at:at+len(bytes.fromhex(expected))].hex()==expected
+inv=json.loads((p/'docs/stage9/inventory.json').read_text(encoding='utf-8'));accepted={a for x in inv['routines'] for a in x['blocks']};records=[]
+for lo,hi in CONFIG.get('boundary_extensions',[]):
+ assert CONFIG.get('boundary_basis') and CONFIG.get('boundary_producers')
+ for source,encoded in CONFIG['boundary_producers']:assert rom[source:source+len(bytes.fromhex(encoded))].hex()==encoded
+ cursor=lo
+ while cursor<hi:
+  accepted.add(cursor);cursor+=Decoder(rom,cursor).decode()['size']
+ assert cursor==hi
+for spec in CONFIG['specs']:
+ start=spec['address'];ranges=spec['ranges'];items=[]
+ for lo,hi in ranges:
+  at=lo
+  while at<hi:
+   assert at in accepted,(hex(start),hex(at));i=Decoder(rom,at).decode();items.append(i);at+=i['size']
+  assert at==hi
+ end=max(b for a,b in ranges)
+ records.append(dict(address=start,hex=f'{start:06X}',end_exclusive=end,original_bytes=rom[start:end].hex(),code_ranges=ranges,instruction_evidence=items,verification_status='verified',status='verified green: '+CONFIG['title'],native_sources=[CONFIG['sources'][0]],checked_cases=spec.get('cases',CONFIG['cases']),contract=spec['contract'],proof=CONFIG['proof'],scope=spec.get('scope',CONFIG['scope'])))
+report=dict(rom_sha256=ROM_HASH,source_sha256={s:hashlib.sha256((p/s).read_bytes()).hexdigest() for s in sources},records=records,test_executable_sha256=hashlib.sha256(exe.read_bytes()).hexdigest(),results_sha256=hashlib.sha256(result.read_bytes()).hexdigest())
+(p/('docs/stage9/'+slug+'-verification.json')).write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8');print(str(len(records))+' local contracts registered: '+slug)

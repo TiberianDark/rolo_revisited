@@ -1,0 +1,14 @@
+import hashlib,json
+from pathlib import Path
+from m68k_static import Decoder
+from verify_leaf_routines import PIN
+p=Path(__file__).resolve().parents[1];root=p.parents[1];rom=(p/'local/rolo.md').read_bytes();assert hashlib.sha256(rom).hexdigest()==PIN
+rp=root/'work/rescue-progress-results.json';r=json.loads(rp.read_text());assert r['passed'] and r['D32A']==2097152
+sources=['src/core/level1_progress.hpp','src/core/actor_state.hpp','tests/rescue_progress_verification_tests.cpp'];exe=root/'work/rescue_progress_verification_tests.exe';assert exe.stat().st_mtime>=max((p/s).stat().st_mtime for s in sources)
+dep='docs/stage9/reward-curve-verification.json';assert any(x['address']==0xd2e2 for x in json.loads((p/dep).read_text())['records'])
+c=0xd32a;ins=[]
+while c<0xd3fe:
+ i=Decoder(rom,c).decode();ins.append(i);c+=i['size']
+assert c==0xd3fe
+record=dict(address=0xd32a,hex='00D32A',end_exclusive=0xd3fe,original_bytes=rom[0xd32a:0xd3fe].hex(),status='verified green: local rescue progress and allocation/HUD request contract',verification_status='verified',native_sources=['src/core/level1_progress.hpp'],instruction_evidence=ins,checked_cases=r['D32A'],contract='Sound27beforelinkgate; linkedscoreallocation140ECrequestatfullX/Y,retainedlinkcallbackB7B8;remainingWORDdecrement. Zero setscurrentflagbits1/3,C552FF,rewardflagbit0before14482optionalallocation;failuredoesnotrollback. Successfulpiece70=4thenimmediateD2E2target296/41completionC551. Signedremaining<=2 invokes54A0requestwithC552temporarilyzeroandrestoresoldBYTEevenifservicechangesit.',proof='Reviewedcompleteoriginalspan, savedincominglink acrossallocation, zero-testandBSETold-bit ordering, andCMPI.W/BGTsignedHUDgate. EveryWORDremainingcount across32null/alias/already-owned/allocation-successpartitions; independentstate/eventoracle comparesthreefull130BYTErecords,flagarray,progressfieldsandorderedrequests/HUD-observedstate. Rewardhelperdependency hash-pinned. Counterunderflow32768..65535stillrequestsHUDasoriginal; scoreallocationfailuredoesnotpreventlinkretirement.',scope='Localprogress/actor/requestAPI withvalid0..79selectors,stablelinkedactors,disjointtypedstateandvalidrewardDIVUdomain. 28B0allocation/poolsideeffects and54A0HUDpublication remain separate unverified service contracts; testservices preserveexistingactorsand flags. Wideralias/rawselectorhighBYTE, scheduler/sounddevice/CPUABI excluded. Notfullrescuelifecyclecertificate.')
+report=dict(rom_sha256=PIN,source_sha256={s:hashlib.sha256((p/s).read_bytes()).hexdigest() for s in sources+[dep]},records=[record],test_executable_sha256=hashlib.sha256(exe.read_bytes()).hexdigest(),results_sha256=hashlib.sha256(rp.read_bytes()).hexdigest());(p/'docs/stage9/rescue-progress-verification.json').write_text(json.dumps(report,indent=2)+'\n');print('Rescue progress/request local contract verified; allocation and HUD publication remain separate.')

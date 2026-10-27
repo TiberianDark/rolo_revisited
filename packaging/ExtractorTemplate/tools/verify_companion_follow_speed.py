@@ -1,0 +1,13 @@
+import hashlib,json
+from pathlib import Path
+from m68k_static import Decoder
+from verify_leaf_routines import PIN
+p=Path(__file__).resolve().parents[1];root=p.parents[1];rom=(p/'local/rolo.md').read_bytes();assert hashlib.sha256(rom).hexdigest()==PIN
+rp=root/'work/companion-follow-speed-results.json';r=json.loads(rp.read_text());assert r['passed'] and r['AEB4']==2097152
+sources=['src/core/level1_companion_motion.hpp','src/core/actor_state.hpp','src/core/player_frame_history.hpp','tests/companion_follow_speed_verification_tests.cpp'];exe=root/'work/companion_follow_speed_verification_tests.exe';assert exe.stat().st_mtime>=max((p/s).stat().st_mtime for s in sources)
+c=0xaeb4;ins=[]
+while c<0xaf80:
+ i=Decoder(rom,c).decode();ins.append(i);c+=i['size']
+assert c==0xaf80
+record=dict(address=0xaeb4,hex='00AEB4',end_exclusive=0xaf80,original_bytes=rom[0xaeb4:0xaf80].hex(),status='verified green: local companion follow speed with canonical controlled-actor alias',verification_status='verified',native_sources=['src/core/level1_companion_motion.hpp'],instruction_evidence=ins,checked_cases=r['AEB4'],contract='Controlled speed WORD+2 signedclamped2..15; downward airborne selectscontrolledX/Yspeed; attachedbit5 selectscontrolledX;otherwisehistoryX with grounded signedheight-distance/radius gate. BLTaftertarget-Xcomparesoriginalsignedendpoints, thenwrappednegation. Clear46bit1; signedwrapped distance<=speed setsdistance speed,copiescontrolledfacing,sets46bit1. Publish58WORD,clearfraction60. Radiusadoptionsets46bit2.',proof='Reviewed full original span including distinction A3 original caller versus A4 controlled pointer. Certificate requires A3==controlled, matching current native API. Corrected BLToverflow mismatch. Independent wideinteger/modular oracle covers everyactorX across32flag partitions, varied history/radius/position/speed values; comparesall130bytes. Bitflags/signed endpoint algebra reviewed; fixture totals do not claim exhaustive crossproduct.',scope='Local API with originalA3==C4E0 controlled actor, valid history record and separate actor/control/history storage. WidercallerA3aliasdomain remains open; scheduler/historypublication andCPUregister/CCR ABI excluded.')
+report=dict(rom_sha256=PIN,source_sha256={s:hashlib.sha256((p/s).read_bytes()).hexdigest() for s in sources},records=[record],test_executable_sha256=hashlib.sha256(exe.read_bytes()).hexdigest(),results_sha256=hashlib.sha256(rp.read_bytes()).hexdigest());(p/'docs/stage9/companion-follow-speed-verification.json').write_text(json.dumps(report,indent=2)+'\n');print('Companion follow-speed local contract verified in declared controlled-actor domain.')

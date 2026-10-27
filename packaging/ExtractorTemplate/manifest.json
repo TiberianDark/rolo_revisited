@@ -1,0 +1,5230 @@
+{
+  "format": "rolo-resources",
+  "version": 1,
+  "encoding": "little-endian",
+  "description": "Numeric arrays extracted from ROM-generated headers",
+  "resources": [
+    {
+      "header": "actor_bounce_motion.hpp",
+      "name": "bounce_direction_bytes",
+      "type": "uint8_t",
+      "count": 6,
+      "bytes": 6,
+      "path": "direct_runtime_tables/actor_bounce_motion/bounce_direction_bytes.bin",
+      "sha256": "4fe9f9290e0d4a6d6dcbceaf8e199e12c74d714ba31cc186eef9a4373bfebcbe"
+    },
+    {
+      "header": "actor_choreography_chain.hpp",
+      "name": "choreography_offsets",
+      "type": "int8_t",
+      "count": 18,
+      "bytes": 18,
+      "path": "direct_runtime_tables/actor_choreography_chain/choreography_offsets.bin",
+      "sha256": "2120625b2560df6c4270e675e5197a697019788a482f7642afe5e48b6c8fcdd0"
+    },
+    {
+      "header": "actor_contact_family.hpp",
+      "name": "actor_contact_speeds",
+      "type": "uint8_t",
+      "count": 6,
+      "bytes": 6,
+      "path": "direct_runtime_tables/actor_contact_family/actor_contact_speeds.bin",
+      "sha256": "e3e9a9ba8cbd2ff02455cc2212354072029f770f3b75f8ce3eaace1596b09313"
+    },
+    {
+      "header": "actor_contact_family.hpp",
+      "name": "actor_contact_thresholds",
+      "type": "uint16_t",
+      "count": 8,
+      "bytes": 16,
+      "path": "direct_runtime_tables/actor_contact_family/actor_contact_thresholds.bin",
+      "sha256": "2646b483c4e2b05c21957bdd48114893edc8209fb22a21aeb2ab4772d978b4c1"
+    },
+    {
+      "header": "actor_contact_family.hpp",
+      "name": "actor_contact_y_offsets",
+      "type": "int16_t",
+      "count": 4,
+      "bytes": 8,
+      "path": "direct_runtime_tables/actor_contact_family/actor_contact_y_offsets.bin",
+      "sha256": "87628fa94daf5c08e3b08bfec2dd0df37cbccac1f035ca47d30919d26cb1aebe"
+    },
+    {
+      "header": "actor_graphic_phase_data.hpp",
+      "name": "anchors",
+      "type": "uint8_t",
+      "count": 18,
+      "bytes": 18,
+      "path": "direct_runtime_tables/actor_graphic_phase_data/anchors.bin",
+      "sha256": "4d4e43a24c0985f5db2b6a8f26aea46bbad44e1d4590b945378d07649c5729aa"
+    },
+    {
+      "header": "actor_graphic_phase_data.hpp",
+      "name": "projectiles",
+      "type": "uint8_t",
+      "count": 18,
+      "bytes": 18,
+      "path": "direct_runtime_tables/actor_graphic_phase_data/projectiles.bin",
+      "sha256": "05230b16246fd6b14e1880210707a3f370b659e2e5132303adce03bd40181f7f"
+    },
+    {
+      "header": "actor_pattern_data.hpp",
+      "name": "bytes",
+      "type": "uint8_t",
+      "count": 158048,
+      "bytes": 158048,
+      "path": "actor_pattern_data/bytes.bin",
+      "sha256": "8da5f9e8dda5b121115c5a888121d67a08fc2329ad0d2d30a1b62b93e685c6e4"
+    },
+    {
+      "header": "actor_pattern_data.hpp",
+      "name": "frames",
+      "type": "Frame",
+      "count": 406,
+      "bytes": 8120,
+      "path": "actor_pattern_data/frames.bin",
+      "sha256": "824d27f1705dd39578417d312b4f30abf7992836ae05ae6f7fb375b2ecae3074",
+      "schema": {
+        "id": "frame-v1",
+        "fields": [
+          "source:u32",
+          "width:u32",
+          "height:u32",
+          "offset:u32",
+          "size:u32"
+        ],
+        "record_bytes": 20
+      }
+    },
+    {
+      "header": "actor_phase_cycle.hpp",
+      "name": "actor_phase_cycle_delays",
+      "type": "uint8_t",
+      "count": 4,
+      "bytes": 4,
+      "path": "direct_runtime_tables/actor_phase_cycle/actor_phase_cycle_delays.bin",
+      "sha256": "9dcddd12ac0a43ae5048c9453cc6c443e07fe4ff8f1ab9961b8cdd0a6a5c1389"
+    },
+    {
+      "header": "actor_phase_emitter_data.hpp",
+      "name": "emit",
+      "type": "uint8_t",
+      "count": 112,
+      "bytes": 112,
+      "path": "direct_runtime_tables/actor_phase_emitter_data/emit.bin",
+      "sha256": "f941bd70c62f64ffe1cc40c1f6e90fde5213b292daa3b3b5621f1e3176ea0a9e"
+    },
+    {
+      "header": "actor_phase_emitter_data.hpp",
+      "name": "jump",
+      "type": "uint8_t",
+      "count": 32,
+      "bytes": 32,
+      "path": "direct_runtime_tables/actor_phase_emitter_data/jump.bin",
+      "sha256": "c177ac6afb3991663c6af3a35a88e2376db2cbebaf7950868fca525268d5810b"
+    },
+    {
+      "header": "actor_probe_patrol.hpp",
+      "name": "actor_probe_patrol_steps",
+      "type": "uint8_t",
+      "count": 22,
+      "bytes": 22,
+      "path": "direct_runtime_tables/actor_probe_patrol/actor_probe_patrol_steps.bin",
+      "sha256": "515e51c37635f7779f46be4c3ba02a0285610b09fec88492c53e0ceb180e6ec5"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank1_collision",
+      "type": "uint8_t",
+      "count": 4096,
+      "bytes": 4096,
+      "path": "all_native_level_data/bank1_collision.bin",
+      "sha256": "414a331bb2ce9a6eb49cada69ebefce4caafb54eddffad26fc2a1dad01fdcbb2"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank1_macros",
+      "type": "TerrainMacroDefinition",
+      "count": 85,
+      "bytes": 850,
+      "path": "all_native_level_data/bank1_macros.bin",
+      "sha256": "40ed35c2f4435680bd031d9f2fd0d222689eb4638b0e039b9ae4e28e778c8421",
+      "schema": {
+        "id": "terrain-macro-v1",
+        "fields": [
+          "width:u8",
+          "height:u8",
+          "tile_offset:u32",
+          "tile_count:u32"
+        ],
+        "tile_resource": "bank1_tiles",
+        "record_bytes": 10
+      }
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank1_patterns",
+      "type": "uint8_t",
+      "count": 28320,
+      "bytes": 28320,
+      "path": "all_native_level_data/bank1_patterns.bin",
+      "sha256": "66a00b3fba3caa446250ae5378f62a8e2d65f416be8891718dc3c2aa5e86d74c"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank1_quads",
+      "type": "uint16_t",
+      "count": 1440,
+      "bytes": 2880,
+      "path": "all_native_level_data/bank1_quads.bin",
+      "sha256": "3712121a1166650043028f226864bb82efd208373fadc8d774c21fba5610d311"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank1_tiles",
+      "type": "uint16_t",
+      "count": 1322,
+      "bytes": 2644,
+      "path": "all_native_level_data/bank1_tiles.bin",
+      "sha256": "4849c82953fdf30f457ed7218871abcbabeac19692dce53262147f2180a16f58"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank2_collision",
+      "type": "uint8_t",
+      "count": 4096,
+      "bytes": 4096,
+      "path": "all_native_level_data/bank2_collision.bin",
+      "sha256": "940d938e6f70929265f307684329bd964b00c8adb9578c30303f8f8af9f7df50"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank2_macros",
+      "type": "TerrainMacroDefinition",
+      "count": 16,
+      "bytes": 160,
+      "path": "all_native_level_data/bank2_macros.bin",
+      "sha256": "175e343439347ed0018c257eda00736f22fe247cd0d29e1e944e14f20216f3d5",
+      "schema": {
+        "id": "terrain-macro-v1",
+        "fields": [
+          "width:u8",
+          "height:u8",
+          "tile_offset:u32",
+          "tile_count:u32"
+        ],
+        "tile_resource": "bank2_tiles",
+        "record_bytes": 10
+      }
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank2_patterns",
+      "type": "uint8_t",
+      "count": 9216,
+      "bytes": 9216,
+      "path": "all_native_level_data/bank2_patterns.bin",
+      "sha256": "7c4a2278d7730c7a27c522c8b5daec00f285dcec9c626232730fba24108f5064"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank2_quads",
+      "type": "uint16_t",
+      "count": 648,
+      "bytes": 1296,
+      "path": "all_native_level_data/bank2_quads.bin",
+      "sha256": "28a3962d17db23c390dd03d66b95242565120db59eb7a3b13d649ed289b34a72"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank2_tiles",
+      "type": "uint16_t",
+      "count": 393,
+      "bytes": 786,
+      "path": "all_native_level_data/bank2_tiles.bin",
+      "sha256": "8b86e989f670f22ffa9b0ed5b69362c46bee64500121c00fb03cd727cc5ed8b9"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank3_collision",
+      "type": "uint8_t",
+      "count": 4096,
+      "bytes": 4096,
+      "path": "all_native_level_data/bank3_collision.bin",
+      "sha256": "4ec4393ee2dd834537594ee18a01aba0f62c2d74ebdfd7940f60bc7e2abcd277"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank3_macros",
+      "type": "TerrainMacroDefinition",
+      "count": 5,
+      "bytes": 50,
+      "path": "all_native_level_data/bank3_macros.bin",
+      "sha256": "bdeaa5b2eaba82ed22615edb602e3b3ec1919d1d84a8b55d15091a6a09b41990",
+      "schema": {
+        "id": "terrain-macro-v1",
+        "fields": [
+          "width:u8",
+          "height:u8",
+          "tile_offset:u32",
+          "tile_count:u32"
+        ],
+        "tile_resource": "bank3_tiles",
+        "record_bytes": 10
+      }
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank3_patterns",
+      "type": "uint8_t",
+      "count": 6880,
+      "bytes": 6880,
+      "path": "all_native_level_data/bank3_patterns.bin",
+      "sha256": "dc3ad5f554afb550cf386fc0b2a8554f3f30b55b982df00192e6c24c9877f3d1"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank3_quads",
+      "type": "uint16_t",
+      "count": 548,
+      "bytes": 1096,
+      "path": "all_native_level_data/bank3_quads.bin",
+      "sha256": "56887a4ad2073d63a4400715d1d6cba29045d66e45ffe03ddfd531f575b5b23c"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank3_tiles",
+      "type": "uint16_t",
+      "count": 312,
+      "bytes": 624,
+      "path": "all_native_level_data/bank3_tiles.bin",
+      "sha256": "79bcbd0be0a1f6f41e1abd0f1399e591bd8cdc49a0d1cbe0644f4485b012ecc6"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank4_collision",
+      "type": "uint8_t",
+      "count": 4096,
+      "bytes": 4096,
+      "path": "all_native_level_data/bank4_collision.bin",
+      "sha256": "46246b3b7d2d5c48c9c630252f08453c699fedef420afc69fbf808485e8d80a7"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank4_macros",
+      "type": "TerrainMacroDefinition",
+      "count": 73,
+      "bytes": 730,
+      "path": "all_native_level_data/bank4_macros.bin",
+      "sha256": "bc60fc2b101f7dce338c76fc9f389616dcb53b12558e50d32c8149f6a69b1cd7",
+      "schema": {
+        "id": "terrain-macro-v1",
+        "fields": [
+          "width:u8",
+          "height:u8",
+          "tile_offset:u32",
+          "tile_count:u32"
+        ],
+        "tile_resource": "bank4_tiles",
+        "record_bytes": 10
+      }
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank4_patterns",
+      "type": "uint8_t",
+      "count": 18272,
+      "bytes": 18272,
+      "path": "all_native_level_data/bank4_patterns.bin",
+      "sha256": "baa8dfac658f67e20115e19e135ec918bd986c27407cf0b323dbedea96b142a0"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank4_quads",
+      "type": "uint16_t",
+      "count": 864,
+      "bytes": 1728,
+      "path": "all_native_level_data/bank4_quads.bin",
+      "sha256": "a5acdc7472fad04f3ee9c480adf02cfbe725498566ce816a6e470a074a487dd1"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank4_tiles",
+      "type": "uint16_t",
+      "count": 1268,
+      "bytes": 2536,
+      "path": "all_native_level_data/bank4_tiles.bin",
+      "sha256": "d248955eddf8c864cae624373d166e60ce09c567292352920c6981e59907a817"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank5_collision",
+      "type": "uint8_t",
+      "count": 4096,
+      "bytes": 4096,
+      "path": "all_native_level_data/bank5_collision.bin",
+      "sha256": "6b3df9cc6c584839d3072889180d4ad4aae42aef6fee8f17950caa15ce3309a8"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank5_macros",
+      "type": "TerrainMacroDefinition",
+      "count": 93,
+      "bytes": 930,
+      "path": "all_native_level_data/bank5_macros.bin",
+      "sha256": "dce6ccb4658c263f108918334b3cea42fc2c7ff5bf3368904fac32ac290aa990",
+      "schema": {
+        "id": "terrain-macro-v1",
+        "fields": [
+          "width:u8",
+          "height:u8",
+          "tile_offset:u32",
+          "tile_count:u32"
+        ],
+        "tile_resource": "bank5_tiles",
+        "record_bytes": 10
+      }
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank5_patterns",
+      "type": "uint8_t",
+      "count": 32128,
+      "bytes": 32128,
+      "path": "all_native_level_data/bank5_patterns.bin",
+      "sha256": "d0d8691440c7cee18f75bfd9cd3feff0363556e58ca1e0af3f70a43cb8df660e"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank5_quads",
+      "type": "uint16_t",
+      "count": 1572,
+      "bytes": 3144,
+      "path": "all_native_level_data/bank5_quads.bin",
+      "sha256": "224942a483dc2d6088b9ac0d762013afd138b970239772cf135cf6cbd4005783"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank5_tiles",
+      "type": "uint16_t",
+      "count": 1485,
+      "bytes": 2970,
+      "path": "all_native_level_data/bank5_tiles.bin",
+      "sha256": "5761d601b1012a742a263942d20a7bd2c7dea3151bd8380cd05f8aed0b3f0985"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank6_collision",
+      "type": "uint8_t",
+      "count": 4096,
+      "bytes": 4096,
+      "path": "all_native_level_data/bank6_collision.bin",
+      "sha256": "2ad9579641fe75dfda553e06b009c739c4fc620d74531c95b0a525e1906be5af"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank6_macros",
+      "type": "TerrainMacroDefinition",
+      "count": 100,
+      "bytes": 1000,
+      "path": "all_native_level_data/bank6_macros.bin",
+      "sha256": "7dc962dc18122a6c903e93323fe48cd94871ce23471ef19ca1189090be003e96",
+      "schema": {
+        "id": "terrain-macro-v1",
+        "fields": [
+          "width:u8",
+          "height:u8",
+          "tile_offset:u32",
+          "tile_count:u32"
+        ],
+        "tile_resource": "bank6_tiles",
+        "record_bytes": 10
+      }
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank6_patterns",
+      "type": "uint8_t",
+      "count": 25984,
+      "bytes": 25984,
+      "path": "all_native_level_data/bank6_patterns.bin",
+      "sha256": "754b005124b6a0af4a7273606319abd5a11b875e0d9e1b1718caa075152f8cc8"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank6_quads",
+      "type": "uint16_t",
+      "count": 1380,
+      "bytes": 2760,
+      "path": "all_native_level_data/bank6_quads.bin",
+      "sha256": "8f60405edbec59c6ddfd8c922aed66dc3bce34e04baf24a963db216ba5e852b6"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank6_tiles",
+      "type": "uint16_t",
+      "count": 1699,
+      "bytes": 3398,
+      "path": "all_native_level_data/bank6_tiles.bin",
+      "sha256": "00a9942df1a26ed8b5eac65cbf1d1b8e2aad0fcd0e235e75da92420b5ff9a01b"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank7_collision",
+      "type": "uint8_t",
+      "count": 4096,
+      "bytes": 4096,
+      "path": "all_native_level_data/bank7_collision.bin",
+      "sha256": "aa331c075a95bb6d3c19c7d04752a6c7db30e5f9aa580fe0b296041bde826cf7"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank7_macros",
+      "type": "TerrainMacroDefinition",
+      "count": 90,
+      "bytes": 900,
+      "path": "all_native_level_data/bank7_macros.bin",
+      "sha256": "efa068442829e113d57ff87f0861b60aa9f41262809f6214e713af8161d91ffb",
+      "schema": {
+        "id": "terrain-macro-v1",
+        "fields": [
+          "width:u8",
+          "height:u8",
+          "tile_offset:u32",
+          "tile_count:u32"
+        ],
+        "tile_resource": "bank7_tiles",
+        "record_bytes": 10
+      }
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank7_patterns",
+      "type": "uint8_t",
+      "count": 30688,
+      "bytes": 30688,
+      "path": "all_native_level_data/bank7_patterns.bin",
+      "sha256": "b754eab08fcc8f484c6462d4569b77152d7933adaa39c0c9948d6937d3462d35"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank7_quads",
+      "type": "uint16_t",
+      "count": 1616,
+      "bytes": 3232,
+      "path": "all_native_level_data/bank7_quads.bin",
+      "sha256": "9baa67a4c3792f8efc4ad08eca381747cc04d0b034ee3d62d8053ee2a303874b"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "bank7_tiles",
+      "type": "uint16_t",
+      "count": 1703,
+      "bytes": 3406,
+      "path": "all_native_level_data/bank7_tiles.bin",
+      "sha256": "56c4fb0b8c5341fdc9279cbfc2f3e895fa1853746872a19f17d808e2c16b433e"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level10_background",
+      "type": "uint8_t",
+      "count": 66,
+      "bytes": 66,
+      "path": "all_native_level_data/level10_background.bin",
+      "sha256": "e0097ac57799c5fe0561973b248675106846f2187bd3bc652e5f118399191ab9"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level10_foreground",
+      "type": "uint8_t",
+      "count": 998,
+      "bytes": 998,
+      "path": "all_native_level_data/level10_foreground.bin",
+      "sha256": "d89598feb2b4d336727a08ccab18eefa5866ec8754067cef1d9515117cd79292"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level10_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level10_palette.bin",
+      "sha256": "ac43be5f09359a3dc2f116a6e28b4b2106514c9f1134bf19e21a251c4e94523e"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level11_background",
+      "type": "uint8_t",
+      "count": 192,
+      "bytes": 192,
+      "path": "all_native_level_data/level11_background.bin",
+      "sha256": "7bce6816205546540786278f98ddab3634a573fdf3da9ce8d18cc1bdc7f21a96"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level11_foreground",
+      "type": "uint8_t",
+      "count": 1784,
+      "bytes": 1784,
+      "path": "all_native_level_data/level11_foreground.bin",
+      "sha256": "307d687b1196ebb0dbea287bf2336b7659f66aaed982843ed049869377103293"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level11_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level11_palette.bin",
+      "sha256": "ac43be5f09359a3dc2f116a6e28b4b2106514c9f1134bf19e21a251c4e94523e"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level12_background",
+      "type": "uint8_t",
+      "count": 192,
+      "bytes": 192,
+      "path": "all_native_level_data/level12_background.bin",
+      "sha256": "7bce6816205546540786278f98ddab3634a573fdf3da9ce8d18cc1bdc7f21a96"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level12_foreground",
+      "type": "uint8_t",
+      "count": 484,
+      "bytes": 484,
+      "path": "all_native_level_data/level12_foreground.bin",
+      "sha256": "d02ad57dcf8b79ab8f335a1c9103dc4978bbbd2a1d0c5f7f60c6d179b5235cf6"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level12_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level12_palette.bin",
+      "sha256": "ac43be5f09359a3dc2f116a6e28b4b2106514c9f1134bf19e21a251c4e94523e"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level13_background",
+      "type": "uint8_t",
+      "count": 192,
+      "bytes": 192,
+      "path": "all_native_level_data/level13_background.bin",
+      "sha256": "7bce6816205546540786278f98ddab3634a573fdf3da9ce8d18cc1bdc7f21a96"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level13_foreground",
+      "type": "uint8_t",
+      "count": 534,
+      "bytes": 534,
+      "path": "all_native_level_data/level13_foreground.bin",
+      "sha256": "fd6411f0be727ddc69ff1bc3aec3404ba25acc3ee82183dce541a08d6f40fe3f"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level13_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level13_palette.bin",
+      "sha256": "ac43be5f09359a3dc2f116a6e28b4b2106514c9f1134bf19e21a251c4e94523e"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level14_background",
+      "type": "uint8_t",
+      "count": 170,
+      "bytes": 170,
+      "path": "all_native_level_data/level14_background.bin",
+      "sha256": "1ae38e7f3e20a484b5c7229b487bb96f47586b9cd4201133b3018cfe0aef566a"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level14_foreground",
+      "type": "uint8_t",
+      "count": 794,
+      "bytes": 794,
+      "path": "all_native_level_data/level14_foreground.bin",
+      "sha256": "651a8fc0f632f1b5b954ed90219e4bc57472667a9cc6105fb5324ab58a573d71"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level14_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level14_palette.bin",
+      "sha256": "acd57359ea506ae0a2f611bb935805f1ad1906f25647947c59761580d868987d"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level15_background",
+      "type": "uint8_t",
+      "count": 626,
+      "bytes": 626,
+      "path": "all_native_level_data/level15_background.bin",
+      "sha256": "87339a2169ccca5696baef26ddda1bc7e8a6b9c7e5233e3288aef6290d902477"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level15_foreground",
+      "type": "uint8_t",
+      "count": 238,
+      "bytes": 238,
+      "path": "all_native_level_data/level15_foreground.bin",
+      "sha256": "4c9eb9846513d3ad228851958211d302c3e3dcc0fd04216e2a3760e2563ca98d"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level15_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level15_palette.bin",
+      "sha256": "2849ef3c1739402dc7b1febf333410f8fe02e1f5b2d4f3a7631d2406cd4d4844"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level16_background",
+      "type": "uint8_t",
+      "count": 58,
+      "bytes": 58,
+      "path": "all_native_level_data/level16_background.bin",
+      "sha256": "df831a9f2a8933a504a5ade260b22ff8bbee00ac2023378bee2aa2b59b3fe76a"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level16_foreground",
+      "type": "uint8_t",
+      "count": 100,
+      "bytes": 100,
+      "path": "all_native_level_data/level16_foreground.bin",
+      "sha256": "bc34df81b58d8e5f0eef216f5c74cb5979e9f566b66d1445e5950ffa23d8c339"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level16_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level16_palette.bin",
+      "sha256": "c29df3cb01c258ced69d74021db2bf2f1c3d297fce82926e93329ed510e21162"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level17_background",
+      "type": "uint8_t",
+      "count": 58,
+      "bytes": 58,
+      "path": "all_native_level_data/level17_background.bin",
+      "sha256": "df831a9f2a8933a504a5ade260b22ff8bbee00ac2023378bee2aa2b59b3fe76a"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level17_foreground",
+      "type": "uint8_t",
+      "count": 100,
+      "bytes": 100,
+      "path": "all_native_level_data/level17_foreground.bin",
+      "sha256": "bc34df81b58d8e5f0eef216f5c74cb5979e9f566b66d1445e5950ffa23d8c339"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level17_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level17_palette.bin",
+      "sha256": "c29df3cb01c258ced69d74021db2bf2f1c3d297fce82926e93329ed510e21162"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level18_background",
+      "type": "uint8_t",
+      "count": 100,
+      "bytes": 100,
+      "path": "all_native_level_data/level18_background.bin",
+      "sha256": "4a9e2d92b9073ecea10afe591e069c469fbecb1b435923f7722914f1c7cb388d"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level18_foreground",
+      "type": "uint8_t",
+      "count": 852,
+      "bytes": 852,
+      "path": "all_native_level_data/level18_foreground.bin",
+      "sha256": "e90a533c01d42d9f74ab2b7cd5b32ccae159eab9f455e47b7adf6fa1dd20f234"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level18_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level18_palette.bin",
+      "sha256": "33062fa1adcfb556e01393bb12fc79f2d0e7a8400c5218bb4b27b923034a58c2"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level19_background",
+      "type": "uint8_t",
+      "count": 100,
+      "bytes": 100,
+      "path": "all_native_level_data/level19_background.bin",
+      "sha256": "4a9e2d92b9073ecea10afe591e069c469fbecb1b435923f7722914f1c7cb388d"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level19_foreground",
+      "type": "uint8_t",
+      "count": 1096,
+      "bytes": 1096,
+      "path": "all_native_level_data/level19_foreground.bin",
+      "sha256": "a6da4ef99190ac9b5b662c7b501f8b1aa5e2118d16b09c681129d60c76c0154c"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level19_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level19_palette.bin",
+      "sha256": "33062fa1adcfb556e01393bb12fc79f2d0e7a8400c5218bb4b27b923034a58c2"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level1_background",
+      "type": "uint8_t",
+      "count": 192,
+      "bytes": 192,
+      "path": "all_native_level_data/level1_background.bin",
+      "sha256": "7bce6816205546540786278f98ddab3634a573fdf3da9ce8d18cc1bdc7f21a96"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level1_foreground",
+      "type": "uint8_t",
+      "count": 1018,
+      "bytes": 1018,
+      "path": "all_native_level_data/level1_foreground.bin",
+      "sha256": "910c87a8643a649cae3f0eee7cf800a2f945fc7c519d8c73e7a83c0046b80512"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level1_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level1_palette.bin",
+      "sha256": "ac43be5f09359a3dc2f116a6e28b4b2106514c9f1134bf19e21a251c4e94523e"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level20_background",
+      "type": "uint8_t",
+      "count": 100,
+      "bytes": 100,
+      "path": "all_native_level_data/level20_background.bin",
+      "sha256": "4a9e2d92b9073ecea10afe591e069c469fbecb1b435923f7722914f1c7cb388d"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level20_foreground",
+      "type": "uint8_t",
+      "count": 1024,
+      "bytes": 1024,
+      "path": "all_native_level_data/level20_foreground.bin",
+      "sha256": "0678c7ee82ff7c6c03c1ceb7c7d1149b05db91bced48e7aef416ab81028f8fc6"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level20_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level20_palette.bin",
+      "sha256": "33062fa1adcfb556e01393bb12fc79f2d0e7a8400c5218bb4b27b923034a58c2"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level21_background",
+      "type": "uint8_t",
+      "count": 100,
+      "bytes": 100,
+      "path": "all_native_level_data/level21_background.bin",
+      "sha256": "4a9e2d92b9073ecea10afe591e069c469fbecb1b435923f7722914f1c7cb388d"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level21_foreground",
+      "type": "uint8_t",
+      "count": 1104,
+      "bytes": 1104,
+      "path": "all_native_level_data/level21_foreground.bin",
+      "sha256": "21ca1061aa9e546932cd8ed0ec609466c1af8d8cc30f12e915bb93568a21dc67"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level21_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level21_palette.bin",
+      "sha256": "33062fa1adcfb556e01393bb12fc79f2d0e7a8400c5218bb4b27b923034a58c2"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level22_background",
+      "type": "uint8_t",
+      "count": 100,
+      "bytes": 100,
+      "path": "all_native_level_data/level22_background.bin",
+      "sha256": "4a9e2d92b9073ecea10afe591e069c469fbecb1b435923f7722914f1c7cb388d"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level22_foreground",
+      "type": "uint8_t",
+      "count": 490,
+      "bytes": 490,
+      "path": "all_native_level_data/level22_foreground.bin",
+      "sha256": "c19543e9f0ba2f8f702799bbf2f2f4aadbdcf19e7201589e93eed2e944f24c31"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level22_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level22_palette.bin",
+      "sha256": "33062fa1adcfb556e01393bb12fc79f2d0e7a8400c5218bb4b27b923034a58c2"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level23_background",
+      "type": "uint8_t",
+      "count": 100,
+      "bytes": 100,
+      "path": "all_native_level_data/level23_background.bin",
+      "sha256": "4a9e2d92b9073ecea10afe591e069c469fbecb1b435923f7722914f1c7cb388d"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level23_foreground",
+      "type": "uint8_t",
+      "count": 1240,
+      "bytes": 1240,
+      "path": "all_native_level_data/level23_foreground.bin",
+      "sha256": "f23c8b3da062d9c851995c1a9009514a0f71933605a72a070a937b05f462754a"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level23_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level23_palette.bin",
+      "sha256": "33062fa1adcfb556e01393bb12fc79f2d0e7a8400c5218bb4b27b923034a58c2"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level24_background",
+      "type": "uint8_t",
+      "count": 100,
+      "bytes": 100,
+      "path": "all_native_level_data/level24_background.bin",
+      "sha256": "4a9e2d92b9073ecea10afe591e069c469fbecb1b435923f7722914f1c7cb388d"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level24_foreground",
+      "type": "uint8_t",
+      "count": 496,
+      "bytes": 496,
+      "path": "all_native_level_data/level24_foreground.bin",
+      "sha256": "6b401f1a4036c90a08e504bd6c2f0c99b850e8f17d3e93faaa1b8621aee50a8b"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level24_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level24_palette.bin",
+      "sha256": "33062fa1adcfb556e01393bb12fc79f2d0e7a8400c5218bb4b27b923034a58c2"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level25_background",
+      "type": "uint8_t",
+      "count": 100,
+      "bytes": 100,
+      "path": "all_native_level_data/level25_background.bin",
+      "sha256": "4a9e2d92b9073ecea10afe591e069c469fbecb1b435923f7722914f1c7cb388d"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level25_foreground",
+      "type": "uint8_t",
+      "count": 380,
+      "bytes": 380,
+      "path": "all_native_level_data/level25_foreground.bin",
+      "sha256": "9b60bdbb1e10cf0625b92849385ff6a6a11465f8f8a2851d73b1a3c480a8fa40"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level25_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level25_palette.bin",
+      "sha256": "33062fa1adcfb556e01393bb12fc79f2d0e7a8400c5218bb4b27b923034a58c2"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level26_background",
+      "type": "uint8_t",
+      "count": 66,
+      "bytes": 66,
+      "path": "all_native_level_data/level26_background.bin",
+      "sha256": "fc60b6497dee9ca3bd790052989ab1a26dfbb551f54fe3822ea6cb6cc899986b"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level26_foreground",
+      "type": "uint8_t",
+      "count": 78,
+      "bytes": 78,
+      "path": "all_native_level_data/level26_foreground.bin",
+      "sha256": "d1cbfbac3d9260e705c1580be1dbfde94b3a9b93758476a62ff212447bd8cf02"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level26_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level26_palette.bin",
+      "sha256": "33062fa1adcfb556e01393bb12fc79f2d0e7a8400c5218bb4b27b923034a58c2"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level27_background",
+      "type": "uint8_t",
+      "count": 100,
+      "bytes": 100,
+      "path": "all_native_level_data/level27_background.bin",
+      "sha256": "4a9e2d92b9073ecea10afe591e069c469fbecb1b435923f7722914f1c7cb388d"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level27_foreground",
+      "type": "uint8_t",
+      "count": 380,
+      "bytes": 380,
+      "path": "all_native_level_data/level27_foreground.bin",
+      "sha256": "68b13507643b80ef65c0d423fd4f55f790f7980a49ee70ab1c2c3bfd81b5359e"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level27_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level27_palette.bin",
+      "sha256": "33062fa1adcfb556e01393bb12fc79f2d0e7a8400c5218bb4b27b923034a58c2"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level28_background",
+      "type": "uint8_t",
+      "count": 100,
+      "bytes": 100,
+      "path": "all_native_level_data/level28_background.bin",
+      "sha256": "4a9e2d92b9073ecea10afe591e069c469fbecb1b435923f7722914f1c7cb388d"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level28_foreground",
+      "type": "uint8_t",
+      "count": 1110,
+      "bytes": 1110,
+      "path": "all_native_level_data/level28_foreground.bin",
+      "sha256": "971c5c6f8e1276945b0118e8dbf96e0d7e80f754ede06f60950ee5c4d09e2aef"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level28_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level28_palette.bin",
+      "sha256": "33062fa1adcfb556e01393bb12fc79f2d0e7a8400c5218bb4b27b923034a58c2"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level29_background",
+      "type": "uint8_t",
+      "count": 626,
+      "bytes": 626,
+      "path": "all_native_level_data/level29_background.bin",
+      "sha256": "87339a2169ccca5696baef26ddda1bc7e8a6b9c7e5233e3288aef6290d902477"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level29_foreground",
+      "type": "uint8_t",
+      "count": 178,
+      "bytes": 178,
+      "path": "all_native_level_data/level29_foreground.bin",
+      "sha256": "7666077d03619bca87243aeb2736f129cdd28b9e0247ce3b6e080d13d66d1527"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level29_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level29_palette.bin",
+      "sha256": "2849ef3c1739402dc7b1febf333410f8fe02e1f5b2d4f3a7631d2406cd4d4844"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level2_background",
+      "type": "uint8_t",
+      "count": 192,
+      "bytes": 192,
+      "path": "all_native_level_data/level2_background.bin",
+      "sha256": "7bce6816205546540786278f98ddab3634a573fdf3da9ce8d18cc1bdc7f21a96"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level2_foreground",
+      "type": "uint8_t",
+      "count": 986,
+      "bytes": 986,
+      "path": "all_native_level_data/level2_foreground.bin",
+      "sha256": "fa9de87576cb3238458f36889e27dc6986ea85352643466ebbaa3f7e4f50f787"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level2_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level2_palette.bin",
+      "sha256": "ac43be5f09359a3dc2f116a6e28b4b2106514c9f1134bf19e21a251c4e94523e"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level30_background",
+      "type": "uint8_t",
+      "count": 100,
+      "bytes": 100,
+      "path": "all_native_level_data/level30_background.bin",
+      "sha256": "4a9e2d92b9073ecea10afe591e069c469fbecb1b435923f7722914f1c7cb388d"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level30_foreground",
+      "type": "uint8_t",
+      "count": 680,
+      "bytes": 680,
+      "path": "all_native_level_data/level30_foreground.bin",
+      "sha256": "1f01603c29fabe0161439e0d2a86bf9cbe1bb9995baf0e3a34597881d4ed8819"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level30_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level30_palette.bin",
+      "sha256": "33062fa1adcfb556e01393bb12fc79f2d0e7a8400c5218bb4b27b923034a58c2"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level31_background",
+      "type": "uint8_t",
+      "count": 100,
+      "bytes": 100,
+      "path": "all_native_level_data/level31_background.bin",
+      "sha256": "4a9e2d92b9073ecea10afe591e069c469fbecb1b435923f7722914f1c7cb388d"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level31_foreground",
+      "type": "uint8_t",
+      "count": 690,
+      "bytes": 690,
+      "path": "all_native_level_data/level31_foreground.bin",
+      "sha256": "b73042878b8a3b4245b450c64721a065a698298286725de1d6bf5bf3015c46d9"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level31_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level31_palette.bin",
+      "sha256": "33062fa1adcfb556e01393bb12fc79f2d0e7a8400c5218bb4b27b923034a58c2"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level32_background",
+      "type": "uint8_t",
+      "count": 100,
+      "bytes": 100,
+      "path": "all_native_level_data/level32_background.bin",
+      "sha256": "4a9e2d92b9073ecea10afe591e069c469fbecb1b435923f7722914f1c7cb388d"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level32_foreground",
+      "type": "uint8_t",
+      "count": 342,
+      "bytes": 342,
+      "path": "all_native_level_data/level32_foreground.bin",
+      "sha256": "cb391283e15352ef68ca1dcc15d5629d2f6b900491a95d60ceb0685c5271caff"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level32_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level32_palette.bin",
+      "sha256": "33062fa1adcfb556e01393bb12fc79f2d0e7a8400c5218bb4b27b923034a58c2"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level33_background",
+      "type": "uint8_t",
+      "count": 626,
+      "bytes": 626,
+      "path": "all_native_level_data/level33_background.bin",
+      "sha256": "87339a2169ccca5696baef26ddda1bc7e8a6b9c7e5233e3288aef6290d902477"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level33_foreground",
+      "type": "uint8_t",
+      "count": 310,
+      "bytes": 310,
+      "path": "all_native_level_data/level33_foreground.bin",
+      "sha256": "c24bdeb9626c38a75b40050ca0ae68d4b48aa62720415d607a1e3ce68014c0af"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level33_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level33_palette.bin",
+      "sha256": "2849ef3c1739402dc7b1febf333410f8fe02e1f5b2d4f3a7631d2406cd4d4844"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level34_background",
+      "type": "uint8_t",
+      "count": 134,
+      "bytes": 134,
+      "path": "all_native_level_data/level34_background.bin",
+      "sha256": "0eb544120999082f3129a07115b781375ee0dd3d310227c644ec1546dd25d0a3"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level34_foreground",
+      "type": "uint8_t",
+      "count": 284,
+      "bytes": 284,
+      "path": "all_native_level_data/level34_foreground.bin",
+      "sha256": "3722f82fa3fcf1cf90642aad66f24a91a77a94b87ead501c382e2dc203f5fa08"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level34_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level34_palette.bin",
+      "sha256": "9410d57772e047ddddc53ff624b21eb4a2c79166af53b37ef83ad05d4539fe31"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level35_background",
+      "type": "uint8_t",
+      "count": 170,
+      "bytes": 170,
+      "path": "all_native_level_data/level35_background.bin",
+      "sha256": "1ae38e7f3e20a484b5c7229b487bb96f47586b9cd4201133b3018cfe0aef566a"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level35_foreground",
+      "type": "uint8_t",
+      "count": 1806,
+      "bytes": 1806,
+      "path": "all_native_level_data/level35_foreground.bin",
+      "sha256": "9916bd3074b31620f5fbe40b99d6b329556bfd1c1445de9624d845f90efd51e1"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level35_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level35_palette.bin",
+      "sha256": "3cc9b35c5ffb76b4f2cc752884faa38fcb604af5df2f46a24b97194b9fe05f9b"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level36_background",
+      "type": "uint8_t",
+      "count": 134,
+      "bytes": 134,
+      "path": "all_native_level_data/level36_background.bin",
+      "sha256": "84e1971b609c7a4ca9bc8e58f89fb6299c54a20e680862b9785d74c01fa8df05"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level36_foreground",
+      "type": "uint8_t",
+      "count": 774,
+      "bytes": 774,
+      "path": "all_native_level_data/level36_foreground.bin",
+      "sha256": "f62a732275405e36e458aa15a7396a2c63b8a892112e6d1e7a4b7fbde7455308"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level36_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level36_palette.bin",
+      "sha256": "854ca8839f8ecc1727c8a138bf1bef30b333abaccfa8d223ea5b8b26a3f356bf"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level37_background",
+      "type": "uint8_t",
+      "count": 134,
+      "bytes": 134,
+      "path": "all_native_level_data/level37_background.bin",
+      "sha256": "84e1971b609c7a4ca9bc8e58f89fb6299c54a20e680862b9785d74c01fa8df05"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level37_foreground",
+      "type": "uint8_t",
+      "count": 1512,
+      "bytes": 1512,
+      "path": "all_native_level_data/level37_foreground.bin",
+      "sha256": "6f7b2dbfdbc0289723db684a8ff698a8092426b0c44c3d5b8f02a53ab1a03e36"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level37_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level37_palette.bin",
+      "sha256": "854ca8839f8ecc1727c8a138bf1bef30b333abaccfa8d223ea5b8b26a3f356bf"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level38_background",
+      "type": "uint8_t",
+      "count": 626,
+      "bytes": 626,
+      "path": "all_native_level_data/level38_background.bin",
+      "sha256": "87339a2169ccca5696baef26ddda1bc7e8a6b9c7e5233e3288aef6290d902477"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level38_foreground",
+      "type": "uint8_t",
+      "count": 106,
+      "bytes": 106,
+      "path": "all_native_level_data/level38_foreground.bin",
+      "sha256": "fc3afac8d419e5e54f81a1fae3aa392b2ac635d18d0226bc867f15a82d752545"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level38_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level38_palette.bin",
+      "sha256": "2849ef3c1739402dc7b1febf333410f8fe02e1f5b2d4f3a7631d2406cd4d4844"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level39_background",
+      "type": "uint8_t",
+      "count": 134,
+      "bytes": 134,
+      "path": "all_native_level_data/level39_background.bin",
+      "sha256": "0eb544120999082f3129a07115b781375ee0dd3d310227c644ec1546dd25d0a3"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level39_foreground",
+      "type": "uint8_t",
+      "count": 986,
+      "bytes": 986,
+      "path": "all_native_level_data/level39_foreground.bin",
+      "sha256": "3e97640b309441871a6cb75f7ffb51e0dc17deb953beefe83021c1a5d4de157d"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level39_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level39_palette.bin",
+      "sha256": "9410d57772e047ddddc53ff624b21eb4a2c79166af53b37ef83ad05d4539fe31"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level3_background",
+      "type": "uint8_t",
+      "count": 192,
+      "bytes": 192,
+      "path": "all_native_level_data/level3_background.bin",
+      "sha256": "7bce6816205546540786278f98ddab3634a573fdf3da9ce8d18cc1bdc7f21a96"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level3_foreground",
+      "type": "uint8_t",
+      "count": 1376,
+      "bytes": 1376,
+      "path": "all_native_level_data/level3_foreground.bin",
+      "sha256": "ffc57e472570a1272d64e3f3afdeaffde59405d0a4605771ee240394beeb2a24"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level3_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level3_palette.bin",
+      "sha256": "ac43be5f09359a3dc2f116a6e28b4b2106514c9f1134bf19e21a251c4e94523e"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level40_background",
+      "type": "uint8_t",
+      "count": 134,
+      "bytes": 134,
+      "path": "all_native_level_data/level40_background.bin",
+      "sha256": "84e1971b609c7a4ca9bc8e58f89fb6299c54a20e680862b9785d74c01fa8df05"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level40_foreground",
+      "type": "uint8_t",
+      "count": 764,
+      "bytes": 764,
+      "path": "all_native_level_data/level40_foreground.bin",
+      "sha256": "3780f76f622b68d414bf8f49ab5f63348df6dcf5971d8e299d78b9744675a09a"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level40_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level40_palette.bin",
+      "sha256": "854ca8839f8ecc1727c8a138bf1bef30b333abaccfa8d223ea5b8b26a3f356bf"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level41_background",
+      "type": "uint8_t",
+      "count": 74,
+      "bytes": 74,
+      "path": "all_native_level_data/level41_background.bin",
+      "sha256": "345cfe35e12f8d6d3226cfd0cda87918057b8abc6d2b971c4473516709b2229e"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level41_foreground",
+      "type": "uint8_t",
+      "count": 954,
+      "bytes": 954,
+      "path": "all_native_level_data/level41_foreground.bin",
+      "sha256": "23d5845ff40378f2b0dc0a5b208d0d047d2b31ff006735a304395993b0683aed"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level41_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level41_palette.bin",
+      "sha256": "854ca8839f8ecc1727c8a138bf1bef30b333abaccfa8d223ea5b8b26a3f356bf"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level42_background",
+      "type": "uint8_t",
+      "count": 134,
+      "bytes": 134,
+      "path": "all_native_level_data/level42_background.bin",
+      "sha256": "84e1971b609c7a4ca9bc8e58f89fb6299c54a20e680862b9785d74c01fa8df05"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level42_foreground",
+      "type": "uint8_t",
+      "count": 834,
+      "bytes": 834,
+      "path": "all_native_level_data/level42_foreground.bin",
+      "sha256": "f1545c10002239c4d154d182cf06cc08d0ed59b4c4e8542f3d104711bbf1ac5b"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level42_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level42_palette.bin",
+      "sha256": "854ca8839f8ecc1727c8a138bf1bef30b333abaccfa8d223ea5b8b26a3f356bf"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level43_background",
+      "type": "uint8_t",
+      "count": 134,
+      "bytes": 134,
+      "path": "all_native_level_data/level43_background.bin",
+      "sha256": "84e1971b609c7a4ca9bc8e58f89fb6299c54a20e680862b9785d74c01fa8df05"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level43_foreground",
+      "type": "uint8_t",
+      "count": 936,
+      "bytes": 936,
+      "path": "all_native_level_data/level43_foreground.bin",
+      "sha256": "2f083ea3c011192c8d66eaad7cf52b6971d5f84566026ec412839a7a5e401462"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level43_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level43_palette.bin",
+      "sha256": "854ca8839f8ecc1727c8a138bf1bef30b333abaccfa8d223ea5b8b26a3f356bf"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level44_background",
+      "type": "uint8_t",
+      "count": 58,
+      "bytes": 58,
+      "path": "all_native_level_data/level44_background.bin",
+      "sha256": "df831a9f2a8933a504a5ade260b22ff8bbee00ac2023378bee2aa2b59b3fe76a"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level44_foreground",
+      "type": "uint8_t",
+      "count": 100,
+      "bytes": 100,
+      "path": "all_native_level_data/level44_foreground.bin",
+      "sha256": "bc34df81b58d8e5f0eef216f5c74cb5979e9f566b66d1445e5950ffa23d8c339"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level44_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level44_palette.bin",
+      "sha256": "c29df3cb01c258ced69d74021db2bf2f1c3d297fce82926e93329ed510e21162"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level45_background",
+      "type": "uint8_t",
+      "count": 134,
+      "bytes": 134,
+      "path": "all_native_level_data/level45_background.bin",
+      "sha256": "84e1971b609c7a4ca9bc8e58f89fb6299c54a20e680862b9785d74c01fa8df05"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level45_foreground",
+      "type": "uint8_t",
+      "count": 300,
+      "bytes": 300,
+      "path": "all_native_level_data/level45_foreground.bin",
+      "sha256": "8617f8748ac9cf99079abd3713812d17e518ca3335af113c713a64d813df3a6f"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level45_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level45_palette.bin",
+      "sha256": "788dee8bea630e3a7091fe2d78787590647bb34fd2d57ca72c139dfe77eb0bf9"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level47_background",
+      "type": "uint8_t",
+      "count": 58,
+      "bytes": 58,
+      "path": "all_native_level_data/level47_background.bin",
+      "sha256": "df831a9f2a8933a504a5ade260b22ff8bbee00ac2023378bee2aa2b59b3fe76a"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level47_foreground",
+      "type": "uint8_t",
+      "count": 74,
+      "bytes": 74,
+      "path": "all_native_level_data/level47_foreground.bin",
+      "sha256": "f253f0920e5f231ef6fb8dd0bffecbc811ced3c48ad4cf929e568d9df62a7a8d"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level47_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level47_palette.bin",
+      "sha256": "c29df3cb01c258ced69d74021db2bf2f1c3d297fce82926e93329ed510e21162"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level48_background",
+      "type": "uint8_t",
+      "count": 134,
+      "bytes": 134,
+      "path": "all_native_level_data/level48_background.bin",
+      "sha256": "84e1971b609c7a4ca9bc8e58f89fb6299c54a20e680862b9785d74c01fa8df05"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level48_foreground",
+      "type": "uint8_t",
+      "count": 1200,
+      "bytes": 1200,
+      "path": "all_native_level_data/level48_foreground.bin",
+      "sha256": "d85662f8a7593bcff7dd8f94560b446f1dc6b6f97a9d7939db1088db4209f0cf"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level48_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level48_palette.bin",
+      "sha256": "854ca8839f8ecc1727c8a138bf1bef30b333abaccfa8d223ea5b8b26a3f356bf"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level49_background",
+      "type": "uint8_t",
+      "count": 58,
+      "bytes": 58,
+      "path": "all_native_level_data/level49_background.bin",
+      "sha256": "df831a9f2a8933a504a5ade260b22ff8bbee00ac2023378bee2aa2b59b3fe76a"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level49_foreground",
+      "type": "uint8_t",
+      "count": 100,
+      "bytes": 100,
+      "path": "all_native_level_data/level49_foreground.bin",
+      "sha256": "bc34df81b58d8e5f0eef216f5c74cb5979e9f566b66d1445e5950ffa23d8c339"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level49_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level49_palette.bin",
+      "sha256": "c29df3cb01c258ced69d74021db2bf2f1c3d297fce82926e93329ed510e21162"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level4_background",
+      "type": "uint8_t",
+      "count": 192,
+      "bytes": 192,
+      "path": "all_native_level_data/level4_background.bin",
+      "sha256": "7bce6816205546540786278f98ddab3634a573fdf3da9ce8d18cc1bdc7f21a96"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level4_foreground",
+      "type": "uint8_t",
+      "count": 1138,
+      "bytes": 1138,
+      "path": "all_native_level_data/level4_foreground.bin",
+      "sha256": "e78c0c8755880ac542fb914acfe9da70ccfaa00cad5ebe842b38d969396e69ff"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level4_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level4_palette.bin",
+      "sha256": "ac43be5f09359a3dc2f116a6e28b4b2106514c9f1134bf19e21a251c4e94523e"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level50_background",
+      "type": "uint8_t",
+      "count": 74,
+      "bytes": 74,
+      "path": "all_native_level_data/level50_background.bin",
+      "sha256": "345cfe35e12f8d6d3226cfd0cda87918057b8abc6d2b971c4473516709b2229e"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level50_foreground",
+      "type": "uint8_t",
+      "count": 890,
+      "bytes": 890,
+      "path": "all_native_level_data/level50_foreground.bin",
+      "sha256": "c83bf52422d0a50490102634e158dafbfd29e8e5b9a5a1cf1d3ec3b78e0d51d8"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level50_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level50_palette.bin",
+      "sha256": "9410d57772e047ddddc53ff624b21eb4a2c79166af53b37ef83ad05d4539fe31"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level51_background",
+      "type": "uint8_t",
+      "count": 170,
+      "bytes": 170,
+      "path": "all_native_level_data/level51_background.bin",
+      "sha256": "1ae38e7f3e20a484b5c7229b487bb96f47586b9cd4201133b3018cfe0aef566a"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level51_foreground",
+      "type": "uint8_t",
+      "count": 422,
+      "bytes": 422,
+      "path": "all_native_level_data/level51_foreground.bin",
+      "sha256": "5490843bdc673eca9fee687ca405aeae514bda457fd9e2f03dbaf3fc64982ba4"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level51_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level51_palette.bin",
+      "sha256": "acd57359ea506ae0a2f611bb935805f1ad1906f25647947c59761580d868987d"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level52_background",
+      "type": "uint8_t",
+      "count": 74,
+      "bytes": 74,
+      "path": "all_native_level_data/level52_background.bin",
+      "sha256": "345cfe35e12f8d6d3226cfd0cda87918057b8abc6d2b971c4473516709b2229e"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level52_foreground",
+      "type": "uint8_t",
+      "count": 620,
+      "bytes": 620,
+      "path": "all_native_level_data/level52_foreground.bin",
+      "sha256": "0818ac006467d48b4e6dfb14eaac2757d988f9ae5279759ef6581fa170c3c92a"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level52_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level52_palette.bin",
+      "sha256": "9410d57772e047ddddc53ff624b21eb4a2c79166af53b37ef83ad05d4539fe31"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level53_background",
+      "type": "uint8_t",
+      "count": 170,
+      "bytes": 170,
+      "path": "all_native_level_data/level53_background.bin",
+      "sha256": "1ae38e7f3e20a484b5c7229b487bb96f47586b9cd4201133b3018cfe0aef566a"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level53_foreground",
+      "type": "uint8_t",
+      "count": 1160,
+      "bytes": 1160,
+      "path": "all_native_level_data/level53_foreground.bin",
+      "sha256": "fa16e42400fc85f449257b3cbe6be344ad543d4ef763b519bc829f8f3e058830"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level53_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level53_palette.bin",
+      "sha256": "7df30fafb8a63de0cadf45ac6a39d43e9c34b801d0155c080285ddb16988e029"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level54_background",
+      "type": "uint8_t",
+      "count": 134,
+      "bytes": 134,
+      "path": "all_native_level_data/level54_background.bin",
+      "sha256": "370c77d34bf6c2c928cf369ec2336db81cb3f7a2f3e630eb2ebbf7851817e40d"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level54_foreground",
+      "type": "uint8_t",
+      "count": 468,
+      "bytes": 468,
+      "path": "all_native_level_data/level54_foreground.bin",
+      "sha256": "1c9c819f784f2e19b8bbefde499d00b8966e46a08fc1793416356891762968fd"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level54_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level54_palette.bin",
+      "sha256": "1896f72a99976aa29b95b3630411589644f9aef33d0d77abda0acd94a805fe79"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level55_background",
+      "type": "uint8_t",
+      "count": 134,
+      "bytes": 134,
+      "path": "all_native_level_data/level55_background.bin",
+      "sha256": "370c77d34bf6c2c928cf369ec2336db81cb3f7a2f3e630eb2ebbf7851817e40d"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level55_foreground",
+      "type": "uint8_t",
+      "count": 644,
+      "bytes": 644,
+      "path": "all_native_level_data/level55_foreground.bin",
+      "sha256": "dc624288d36f7936c101aedf916eb170504fdeb12df64028be8d7102567a8007"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level55_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level55_palette.bin",
+      "sha256": "1896f72a99976aa29b95b3630411589644f9aef33d0d77abda0acd94a805fe79"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level56_background",
+      "type": "uint8_t",
+      "count": 134,
+      "bytes": 134,
+      "path": "all_native_level_data/level56_background.bin",
+      "sha256": "370c77d34bf6c2c928cf369ec2336db81cb3f7a2f3e630eb2ebbf7851817e40d"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level56_foreground",
+      "type": "uint8_t",
+      "count": 986,
+      "bytes": 986,
+      "path": "all_native_level_data/level56_foreground.bin",
+      "sha256": "33198002a28af15832a853ae71e6feb6a9e6f49256c704385b024e28116bbb3e"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level56_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level56_palette.bin",
+      "sha256": "1896f72a99976aa29b95b3630411589644f9aef33d0d77abda0acd94a805fe79"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level57_background",
+      "type": "uint8_t",
+      "count": 170,
+      "bytes": 170,
+      "path": "all_native_level_data/level57_background.bin",
+      "sha256": "1ae38e7f3e20a484b5c7229b487bb96f47586b9cd4201133b3018cfe0aef566a"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level57_foreground",
+      "type": "uint8_t",
+      "count": 364,
+      "bytes": 364,
+      "path": "all_native_level_data/level57_foreground.bin",
+      "sha256": "0ccf3fa11d85e7ecde7389a76f38aa3430787f1a14377789a11fb56b36098ea3"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level57_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level57_palette.bin",
+      "sha256": "82bfaaa65a60f86ee412a1c506c7118a503945b42768a82f8d7456f43fa203fb"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level58_background",
+      "type": "uint8_t",
+      "count": 134,
+      "bytes": 134,
+      "path": "all_native_level_data/level58_background.bin",
+      "sha256": "370c77d34bf6c2c928cf369ec2336db81cb3f7a2f3e630eb2ebbf7851817e40d"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level58_foreground",
+      "type": "uint8_t",
+      "count": 490,
+      "bytes": 490,
+      "path": "all_native_level_data/level58_foreground.bin",
+      "sha256": "cee3c43748fd00b6af4efdb7edc45d3c9c79f2c585c332ffb6ff1315799bee21"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level58_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level58_palette.bin",
+      "sha256": "1896f72a99976aa29b95b3630411589644f9aef33d0d77abda0acd94a805fe79"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level59_background",
+      "type": "uint8_t",
+      "count": 134,
+      "bytes": 134,
+      "path": "all_native_level_data/level59_background.bin",
+      "sha256": "370c77d34bf6c2c928cf369ec2336db81cb3f7a2f3e630eb2ebbf7851817e40d"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level59_foreground",
+      "type": "uint8_t",
+      "count": 902,
+      "bytes": 902,
+      "path": "all_native_level_data/level59_foreground.bin",
+      "sha256": "8c6aafee4affa335bc51adeb130fd7ca2b6c3eecc6dc226dec9e5a8ef083237a"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level59_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level59_palette.bin",
+      "sha256": "1896f72a99976aa29b95b3630411589644f9aef33d0d77abda0acd94a805fe79"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level5_background",
+      "type": "uint8_t",
+      "count": 192,
+      "bytes": 192,
+      "path": "all_native_level_data/level5_background.bin",
+      "sha256": "7bce6816205546540786278f98ddab3634a573fdf3da9ce8d18cc1bdc7f21a96"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level5_foreground",
+      "type": "uint8_t",
+      "count": 558,
+      "bytes": 558,
+      "path": "all_native_level_data/level5_foreground.bin",
+      "sha256": "331a6635d8fc3a1521cb48c172d243b9d5a1c8064b3e65d1487992946d96993c"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level5_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level5_palette.bin",
+      "sha256": "ac43be5f09359a3dc2f116a6e28b4b2106514c9f1134bf19e21a251c4e94523e"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level60_background",
+      "type": "uint8_t",
+      "count": 134,
+      "bytes": 134,
+      "path": "all_native_level_data/level60_background.bin",
+      "sha256": "370c77d34bf6c2c928cf369ec2336db81cb3f7a2f3e630eb2ebbf7851817e40d"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level60_foreground",
+      "type": "uint8_t",
+      "count": 238,
+      "bytes": 238,
+      "path": "all_native_level_data/level60_foreground.bin",
+      "sha256": "e2b822d969bf634fb39471684772ab1a2314fb4d1a8586500327badbc4543802"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level60_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level60_palette.bin",
+      "sha256": "1896f72a99976aa29b95b3630411589644f9aef33d0d77abda0acd94a805fe79"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level61_background",
+      "type": "uint8_t",
+      "count": 134,
+      "bytes": 134,
+      "path": "all_native_level_data/level61_background.bin",
+      "sha256": "370c77d34bf6c2c928cf369ec2336db81cb3f7a2f3e630eb2ebbf7851817e40d"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level61_foreground",
+      "type": "uint8_t",
+      "count": 498,
+      "bytes": 498,
+      "path": "all_native_level_data/level61_foreground.bin",
+      "sha256": "867a4e7e488fd51dcfdf8ed36391020c4424e71c062cebb78c57964d515aa732"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level61_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level61_palette.bin",
+      "sha256": "1896f72a99976aa29b95b3630411589644f9aef33d0d77abda0acd94a805fe79"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level62_background",
+      "type": "uint8_t",
+      "count": 170,
+      "bytes": 170,
+      "path": "all_native_level_data/level62_background.bin",
+      "sha256": "54aa25bf25985bd3b23515e636f876c5a9516af66b0f515830961b134090a3dd"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level62_foreground",
+      "type": "uint8_t",
+      "count": 84,
+      "bytes": 84,
+      "path": "all_native_level_data/level62_foreground.bin",
+      "sha256": "aaf24dafb8e8cb10231917911b784ed3eda84a9d8aad8ec13b07c3da55c78225"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level62_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level62_palette.bin",
+      "sha256": "702f67efdc8cf0494802e765342549ddce83cdfe7933d8435be39fb05c2013f8"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level63_background",
+      "type": "uint8_t",
+      "count": 170,
+      "bytes": 170,
+      "path": "all_native_level_data/level63_background.bin",
+      "sha256": "54aa25bf25985bd3b23515e636f876c5a9516af66b0f515830961b134090a3dd"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level63_foreground",
+      "type": "uint8_t",
+      "count": 92,
+      "bytes": 92,
+      "path": "all_native_level_data/level63_foreground.bin",
+      "sha256": "406abc1fbccbcfe8ea0e7d836a65aa179c0bb421f91820777c3da12926513f80"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level63_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level63_palette.bin",
+      "sha256": "702f67efdc8cf0494802e765342549ddce83cdfe7933d8435be39fb05c2013f8"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level64_background",
+      "type": "uint8_t",
+      "count": 144,
+      "bytes": 144,
+      "path": "all_native_level_data/level64_background.bin",
+      "sha256": "00bf6c50fc1b61600ee19bbc857ecf8bf45193cc34c9be156c571b9a3a6db4a0"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level64_foreground",
+      "type": "uint8_t",
+      "count": 340,
+      "bytes": 340,
+      "path": "all_native_level_data/level64_foreground.bin",
+      "sha256": "4c7c0158acb56b341ea308a29c1d118ce50e17fac7dae85701ba864938f7856c"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level64_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level64_palette.bin",
+      "sha256": "5111898b9bf7d5344acc259fcaf4b7b9539b6070620f5d12382635ce5575620c"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level65_background",
+      "type": "uint8_t",
+      "count": 140,
+      "bytes": 140,
+      "path": "all_native_level_data/level65_background.bin",
+      "sha256": "15ac1fe714f28949ac034bc1e6cabbe9e79d43865bbcea18302168656d1a58f4"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level65_foreground",
+      "type": "uint8_t",
+      "count": 1440,
+      "bytes": 1440,
+      "path": "all_native_level_data/level65_foreground.bin",
+      "sha256": "5cdac982dad8fb67a5c6ca93c427bc7002e21cf2e19a3f811f314b3f0e1b1bf6"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level65_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level65_palette.bin",
+      "sha256": "5111898b9bf7d5344acc259fcaf4b7b9539b6070620f5d12382635ce5575620c"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level66_background",
+      "type": "uint8_t",
+      "count": 144,
+      "bytes": 144,
+      "path": "all_native_level_data/level66_background.bin",
+      "sha256": "00bf6c50fc1b61600ee19bbc857ecf8bf45193cc34c9be156c571b9a3a6db4a0"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level66_foreground",
+      "type": "uint8_t",
+      "count": 822,
+      "bytes": 822,
+      "path": "all_native_level_data/level66_foreground.bin",
+      "sha256": "ec11cbf2f6c84d04e1feaa583880786a0c3d30ae444e94c538dc9320a7be9d4c"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level66_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level66_palette.bin",
+      "sha256": "5111898b9bf7d5344acc259fcaf4b7b9539b6070620f5d12382635ce5575620c"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level67_background",
+      "type": "uint8_t",
+      "count": 144,
+      "bytes": 144,
+      "path": "all_native_level_data/level67_background.bin",
+      "sha256": "00bf6c50fc1b61600ee19bbc857ecf8bf45193cc34c9be156c571b9a3a6db4a0"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level67_foreground",
+      "type": "uint8_t",
+      "count": 248,
+      "bytes": 248,
+      "path": "all_native_level_data/level67_foreground.bin",
+      "sha256": "00929eab69f37c8d45253e715614ac12631dedce1115da407b5475f819b3e559"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level67_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level67_palette.bin",
+      "sha256": "5111898b9bf7d5344acc259fcaf4b7b9539b6070620f5d12382635ce5575620c"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level68_background",
+      "type": "uint8_t",
+      "count": 144,
+      "bytes": 144,
+      "path": "all_native_level_data/level68_background.bin",
+      "sha256": "00bf6c50fc1b61600ee19bbc857ecf8bf45193cc34c9be156c571b9a3a6db4a0"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level68_foreground",
+      "type": "uint8_t",
+      "count": 160,
+      "bytes": 160,
+      "path": "all_native_level_data/level68_foreground.bin",
+      "sha256": "b194c38b65e5769e5a1c0e03bee2dc90ba328d0703a55ccb256803b25839e5b3"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level68_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level68_palette.bin",
+      "sha256": "5111898b9bf7d5344acc259fcaf4b7b9539b6070620f5d12382635ce5575620c"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level69_background",
+      "type": "uint8_t",
+      "count": 100,
+      "bytes": 100,
+      "path": "all_native_level_data/level69_background.bin",
+      "sha256": "4a9e2d92b9073ecea10afe591e069c469fbecb1b435923f7722914f1c7cb388d"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level69_foreground",
+      "type": "uint8_t",
+      "count": 154,
+      "bytes": 154,
+      "path": "all_native_level_data/level69_foreground.bin",
+      "sha256": "3928af290083253fe19e7572c863671a8492aa2cc811c69053d6e8cf55e11796"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level69_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level69_palette.bin",
+      "sha256": "33062fa1adcfb556e01393bb12fc79f2d0e7a8400c5218bb4b27b923034a58c2"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level6_background",
+      "type": "uint8_t",
+      "count": 142,
+      "bytes": 142,
+      "path": "all_native_level_data/level6_background.bin",
+      "sha256": "e0fd7db59f9952326197d728ce8cd733e31956b1a067451cc14484e048199d16"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level6_foreground",
+      "type": "uint8_t",
+      "count": 962,
+      "bytes": 962,
+      "path": "all_native_level_data/level6_foreground.bin",
+      "sha256": "70e380e23428dbd7de275af99ca68eb2db3b8ba75e69596156cad39eb98a3a55"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level6_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level6_palette.bin",
+      "sha256": "ac43be5f09359a3dc2f116a6e28b4b2106514c9f1134bf19e21a251c4e94523e"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level70_background",
+      "type": "uint8_t",
+      "count": 74,
+      "bytes": 74,
+      "path": "all_native_level_data/level70_background.bin",
+      "sha256": "ee2b4aebbf831c827ca70386e5b5c7f24c757cc8faf28964dd178e177a46c8b2"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level70_foreground",
+      "type": "uint8_t",
+      "count": 560,
+      "bytes": 560,
+      "path": "all_native_level_data/level70_foreground.bin",
+      "sha256": "4b1af9868e78c5e7691faa89e939d8792c11d36d08d9177fa141002f0fe520dc"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level70_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level70_palette.bin",
+      "sha256": "77e1b6343df348200dbc479f976ed3f34bb4a75a585d3845dcd292c94ec5dc8c"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level71_background",
+      "type": "uint8_t",
+      "count": 74,
+      "bytes": 74,
+      "path": "all_native_level_data/level71_background.bin",
+      "sha256": "ee2b4aebbf831c827ca70386e5b5c7f24c757cc8faf28964dd178e177a46c8b2"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level71_foreground",
+      "type": "uint8_t",
+      "count": 130,
+      "bytes": 130,
+      "path": "all_native_level_data/level71_foreground.bin",
+      "sha256": "8c77e9c350ed1466dbc50950765d49303aa0c72ba6ffe1ed48ffb6a89e72fb6a"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level71_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level71_palette.bin",
+      "sha256": "77e1b6343df348200dbc479f976ed3f34bb4a75a585d3845dcd292c94ec5dc8c"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level72_background",
+      "type": "uint8_t",
+      "count": 144,
+      "bytes": 144,
+      "path": "all_native_level_data/level72_background.bin",
+      "sha256": "00bf6c50fc1b61600ee19bbc857ecf8bf45193cc34c9be156c571b9a3a6db4a0"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level72_foreground",
+      "type": "uint8_t",
+      "count": 140,
+      "bytes": 140,
+      "path": "all_native_level_data/level72_foreground.bin",
+      "sha256": "6aeaa5c236274f9df69401cebd5e6deafcd7526ad6b362758bed116f2dc1c1c6"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level72_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level72_palette.bin",
+      "sha256": "5111898b9bf7d5344acc259fcaf4b7b9539b6070620f5d12382635ce5575620c"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level73_background",
+      "type": "uint8_t",
+      "count": 58,
+      "bytes": 58,
+      "path": "all_native_level_data/level73_background.bin",
+      "sha256": "df831a9f2a8933a504a5ade260b22ff8bbee00ac2023378bee2aa2b59b3fe76a"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level73_foreground",
+      "type": "uint8_t",
+      "count": 100,
+      "bytes": 100,
+      "path": "all_native_level_data/level73_foreground.bin",
+      "sha256": "bc34df81b58d8e5f0eef216f5c74cb5979e9f566b66d1445e5950ffa23d8c339"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level73_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level73_palette.bin",
+      "sha256": "c29df3cb01c258ced69d74021db2bf2f1c3d297fce82926e93329ed510e21162"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level77_background",
+      "type": "uint8_t",
+      "count": 58,
+      "bytes": 58,
+      "path": "all_native_level_data/level77_background.bin",
+      "sha256": "df831a9f2a8933a504a5ade260b22ff8bbee00ac2023378bee2aa2b59b3fe76a"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level77_foreground",
+      "type": "uint8_t",
+      "count": 74,
+      "bytes": 74,
+      "path": "all_native_level_data/level77_foreground.bin",
+      "sha256": "f253f0920e5f231ef6fb8dd0bffecbc811ced3c48ad4cf929e568d9df62a7a8d"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level77_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level77_palette.bin",
+      "sha256": "c29df3cb01c258ced69d74021db2bf2f1c3d297fce82926e93329ed510e21162"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level78_background",
+      "type": "uint8_t",
+      "count": 144,
+      "bytes": 144,
+      "path": "all_native_level_data/level78_background.bin",
+      "sha256": "00bf6c50fc1b61600ee19bbc857ecf8bf45193cc34c9be156c571b9a3a6db4a0"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level78_foreground",
+      "type": "uint8_t",
+      "count": 722,
+      "bytes": 722,
+      "path": "all_native_level_data/level78_foreground.bin",
+      "sha256": "a0a1310511d6dd72bf81a6e5acb37eaaeead0faed0fc93c3021ee74d74352d61"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level78_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level78_palette.bin",
+      "sha256": "77e1b6343df348200dbc479f976ed3f34bb4a75a585d3845dcd292c94ec5dc8c"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level7_background",
+      "type": "uint8_t",
+      "count": 192,
+      "bytes": 192,
+      "path": "all_native_level_data/level7_background.bin",
+      "sha256": "7bce6816205546540786278f98ddab3634a573fdf3da9ce8d18cc1bdc7f21a96"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level7_foreground",
+      "type": "uint8_t",
+      "count": 718,
+      "bytes": 718,
+      "path": "all_native_level_data/level7_foreground.bin",
+      "sha256": "4bb70da9f6161e632984510d9cd1687a5f9ebe75f8143ebf67ab3924f4364a14"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level7_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level7_palette.bin",
+      "sha256": "ac43be5f09359a3dc2f116a6e28b4b2106514c9f1134bf19e21a251c4e94523e"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level8_background",
+      "type": "uint8_t",
+      "count": 192,
+      "bytes": 192,
+      "path": "all_native_level_data/level8_background.bin",
+      "sha256": "7bce6816205546540786278f98ddab3634a573fdf3da9ce8d18cc1bdc7f21a96"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level8_foreground",
+      "type": "uint8_t",
+      "count": 1178,
+      "bytes": 1178,
+      "path": "all_native_level_data/level8_foreground.bin",
+      "sha256": "4817fc80089b8a228c937f973792cb12141f7cae7cbcaeac4ad34ed36d3d9967"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level8_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level8_palette.bin",
+      "sha256": "ac43be5f09359a3dc2f116a6e28b4b2106514c9f1134bf19e21a251c4e94523e"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level9_background",
+      "type": "uint8_t",
+      "count": 66,
+      "bytes": 66,
+      "path": "all_native_level_data/level9_background.bin",
+      "sha256": "e0097ac57799c5fe0561973b248675106846f2187bd3bc652e5f118399191ab9"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level9_foreground",
+      "type": "uint8_t",
+      "count": 206,
+      "bytes": 206,
+      "path": "all_native_level_data/level9_foreground.bin",
+      "sha256": "11892641df77a214b9da1e4221e8fabdcbb5505f8c1e0b973099713602b8bab1"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "level9_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "all_native_level_data/level9_palette.bin",
+      "sha256": "ac43be5f09359a3dc2f116a6e28b4b2106514c9f1134bf19e21a251c4e94523e"
+    },
+    {
+      "header": "all_native_level_data.hpp",
+      "name": "selectors",
+      "type": "uint16_t",
+      "count": 74,
+      "bytes": 148,
+      "path": "all_native_level_data/selectors.bin",
+      "sha256": "72b1f1719fa22f5dcb6ec55271ed82d14399e2061bcfbba4b7813dea0a973e7e"
+    },
+    {
+      "header": "audio_bank_data.hpp",
+      "name": "frequency_high",
+      "type": "uint8_t",
+      "count": 84,
+      "bytes": 84,
+      "path": "audio_bank_data/frequency_high.bin",
+      "sha256": "af8dca1537ae8f9161ed0a5a72aea5846d7eb6b0a4e745693a9cf776347390be"
+    },
+    {
+      "header": "audio_bank_data.hpp",
+      "name": "frequency_low",
+      "type": "uint8_t",
+      "count": 84,
+      "bytes": 84,
+      "path": "audio_bank_data/frequency_low.bin",
+      "sha256": "20f43548d49718c3612949fc40f66082172543e54760728139198b1403558994"
+    },
+    {
+      "header": "audio_bank_data.hpp",
+      "name": "patches",
+      "type": "uint8_t",
+      "count": 1472,
+      "bytes": 1472,
+      "path": "audio_bank_data/patches.bin",
+      "sha256": "075f902c200d46a60d1ce098f326a924bb6af49e289b97a8ef42031473b70c47"
+    },
+    {
+      "header": "audio_bank_data.hpp",
+      "name": "registers",
+      "type": "uint8_t",
+      "count": 28,
+      "bytes": 28,
+      "path": "audio_bank_data/registers.bin",
+      "sha256": "3caea3d8fc83dc9ebcfa56a73978ad924d0fe5699cc527b9677f01a9e4b848ca"
+    },
+    {
+      "header": "camera_data.hpp",
+      "name": "modes",
+      "type": "uint8_t",
+      "count": 80,
+      "bytes": 80,
+      "path": "direct_runtime_tables/camera_data/modes.bin",
+      "sha256": "608128748ff31d1b85e32b00bd39101eb255547c1adff67a8fd11b28a62e29be"
+    },
+    {
+      "header": "camera_data.hpp",
+      "name": "sine",
+      "type": "int16_t",
+      "count": 512,
+      "bytes": 1024,
+      "path": "direct_runtime_tables/camera_data/sine.bin",
+      "sha256": "0e5e15faf1a892aea595c6a37b62a4b38064ad64f74f1d8a2f153de450aba806"
+    },
+    {
+      "header": "cavern_tile_animation_data.hpp",
+      "name": "patterns",
+      "type": "uint8_t",
+      "count": 2304,
+      "bytes": 2304,
+      "path": "cavern_tile_animation_data/patterns.bin",
+      "sha256": "49f29eaf33c30ce3bb91fbfb954b63ab39781a7f0c27ef097d5ac15f05497479"
+    },
+    {
+      "header": "cavern_tile_animation_data.hpp",
+      "name": "sequences",
+      "type": "uint8_t",
+      "count": 18,
+      "bytes": 18,
+      "path": "cavern_tile_animation_data/sequences.bin",
+      "sha256": "ce3e629bab86bf40d5bdbe188fc527e5d89fb3971417029b62806e9622306d4f"
+    },
+    {
+      "header": "cavern_tile_animation_data.hpp",
+      "name": "tracks",
+      "type": "Track",
+      "count": 4,
+      "bytes": 96,
+      "path": "cavern_tile_animation_data/tracks.bin",
+      "sha256": "596f8c5b6cbcc17a646753a56671990ee0e084fb8d90d15dd358d3644ebbcee6",
+      "schema": {
+        "id": "tile-track-v1",
+        "fields": [
+          "cache_byte_offset:u32",
+          "delay:u32",
+          "first:u32",
+          "bytes:u32",
+          "sequence_first:u32",
+          "sequence_count:u32"
+        ],
+        "record_bytes": 24
+      }
+    },
+    {
+      "header": "desert_tile_animation_data.hpp",
+      "name": "patterns",
+      "type": "uint8_t",
+      "count": 1536,
+      "bytes": 1536,
+      "path": "desert_tile_animation_data/patterns.bin",
+      "sha256": "edff3a14dc1e3fa2e30a9743c06adccff1327d4d8733140ffa41934080010632"
+    },
+    {
+      "header": "desert_tile_animation_data.hpp",
+      "name": "sequences",
+      "type": "uint8_t",
+      "count": 16,
+      "bytes": 16,
+      "path": "desert_tile_animation_data/sequences.bin",
+      "sha256": "52592b227445a48c3e42a9a09709a35afedc191ff550ed4090144607f2bc918d"
+    },
+    {
+      "header": "desert_tile_animation_data.hpp",
+      "name": "tracks",
+      "type": "Track",
+      "count": 4,
+      "bytes": 96,
+      "path": "desert_tile_animation_data/tracks.bin",
+      "sha256": "1ead0a4209a618eb15e8e783d3d92991ff8c0af94d6f81f4c5c7e4c5d50ffb6e",
+      "schema": {
+        "id": "tile-track-v1",
+        "fields": [
+          "cache_byte_offset:u32",
+          "delay:u32",
+          "first:u32",
+          "bytes:u32",
+          "sequence_first:u32",
+          "sequence_count:u32"
+        ],
+        "record_bytes": 24
+      }
+    },
+    {
+      "header": "dynamic_platform_data.hpp",
+      "name": "definitions",
+      "type": "ActorDefinition",
+      "count": 11,
+      "bytes": 418,
+      "path": "dynamic_platform_data/definitions.bin",
+      "sha256": "732e58d119f2c2ae4c2cdb2f004bc8c0c946127cffdce4c171f595711e2d47f0",
+      "schema": {
+        "id": "actor-definition-v1",
+        "fields": [
+          "key:u32",
+          "data:u8[34]"
+        ],
+        "record_bytes": 38
+      }
+    },
+    {
+      "header": "ending_animation_data.hpp",
+      "name": "frames",
+      "type": "Frame",
+      "count": 20,
+      "bytes": 440,
+      "path": "ending_animation_data/frames.bin",
+      "sha256": "45adf8f63f4718ef24b2a6e71e162fbeba4f170780c765fd09458781f3a3fb67",
+      "schema": {
+        "id": "animation-frame-v1",
+        "fields": [
+          "descriptor:u32",
+          "left_graphics:u32",
+          "right_graphics:u32",
+          "offset_x:i16",
+          "offset_y:i16",
+          "width:u16",
+          "height:u16",
+          "bytes:u16"
+        ],
+        "record_bytes": 22
+      }
+    },
+    {
+      "header": "ending_animation_data.hpp",
+      "name": "nodes",
+      "type": "AnimationNode",
+      "count": 28,
+      "bytes": 616,
+      "path": "ending_animation_data/nodes.bin",
+      "sha256": "17697a99370c5d491ff8f5348ea5584f950e565cb00637e60aada866a9135966",
+      "schema": {
+        "id": "animation-node-v1",
+        "fields": [
+          "op:i32",
+          "parameter:u16",
+          "frame:i32",
+          "next:i32",
+          "target:i32",
+          "evidence_address:u32"
+        ],
+        "record_bytes": 22
+      }
+    },
+    {
+      "header": "ending_animation_data.hpp",
+      "name": "programs",
+      "type": "AnimationProgram",
+      "count": 6,
+      "bytes": 66,
+      "path": "ending_animation_data/programs.bin",
+      "sha256": "eedaa485f238143f390c093c84a745a2a87a7642bacb2544faed99ad7d9b8ce2",
+      "schema": {
+        "id": "animation-program-v1",
+        "fields": [
+          "definition:u32",
+          "selector:u16",
+          "delay:u8",
+          "start:i32"
+        ],
+        "record_bytes": 11
+      }
+    },
+    {
+      "header": "ending_data.hpp",
+      "name": "bad_palette",
+      "type": "uint16_t",
+      "count": 16,
+      "bytes": 32,
+      "path": "direct_runtime_tables/ending_data/bad_palette.bin",
+      "sha256": "bb575b83cd3ede049bfbc5fd16f529dfc646edcb7b5ace937dc7d9bb87c51ded"
+    },
+    {
+      "header": "ending_data.hpp",
+      "name": "bad_text",
+      "type": "uint8_t",
+      "count": 261,
+      "bytes": 261,
+      "path": "direct_runtime_tables/ending_data/bad_text.bin",
+      "sha256": "56d0e1078c2a95d08927284eea87beec99ca8661ad2a4cd994962a68776af65f"
+    },
+    {
+      "header": "ending_data.hpp",
+      "name": "good_text",
+      "type": "uint8_t",
+      "count": 214,
+      "bytes": 214,
+      "path": "direct_runtime_tables/ending_data/good_text.bin",
+      "sha256": "0623e0df9530b70e9913a70d7bbcd121b7ccbe7496d1e93db915499fd8e0a5ff"
+    },
+    {
+      "header": "ending_data.hpp",
+      "name": "pixels",
+      "type": "uint8_t",
+      "count": 18048,
+      "bytes": 18048,
+      "path": "ending_data/pixels.bin",
+      "sha256": "661631b9e58c530efd80074a373982450f4acfaa991c9c37f83df9846858c784"
+    },
+    {
+      "header": "ending_data.hpp",
+      "name": "sprites",
+      "type": "Sprite",
+      "count": 15,
+      "bytes": 240,
+      "path": "ending_data/sprites.bin",
+      "sha256": "8d24cd8f77825e05846281c841f1cccdbf8b0144ecde43e06bf1122c1f482fcb",
+      "schema": {
+        "id": "sprite-v1",
+        "fields": [
+          "source:u32",
+          "width:u32",
+          "height:u32",
+          "offset:u32"
+        ],
+        "record_bytes": 16
+      }
+    },
+    {
+      "header": "ending_data.hpp",
+      "name": "white",
+      "type": "uint16_t",
+      "count": 16,
+      "bytes": 32,
+      "path": "direct_runtime_tables/ending_data/white.bin",
+      "sha256": "c406d951f1a23ba02864c2168d6be964a7500f280f3861406a4fcb4d82c84c6e"
+    },
+    {
+      "header": "enemy_phase_entries.hpp",
+      "name": "enemy_burst_records",
+      "type": "EnemyBurstRecord",
+      "count": 6,
+      "bytes": 48,
+      "path": "enemy_phase_entries/enemy_burst_records.bin",
+      "sha256": "22bf765e6930120013014115055977db6e773a0a5984165962e9f81db7cd6941",
+      "schema": {
+        "id": "enemy-burst-v1",
+        "fields": [
+          "definition:u32",
+          "bytes:u8[4]"
+        ],
+        "record_bytes": 8
+      }
+    },
+    {
+      "header": "entrance_data.hpp",
+      "name": "frames",
+      "type": "Frame",
+      "count": 59,
+      "bytes": 1298,
+      "path": "entrance_data/frames.bin",
+      "sha256": "b89177beb9e4d97d7b3bf359d56fdad261a5a314ddabfd80d3da60ddf48b83b6",
+      "schema": {
+        "id": "animation-frame-v1",
+        "fields": [
+          "descriptor:u32",
+          "left_graphics:u32",
+          "right_graphics:u32",
+          "offset_x:i16",
+          "offset_y:i16",
+          "width:u16",
+          "height:u16",
+          "bytes:u16"
+        ],
+        "record_bytes": 22
+      }
+    },
+    {
+      "header": "entrance_data.hpp",
+      "name": "nodes",
+      "type": "AnimationNode",
+      "count": 91,
+      "bytes": 2002,
+      "path": "entrance_data/nodes.bin",
+      "sha256": "62f0fe8d7ad4e32af3faa0722c7ab63a1bba087e49f9fe1ecd67e59ceb5e8dc9",
+      "schema": {
+        "id": "animation-node-v1",
+        "fields": [
+          "op:i32",
+          "parameter:u16",
+          "frame:i32",
+          "next:i32",
+          "target:i32",
+          "evidence_address:u32"
+        ],
+        "record_bytes": 22
+      }
+    },
+    {
+      "header": "entrance_data.hpp",
+      "name": "programs",
+      "type": "AnimationProgram",
+      "count": 12,
+      "bytes": 132,
+      "path": "entrance_data/programs.bin",
+      "sha256": "5f870e6ef3a0d4994043007497e929446cfae86967a08a91bb85b44d4ad72cbb",
+      "schema": {
+        "id": "animation-program-v1",
+        "fields": [
+          "definition:u32",
+          "selector:u16",
+          "delay:u8",
+          "start:i32"
+        ],
+        "record_bytes": 11
+      }
+    },
+    {
+      "header": "first_enemy_animation_data.hpp",
+      "name": "frames",
+      "type": "Frame",
+      "count": 21,
+      "bytes": 462,
+      "path": "first_enemy_animation_data/frames.bin",
+      "sha256": "ce3c2c81c407465257e4e53b0466643cbc2012d2de853ae1c723ed21fa88dfdb",
+      "schema": {
+        "id": "animation-frame-v1",
+        "fields": [
+          "descriptor:u32",
+          "left_graphics:u32",
+          "right_graphics:u32",
+          "offset_x:i16",
+          "offset_y:i16",
+          "width:u16",
+          "height:u16",
+          "bytes:u16"
+        ],
+        "record_bytes": 22
+      }
+    },
+    {
+      "header": "first_enemy_animation_data.hpp",
+      "name": "nodes",
+      "type": "AnimationNode",
+      "count": 31,
+      "bytes": 682,
+      "path": "first_enemy_animation_data/nodes.bin",
+      "sha256": "e7f25a1b81ef852552acc03b8a6e8bd836f7f984ab35c576e6414d3c4f7a1c4c",
+      "schema": {
+        "id": "animation-node-v1",
+        "fields": [
+          "op:i32",
+          "parameter:u16",
+          "frame:i32",
+          "next:i32",
+          "target:i32",
+          "evidence_address:u32"
+        ],
+        "record_bytes": 22
+      }
+    },
+    {
+      "header": "first_enemy_animation_data.hpp",
+      "name": "programs",
+      "type": "AnimationProgram",
+      "count": 8,
+      "bytes": 88,
+      "path": "first_enemy_animation_data/programs.bin",
+      "sha256": "3fd3ec09be560bf5c21ad7ebaddbb633697c9a97a7c6c78f7a0f4df189974c38",
+      "schema": {
+        "id": "animation-program-v1",
+        "fields": [
+          "definition:u32",
+          "selector:u16",
+          "delay:u8",
+          "start:i32"
+        ],
+        "record_bytes": 11
+      }
+    },
+    {
+      "header": "first_enemy_definition_data.hpp",
+      "name": "definitions",
+      "type": "ActorDefinition",
+      "count": 3,
+      "bytes": 114,
+      "path": "first_enemy_definition_data/definitions.bin",
+      "sha256": "d9bad6f2e7399d783ba0f279b5423263b2da01bbffacec04445c9e261d248ff5",
+      "schema": {
+        "id": "actor-definition-v1",
+        "fields": [
+          "key:u32",
+          "data:u8[34]"
+        ],
+        "record_bytes": 38
+      }
+    },
+    {
+      "header": "first_enemy_definition_data.hpp",
+      "name": "score_wave",
+      "type": "int8_t",
+      "count": 16,
+      "bytes": 16,
+      "path": "first_enemy_definition_data/score_wave.bin",
+      "sha256": "e2c1fab77cf1cbebbc02d27edd963d78de586ead92ac501af9ad75da4ecc4544"
+    },
+    {
+      "header": "forest_level_data.hpp",
+      "name": "level10_background",
+      "type": "uint8_t",
+      "count": 66,
+      "bytes": 66,
+      "path": "forest_level_data/level10_background.bin",
+      "sha256": "e0097ac57799c5fe0561973b248675106846f2187bd3bc652e5f118399191ab9"
+    },
+    {
+      "header": "forest_level_data.hpp",
+      "name": "level10_foreground",
+      "type": "uint8_t",
+      "count": 998,
+      "bytes": 998,
+      "path": "forest_level_data/level10_foreground.bin",
+      "sha256": "d89598feb2b4d336727a08ccab18eefa5866ec8754067cef1d9515117cd79292"
+    },
+    {
+      "header": "forest_level_data.hpp",
+      "name": "level10_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "forest_level_data/level10_palette.bin",
+      "sha256": "ac43be5f09359a3dc2f116a6e28b4b2106514c9f1134bf19e21a251c4e94523e"
+    },
+    {
+      "header": "forest_level_data.hpp",
+      "name": "level11_background",
+      "type": "uint8_t",
+      "count": 192,
+      "bytes": 192,
+      "path": "forest_level_data/level11_background.bin",
+      "sha256": "7bce6816205546540786278f98ddab3634a573fdf3da9ce8d18cc1bdc7f21a96"
+    },
+    {
+      "header": "forest_level_data.hpp",
+      "name": "level11_foreground",
+      "type": "uint8_t",
+      "count": 1784,
+      "bytes": 1784,
+      "path": "forest_level_data/level11_foreground.bin",
+      "sha256": "307d687b1196ebb0dbea287bf2336b7659f66aaed982843ed049869377103293"
+    },
+    {
+      "header": "forest_level_data.hpp",
+      "name": "level11_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "forest_level_data/level11_palette.bin",
+      "sha256": "ac43be5f09359a3dc2f116a6e28b4b2106514c9f1134bf19e21a251c4e94523e"
+    },
+    {
+      "header": "forest_level_data.hpp",
+      "name": "level12_background",
+      "type": "uint8_t",
+      "count": 192,
+      "bytes": 192,
+      "path": "forest_level_data/level12_background.bin",
+      "sha256": "7bce6816205546540786278f98ddab3634a573fdf3da9ce8d18cc1bdc7f21a96"
+    },
+    {
+      "header": "forest_level_data.hpp",
+      "name": "level12_foreground",
+      "type": "uint8_t",
+      "count": 484,
+      "bytes": 484,
+      "path": "forest_level_data/level12_foreground.bin",
+      "sha256": "d02ad57dcf8b79ab8f335a1c9103dc4978bbbd2a1d0c5f7f60c6d179b5235cf6"
+    },
+    {
+      "header": "forest_level_data.hpp",
+      "name": "level12_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "forest_level_data/level12_palette.bin",
+      "sha256": "ac43be5f09359a3dc2f116a6e28b4b2106514c9f1134bf19e21a251c4e94523e"
+    },
+    {
+      "header": "forest_level_data.hpp",
+      "name": "level13_background",
+      "type": "uint8_t",
+      "count": 192,
+      "bytes": 192,
+      "path": "forest_level_data/level13_background.bin",
+      "sha256": "7bce6816205546540786278f98ddab3634a573fdf3da9ce8d18cc1bdc7f21a96"
+    },
+    {
+      "header": "forest_level_data.hpp",
+      "name": "level13_foreground",
+      "type": "uint8_t",
+      "count": 534,
+      "bytes": 534,
+      "path": "forest_level_data/level13_foreground.bin",
+      "sha256": "fd6411f0be727ddc69ff1bc3aec3404ba25acc3ee82183dce541a08d6f40fe3f"
+    },
+    {
+      "header": "forest_level_data.hpp",
+      "name": "level13_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "forest_level_data/level13_palette.bin",
+      "sha256": "ac43be5f09359a3dc2f116a6e28b4b2106514c9f1134bf19e21a251c4e94523e"
+    },
+    {
+      "header": "forest_level_data.hpp",
+      "name": "level5_background",
+      "type": "uint8_t",
+      "count": 192,
+      "bytes": 192,
+      "path": "forest_level_data/level5_background.bin",
+      "sha256": "7bce6816205546540786278f98ddab3634a573fdf3da9ce8d18cc1bdc7f21a96"
+    },
+    {
+      "header": "forest_level_data.hpp",
+      "name": "level5_foreground",
+      "type": "uint8_t",
+      "count": 558,
+      "bytes": 558,
+      "path": "forest_level_data/level5_foreground.bin",
+      "sha256": "331a6635d8fc3a1521cb48c172d243b9d5a1c8064b3e65d1487992946d96993c"
+    },
+    {
+      "header": "forest_level_data.hpp",
+      "name": "level5_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "forest_level_data/level5_palette.bin",
+      "sha256": "ac43be5f09359a3dc2f116a6e28b4b2106514c9f1134bf19e21a251c4e94523e"
+    },
+    {
+      "header": "forest_level_data.hpp",
+      "name": "level6_background",
+      "type": "uint8_t",
+      "count": 142,
+      "bytes": 142,
+      "path": "forest_level_data/level6_background.bin",
+      "sha256": "e0fd7db59f9952326197d728ce8cd733e31956b1a067451cc14484e048199d16"
+    },
+    {
+      "header": "forest_level_data.hpp",
+      "name": "level6_foreground",
+      "type": "uint8_t",
+      "count": 962,
+      "bytes": 962,
+      "path": "forest_level_data/level6_foreground.bin",
+      "sha256": "70e380e23428dbd7de275af99ca68eb2db3b8ba75e69596156cad39eb98a3a55"
+    },
+    {
+      "header": "forest_level_data.hpp",
+      "name": "level6_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "forest_level_data/level6_palette.bin",
+      "sha256": "ac43be5f09359a3dc2f116a6e28b4b2106514c9f1134bf19e21a251c4e94523e"
+    },
+    {
+      "header": "forest_level_data.hpp",
+      "name": "level7_background",
+      "type": "uint8_t",
+      "count": 192,
+      "bytes": 192,
+      "path": "forest_level_data/level7_background.bin",
+      "sha256": "7bce6816205546540786278f98ddab3634a573fdf3da9ce8d18cc1bdc7f21a96"
+    },
+    {
+      "header": "forest_level_data.hpp",
+      "name": "level7_foreground",
+      "type": "uint8_t",
+      "count": 718,
+      "bytes": 718,
+      "path": "forest_level_data/level7_foreground.bin",
+      "sha256": "4bb70da9f6161e632984510d9cd1687a5f9ebe75f8143ebf67ab3924f4364a14"
+    },
+    {
+      "header": "forest_level_data.hpp",
+      "name": "level7_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "forest_level_data/level7_palette.bin",
+      "sha256": "ac43be5f09359a3dc2f116a6e28b4b2106514c9f1134bf19e21a251c4e94523e"
+    },
+    {
+      "header": "forest_level_data.hpp",
+      "name": "level9_background",
+      "type": "uint8_t",
+      "count": 66,
+      "bytes": 66,
+      "path": "forest_level_data/level9_background.bin",
+      "sha256": "e0097ac57799c5fe0561973b248675106846f2187bd3bc652e5f118399191ab9"
+    },
+    {
+      "header": "forest_level_data.hpp",
+      "name": "level9_foreground",
+      "type": "uint8_t",
+      "count": 206,
+      "bytes": 206,
+      "path": "forest_level_data/level9_foreground.bin",
+      "sha256": "11892641df77a214b9da1e4221e8fabdcbb5505f8c1e0b973099713602b8bab1"
+    },
+    {
+      "header": "forest_level_data.hpp",
+      "name": "level9_palette",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "forest_level_data/level9_palette.bin",
+      "sha256": "ac43be5f09359a3dc2f116a6e28b4b2106514c9f1134bf19e21a251c4e94523e"
+    },
+    {
+      "header": "forest_tile_animation_data.hpp",
+      "name": "patterns",
+      "type": "uint8_t",
+      "count": 4096,
+      "bytes": 4096,
+      "path": "forest_tile_animation_data/patterns.bin",
+      "sha256": "601d741131e75bf454133b8915e715b9b28d893c3c82777a8e4aa24a03e9d9de"
+    },
+    {
+      "header": "forest_tile_animation_data.hpp",
+      "name": "sequences",
+      "type": "uint8_t",
+      "count": 32,
+      "bytes": 32,
+      "path": "forest_tile_animation_data/sequences.bin",
+      "sha256": "f5aa5a0860fab93f0c7d583b2cc8b4e9ae2701feaaac0d9330ae7f8ac02b0161"
+    },
+    {
+      "header": "forest_tile_animation_data.hpp",
+      "name": "tracks",
+      "type": "Track",
+      "count": 6,
+      "bytes": 144,
+      "path": "forest_tile_animation_data/tracks.bin",
+      "sha256": "cace202668aaacf00757b58d10cb2d9d0a3a8495621960ff681725bebebfae6d",
+      "schema": {
+        "id": "tile-track-v1",
+        "fields": [
+          "cache_byte_offset:u32",
+          "delay:u32",
+          "first:u32",
+          "bytes:u32",
+          "sequence_first:u32",
+          "sequence_count:u32"
+        ],
+        "record_bytes": 24
+      }
+    },
+    {
+      "header": "level1_companion_menu_data.hpp",
+      "name": "companion_sprites",
+      "type": "uint8_t",
+      "count": 24,
+      "bytes": 24,
+      "path": "level1_companion_menu_data/companion_sprites.bin",
+      "sha256": "02e1495440e6e288f92bd05bafc18b9a71f6aae0fb2803b79f25f4e93204229c"
+    },
+    {
+      "header": "level1_companion_menu_data.hpp",
+      "name": "inactive_sprites",
+      "type": "uint8_t",
+      "count": 24,
+      "bytes": 24,
+      "path": "level1_companion_menu_data/inactive_sprites.bin",
+      "sha256": "7f7e430382b73404c9e61170fa225df3fec835cc123dc2f451e64bfff9f590ba"
+    },
+    {
+      "header": "level1_companion_menu_data.hpp",
+      "name": "layout",
+      "type": "uint8_t",
+      "count": 2240,
+      "bytes": 2240,
+      "path": "level1_companion_menu_data/layout.bin",
+      "sha256": "d5ab051b250847333906da6c83cfcf4715cb79168ba635f48eab5324bd887d22"
+    },
+    {
+      "header": "level1_companion_menu_data.hpp",
+      "name": "palette",
+      "type": "uint8_t",
+      "count": 64,
+      "bytes": 64,
+      "path": "level1_companion_menu_data/palette.bin",
+      "sha256": "07a4d591de808b4e9b33d482abb5fcd28942f8d55fb0775f793408af7b3f9d1e"
+    },
+    {
+      "header": "level1_companion_menu_data.hpp",
+      "name": "patterns",
+      "type": "uint8_t",
+      "count": 3424,
+      "bytes": 3424,
+      "path": "level1_companion_menu_data/patterns.bin",
+      "sha256": "81add834541283eadc58acea8ef68baa3d3053da1eb41707864ab16a9f5b9a75"
+    },
+    {
+      "header": "level1_companion_menu_data.hpp",
+      "name": "selection_sprites",
+      "type": "uint8_t",
+      "count": 192,
+      "bytes": 192,
+      "path": "level1_companion_menu_data/selection_sprites.bin",
+      "sha256": "7ea4e464350d46fa07f76fe947257dff0b339e4f36b714eb3a0855c3bf0ec350"
+    },
+    {
+      "header": "level1_companion_menu_data.hpp",
+      "name": "static_sprites",
+      "type": "uint8_t",
+      "count": 98,
+      "bytes": 98,
+      "path": "level1_companion_menu_data/static_sprites.bin",
+      "sha256": "b179bd365bcae1a7cab51106c15f97ca4f7ce89093d46d9a6f75ef3294cc8223"
+    },
+    {
+      "header": "level1_companion_presentation_data.hpp",
+      "name": "head_x",
+      "type": "int16_t",
+      "count": 23,
+      "bytes": 46,
+      "path": "level1_companion_presentation_data/head_x.bin",
+      "sha256": "ef47c979ea83ad394313f5d4f37391274928b02a6eb5e09bea58aa15a5a575d0"
+    },
+    {
+      "header": "level1_completion_data.hpp",
+      "name": "world_coordinate_bytes",
+      "type": "uint8_t",
+      "count": 160,
+      "bytes": 160,
+      "path": "level1_completion_data/world_coordinate_bytes.bin",
+      "sha256": "332542ec347002542584571f723650312a5a50d3b9f4acb0bb879d57b0765332"
+    },
+    {
+      "header": "level1_hud_data.hpp",
+      "name": "blank",
+      "type": "uint8_t",
+      "count": 64,
+      "bytes": 64,
+      "path": "level1_hud_data/blank.bin",
+      "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b"
+    },
+    {
+      "header": "level1_hud_data.hpp",
+      "name": "digits",
+      "type": "uint8_t",
+      "count": 640,
+      "bytes": 640,
+      "path": "level1_hud_data/digits.bin",
+      "sha256": "424cca1bdebcb8e99601b81cf2d6522d54cefc17cb1f4286634a56de98ac704e"
+    },
+    {
+      "header": "level1_hud_data.hpp",
+      "name": "icon",
+      "type": "uint8_t",
+      "count": 64,
+      "bytes": 64,
+      "path": "level1_hud_data/icon.bin",
+      "sha256": "4c3ec6163140243a4ad252ff29ce5ceecb5258dec9bf8fb773fad4076f8593a4"
+    },
+    {
+      "header": "level1_hud_data.hpp",
+      "name": "label",
+      "type": "uint8_t",
+      "count": 128,
+      "bytes": 128,
+      "path": "level1_hud_data/label.bin",
+      "sha256": "54ce7e672259c720cbb0bbcddbd6e82665fb457966cdff48931383723168b1e9"
+    },
+    {
+      "header": "level1_hud_data.hpp",
+      "name": "wave",
+      "type": "int16_t",
+      "count": 23,
+      "bytes": 46,
+      "path": "level1_hud_data/wave.bin",
+      "sha256": "32945fa7c4a927bce5cc3226b0e3ae1b964e6fa0230b516d08a02a9ed643cbce"
+    },
+    {
+      "header": "level1_indexed_background_data.hpp",
+      "name": "pixels",
+      "type": "uint8_t",
+      "count": 139264,
+      "bytes": 139264,
+      "path": "level1_indexed_background_data/pixels.bin",
+      "sha256": "cd2ca6f58527cceb4c93ce91314a98b596bb8f6a365385484019e1ef5cc99c42"
+    },
+    {
+      "header": "level1_object_animation_data.hpp",
+      "name": "frames",
+      "type": "Frame",
+      "count": 392,
+      "bytes": 8624,
+      "path": "level1_object_animation_data/frames.bin",
+      "sha256": "afb19029369b2081f2a6943adfb851c4f0abcd516849841af953f6165ab5a068",
+      "schema": {
+        "id": "animation-frame-v1",
+        "fields": [
+          "descriptor:u32",
+          "left_graphics:u32",
+          "right_graphics:u32",
+          "offset_x:i16",
+          "offset_y:i16",
+          "width:u16",
+          "height:u16",
+          "bytes:u16"
+        ],
+        "record_bytes": 22
+      }
+    },
+    {
+      "header": "level1_object_animation_data.hpp",
+      "name": "nodes",
+      "type": "AnimationNode",
+      "count": 759,
+      "bytes": 16698,
+      "path": "level1_object_animation_data/nodes.bin",
+      "sha256": "f9f9ab45dfb0780d8636887fe671f84cd3ed341d0e2275b2dc9cea3e0dc23b64",
+      "schema": {
+        "id": "animation-node-v1",
+        "fields": [
+          "op:i32",
+          "parameter:u16",
+          "frame:i32",
+          "next:i32",
+          "target:i32",
+          "evidence_address:u32"
+        ],
+        "record_bytes": 22
+      }
+    },
+    {
+      "header": "level1_object_animation_data.hpp",
+      "name": "programs",
+      "type": "AnimationProgram",
+      "count": 366,
+      "bytes": 4026,
+      "path": "level1_object_animation_data/programs.bin",
+      "sha256": "5749851b45d5daa9c61ed084183dd4349b064abb0daa4e151010e2cac1c893b4",
+      "schema": {
+        "id": "animation-program-v1",
+        "fields": [
+          "definition:u32",
+          "selector:u16",
+          "delay:u8",
+          "start:i32"
+        ],
+        "record_bytes": 11
+      }
+    },
+    {
+      "header": "level1_object_data.hpp",
+      "name": "boss29_part_offsets",
+      "type": "uint8_t",
+      "count": 48,
+      "bytes": 48,
+      "path": "level1_object_data/boss29_part_offsets.bin",
+      "sha256": "7cc96c91f28754f9f55a03020f1b3960b078c992013ffc19433e16bc0ae8dcd4"
+    },
+    {
+      "header": "level1_object_data.hpp",
+      "name": "choreography_groups",
+      "type": "uint8_t",
+      "count": 9,
+      "bytes": 9,
+      "path": "level1_object_data/choreography_groups.bin",
+      "sha256": "7e3a71bd8af4a36eb15d6ea94400edf3fd9c54c8758f03dd2a1fec32c613118e"
+    },
+    {
+      "header": "level1_object_data.hpp",
+      "name": "choreography_permutations",
+      "type": "uint32_t",
+      "count": 18,
+      "bytes": 72,
+      "path": "level1_object_data/choreography_permutations.bin",
+      "sha256": "b552be06ce0f3b2cde1f5aab484e71c709771cc043a5131dec3cfe91dd365346"
+    },
+    {
+      "header": "level1_object_data.hpp",
+      "name": "choreography_spawn",
+      "type": "uint32_t",
+      "count": 9,
+      "bytes": 36,
+      "path": "level1_object_data/choreography_spawn.bin",
+      "sha256": "1516d3fe86e7431439f893e83466f14aa0a4e0073a27d8192089d38b77cf0ab5"
+    },
+    {
+      "header": "level1_object_data.hpp",
+      "name": "choreography_tiles",
+      "type": "uint16_t",
+      "count": 8,
+      "bytes": 16,
+      "path": "level1_object_data/choreography_tiles.bin",
+      "sha256": "e1407ea4f2215fbf56632028100e36e299995dbd1af5b01fbeb0e67403569e2c"
+    },
+    {
+      "header": "level1_object_data.hpp",
+      "name": "collectible_spawn_table",
+      "type": "uint32_t",
+      "count": 24,
+      "bytes": 96,
+      "path": "level1_object_data/collectible_spawn_table.bin",
+      "sha256": "13e6db91636be3f62cf3e9550e39d80992b19ca81f5dfc8b5797c060fb3edaa6"
+    },
+    {
+      "header": "level1_object_data.hpp",
+      "name": "common_flash_palette",
+      "type": "uint16_t",
+      "count": 15,
+      "bytes": 30,
+      "path": "level1_object_data/common_flash_palette.bin",
+      "sha256": "06a48db0c38e60a6bfdeb325fdce4512b452d25366d0ce85f64e9d601a4c798e"
+    },
+    {
+      "header": "level1_object_data.hpp",
+      "name": "companion_menu_navigation",
+      "type": "uint8_t",
+      "count": 24,
+      "bytes": 24,
+      "path": "level1_object_data/companion_menu_navigation.bin",
+      "sha256": "eae7df12821bd544bb04d751800332093f835e90d20d9522b6de24ab2c800fde"
+    },
+    {
+      "header": "level1_object_data.hpp",
+      "name": "companion_spawn_table",
+      "type": "uint32_t",
+      "count": 4,
+      "bytes": 16,
+      "path": "level1_object_data/companion_spawn_table.bin",
+      "sha256": "cd9ad0f8978478437b0ef26516d8ae3bf1bb9af5e3fb3f47719e52ba3ef7d76a"
+    },
+    {
+      "header": "level1_object_data.hpp",
+      "name": "definitions",
+      "type": "ActorDefinition",
+      "count": 177,
+      "bytes": 6726,
+      "path": "level1_object_data/definitions.bin",
+      "sha256": "82671cf361f19d4a0b4930c9eee1166a4205648238297a834dfa9d88c241b45e",
+      "schema": {
+        "id": "actor-definition-v1",
+        "fields": [
+          "key:u32",
+          "data:u8[34]"
+        ],
+        "record_bytes": 38
+      }
+    },
+    {
+      "header": "level1_object_data.hpp",
+      "name": "enemy_spawn_table",
+      "type": "uint32_t",
+      "count": 37,
+      "bytes": 148,
+      "path": "level1_object_data/enemy_spawn_table.bin",
+      "sha256": "e34ca276fcd6fbefc0a990678620da25936bbe0def79b02d94b6dcfe61e9d185"
+    },
+    {
+      "header": "level1_object_data.hpp",
+      "name": "generic_spawn_table",
+      "type": "uint32_t",
+      "count": 13,
+      "bytes": 52,
+      "path": "level1_object_data/generic_spawn_table.bin",
+      "sha256": "687a842407d441c8521138273456eac5a49e2facf5ba93c922e86515d72fddc6"
+    },
+    {
+      "header": "level1_object_data.hpp",
+      "name": "phase_boss_offsets",
+      "type": "uint32_t",
+      "count": 8,
+      "bytes": 32,
+      "path": "level1_object_data/phase_boss_offsets.bin",
+      "sha256": "b887b93f8536f80bc8aedbe3df610d93efc9b4803ec9f1b5ce4546633dd3c958"
+    },
+    {
+      "header": "level1_object_data.hpp",
+      "name": "ride_slope_forward",
+      "type": "uint32_t",
+      "count": 128,
+      "bytes": 512,
+      "path": "level1_object_data/ride_slope_forward.bin",
+      "sha256": "26f9106f9ea9ede07fcf9931f78a817ac59b523223d25884ebec86b373247b7d"
+    },
+    {
+      "header": "level1_object_data.hpp",
+      "name": "ride_slope_reverse",
+      "type": "uint32_t",
+      "count": 128,
+      "bytes": 512,
+      "path": "level1_object_data/ride_slope_reverse.bin",
+      "sha256": "89a3ba13620580d74a4e0813ab159a0e5efe628f5a8e2a31cc4d4b4a3847a816"
+    },
+    {
+      "header": "level1_object_data.hpp",
+      "name": "spawner_directions",
+      "type": "uint8_t",
+      "count": 6,
+      "bytes": 6,
+      "path": "level1_object_data/spawner_directions.bin",
+      "sha256": "4fe9f9290e0d4a6d6dcbceaf8e199e12c74d714ba31cc186eef9a4373bfebcbe"
+    },
+    {
+      "header": "level1_object_data.hpp",
+      "name": "spawner_rewards",
+      "type": "uint32_t",
+      "count": 17,
+      "bytes": 68,
+      "path": "level1_object_data/spawner_rewards.bin",
+      "sha256": "6bf5eb0d9daa428c232332628db13e35fb44318eff3fae81352314d16ca81fca"
+    },
+    {
+      "header": "level1_object_data.hpp",
+      "name": "special_spawn_table",
+      "type": "uint32_t",
+      "count": 2,
+      "bytes": 8,
+      "path": "level1_object_data/special_spawn_table.bin",
+      "sha256": "c29cda263a304930f26aa19eb8d4f11ed43a0e5a2955092ac596a80096da8579"
+    },
+    {
+      "header": "level1_player_animation_data.hpp",
+      "name": "frames",
+      "type": "Frame",
+      "count": 45,
+      "bytes": 990,
+      "path": "level1_player_animation_data/frames.bin",
+      "sha256": "9c3ee5b6d039d2bdec6dba48d026697ac967a7ab5eacfaf8e9318799fe453b42",
+      "schema": {
+        "id": "animation-frame-v1",
+        "fields": [
+          "descriptor:u32",
+          "left_graphics:u32",
+          "right_graphics:u32",
+          "offset_x:i16",
+          "offset_y:i16",
+          "width:u16",
+          "height:u16",
+          "bytes:u16"
+        ],
+        "record_bytes": 22
+      }
+    },
+    {
+      "header": "level1_player_animation_data.hpp",
+      "name": "nodes",
+      "type": "AnimationNode",
+      "count": 87,
+      "bytes": 1914,
+      "path": "level1_player_animation_data/nodes.bin",
+      "sha256": "836ea0989d70f4713b3cada9be06cec85142ded12bc90646680e88ed2213b3a1",
+      "schema": {
+        "id": "animation-node-v1",
+        "fields": [
+          "op:i32",
+          "parameter:u16",
+          "frame:i32",
+          "next:i32",
+          "target:i32",
+          "evidence_address:u32"
+        ],
+        "record_bytes": 22
+      }
+    },
+    {
+      "header": "level1_player_animation_data.hpp",
+      "name": "programs",
+      "type": "AnimationProgram",
+      "count": 33,
+      "bytes": 363,
+      "path": "level1_player_animation_data/programs.bin",
+      "sha256": "587aea8e492f754dad9015f52be86427d8f9b800e0600cfde6de3a8b1cf2baf4",
+      "schema": {
+        "id": "animation-program-v1",
+        "fields": [
+          "definition:u32",
+          "selector:u16",
+          "delay:u8",
+          "start:i32"
+        ],
+        "record_bytes": 11
+      }
+    },
+    {
+      "header": "level1_status_hud_data.hpp",
+      "name": "digits",
+      "type": "uint8_t",
+      "count": 640,
+      "bytes": 640,
+      "path": "level1_status_hud_data/digits.bin",
+      "sha256": "424cca1bdebcb8e99601b81cf2d6522d54cefc17cb1f4286634a56de98ac704e"
+    },
+    {
+      "header": "level1_status_hud_data.hpp",
+      "name": "key",
+      "type": "uint8_t",
+      "count": 128,
+      "bytes": 128,
+      "path": "level1_status_hud_data/key.bin",
+      "sha256": "69e74a3a48491615cd8cf6eaaf518f851063472333be04ae751fa9d21ecf11c1"
+    },
+    {
+      "header": "level1_status_hud_data.hpp",
+      "name": "life_label",
+      "type": "uint8_t",
+      "count": 64,
+      "bytes": 64,
+      "path": "level1_status_hud_data/life_label.bin",
+      "sha256": "4c3ec6163140243a4ad252ff29ce5ceecb5258dec9bf8fb773fad4076f8593a4"
+    },
+    {
+      "header": "level1_status_hud_data.hpp",
+      "name": "piece",
+      "type": "uint8_t",
+      "count": 128,
+      "bytes": 128,
+      "path": "level1_status_hud_data/piece.bin",
+      "sha256": "5a750ba106e5ab83d15ae3c06d5fcf1a1cbc3402376bd7c7eb1ee750f23f1927"
+    },
+    {
+      "header": "level1_status_hud_data.hpp",
+      "name": "portrait",
+      "type": "uint8_t",
+      "count": 384,
+      "bytes": 384,
+      "path": "level1_status_hud_data/portrait.bin",
+      "sha256": "dd725af96823cc6a30753fdc0f4c479487b6b6f9134a421ecab167b7aeacfe60"
+    },
+    {
+      "header": "level1_status_hud_data.hpp",
+      "name": "sprite_templates",
+      "type": "uint8_t",
+      "count": 40,
+      "bytes": 40,
+      "path": "level1_status_hud_data/sprite_templates.bin",
+      "sha256": "46494a02801825f2a06b5d9028dc0a7d0aa3b52b62953ff33499b199269e90ed"
+    },
+    {
+      "header": "level1_terrain_data.hpp",
+      "name": "background_map_bytes",
+      "type": "uint8_t",
+      "count": 192,
+      "bytes": 192,
+      "path": "level1_terrain_data/background_map_bytes.bin",
+      "sha256": "7bce6816205546540786278f98ddab3634a573fdf3da9ce8d18cc1bdc7f21a96"
+    },
+    {
+      "header": "level1_terrain_data.hpp",
+      "name": "bank_patterns",
+      "type": "uint8_t",
+      "count": 28320,
+      "bytes": 28320,
+      "path": "level1_terrain_data/bank_patterns.bin",
+      "sha256": "66a00b3fba3caa446250ae5378f62a8e2d65f416be8891718dc3c2aa5e86d74c"
+    },
+    {
+      "header": "level1_terrain_data.hpp",
+      "name": "common_patterns",
+      "type": "uint8_t",
+      "count": 3424,
+      "bytes": 3424,
+      "path": "level1_terrain_data/common_patterns.bin",
+      "sha256": "81add834541283eadc58acea8ef68baa3d3053da1eb41707864ab16a9f5b9a75"
+    },
+    {
+      "header": "level1_terrain_data.hpp",
+      "name": "history_selector_bytes",
+      "type": "uint8_t",
+      "count": 58,
+      "bytes": 58,
+      "path": "level1_terrain_data/history_selector_bytes.bin",
+      "sha256": "ed136a6b46d88d73f131c933e4cc6cabe602497bb1ce359f9f27d4d0646f1ed2"
+    },
+    {
+      "header": "level1_terrain_data.hpp",
+      "name": "macro_tiles",
+      "type": "uint16_t",
+      "count": 1322,
+      "bytes": 2644,
+      "path": "level1_terrain_data/macro_tiles.bin",
+      "sha256": "4849c82953fdf30f457ed7218871abcbabeac19692dce53262147f2180a16f58"
+    },
+    {
+      "header": "level1_terrain_data.hpp",
+      "name": "macros",
+      "type": "TerrainMacroDefinition",
+      "count": 85,
+      "bytes": 850,
+      "path": "level1_terrain_data/macros.bin",
+      "sha256": "40ed35c2f4435680bd031d9f2fd0d222689eb4638b0e039b9ae4e28e778c8421",
+      "schema": {
+        "id": "terrain-macro-v1",
+        "fields": [
+          "width:u8",
+          "height:u8",
+          "tile_offset:u32",
+          "tile_count:u32"
+        ],
+        "tile_resource": "macro_tiles",
+        "record_bytes": 10
+      }
+    },
+    {
+      "header": "level1_terrain_data.hpp",
+      "name": "map_bytes",
+      "type": "uint8_t",
+      "count": 1018,
+      "bytes": 1018,
+      "path": "level1_terrain_data/map_bytes.bin",
+      "sha256": "910c87a8643a649cae3f0eee7cf800a2f945fc7c519d8c73e7a83c0046b80512"
+    },
+    {
+      "header": "level1_terrain_data.hpp",
+      "name": "palette_words",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "level1_terrain_data/palette_words.bin",
+      "sha256": "ac43be5f09359a3dc2f116a6e28b4b2106514c9f1134bf19e21a251c4e94523e"
+    },
+    {
+      "header": "level1_terrain_data.hpp",
+      "name": "post_motion_table_bytes",
+      "type": "uint8_t",
+      "count": 172,
+      "bytes": 172,
+      "path": "level1_terrain_data/post_motion_table_bytes.bin",
+      "sha256": "8ef55c1db31213a4548fecaf8e1033cad125e4a798d8cab156dfd849a57c183c"
+    },
+    {
+      "header": "level1_terrain_data.hpp",
+      "name": "quad_words",
+      "type": "uint16_t",
+      "count": 1440,
+      "bytes": 2880,
+      "path": "level1_terrain_data/quad_words.bin",
+      "sha256": "3712121a1166650043028f226864bb82efd208373fadc8d774c21fba5610d311"
+    },
+    {
+      "header": "level1_terrain_data.hpp",
+      "name": "rolo_slope_forward",
+      "type": "uint32_t",
+      "count": 128,
+      "bytes": 512,
+      "path": "level1_terrain_data/rolo_slope_forward.bin",
+      "sha256": "0f468319b361ab9fcf3be4e3d51ddfdcd87790da98076482edbc40605b64e638"
+    },
+    {
+      "header": "level1_terrain_data.hpp",
+      "name": "rolo_slope_reverse",
+      "type": "uint32_t",
+      "count": 128,
+      "bytes": 512,
+      "path": "level1_terrain_data/rolo_slope_reverse.bin",
+      "sha256": "6a709402e535d4ab7b33e8fc5f5f79ed463ea94047e621a7891fcb2d8b7b63c7"
+    },
+    {
+      "header": "level1_terrain_data.hpp",
+      "name": "rolo_slope_run_forward",
+      "type": "uint32_t",
+      "count": 128,
+      "bytes": 512,
+      "path": "level1_terrain_data/rolo_slope_run_forward.bin",
+      "sha256": "0534a91790a23416cde076a1035cd881072735a54a7fa5b6275c1f0de53bc156"
+    },
+    {
+      "header": "level1_terrain_data.hpp",
+      "name": "rolo_slope_run_reverse",
+      "type": "uint32_t",
+      "count": 128,
+      "bytes": 512,
+      "path": "level1_terrain_data/rolo_slope_run_reverse.bin",
+      "sha256": "89a3ba13620580d74a4e0813ab159a0e5efe628f5a8e2a31cc4d4b4a3847a816"
+    },
+    {
+      "header": "level1_world_data.hpp",
+      "name": "definitions",
+      "type": "ActorDefinition",
+      "count": 5,
+      "bytes": 190,
+      "path": "level1_world_data/definitions.bin",
+      "sha256": "ff9781a63ba827e06a62e12a26296032dbeda9ee6948980ff9b73bcff9b7d8c3",
+      "schema": {
+        "id": "actor-definition-v1",
+        "fields": [
+          "key:u32",
+          "data:u8[34]"
+        ],
+        "record_bytes": 38
+      }
+    },
+    {
+      "header": "level1_world_data.hpp",
+      "name": "head_offsets",
+      "type": "uint32_t",
+      "count": 6,
+      "bytes": 24,
+      "path": "level1_world_data/head_offsets.bin",
+      "sha256": "69f2c534f0dd2049005dd4cbfe012f009415b36704e275e7ce99b7d7f66310fa"
+    },
+    {
+      "header": "level2_terrain_data.hpp",
+      "name": "background_map_bytes",
+      "type": "uint8_t",
+      "count": 192,
+      "bytes": 192,
+      "path": "level2_terrain_data/background_map_bytes.bin",
+      "sha256": "7bce6816205546540786278f98ddab3634a573fdf3da9ce8d18cc1bdc7f21a96"
+    },
+    {
+      "header": "level2_terrain_data.hpp",
+      "name": "bank_patterns",
+      "type": "uint8_t",
+      "count": 28320,
+      "bytes": 28320,
+      "path": "level2_terrain_data/bank_patterns.bin",
+      "sha256": "66a00b3fba3caa446250ae5378f62a8e2d65f416be8891718dc3c2aa5e86d74c"
+    },
+    {
+      "header": "level2_terrain_data.hpp",
+      "name": "common_patterns",
+      "type": "uint8_t",
+      "count": 3424,
+      "bytes": 3424,
+      "path": "level2_terrain_data/common_patterns.bin",
+      "sha256": "81add834541283eadc58acea8ef68baa3d3053da1eb41707864ab16a9f5b9a75"
+    },
+    {
+      "header": "level2_terrain_data.hpp",
+      "name": "history_selector_bytes",
+      "type": "uint8_t",
+      "count": 58,
+      "bytes": 58,
+      "path": "level2_terrain_data/history_selector_bytes.bin",
+      "sha256": "ed136a6b46d88d73f131c933e4cc6cabe602497bb1ce359f9f27d4d0646f1ed2"
+    },
+    {
+      "header": "level2_terrain_data.hpp",
+      "name": "macro_tiles",
+      "type": "uint16_t",
+      "count": 1322,
+      "bytes": 2644,
+      "path": "level2_terrain_data/macro_tiles.bin",
+      "sha256": "4849c82953fdf30f457ed7218871abcbabeac19692dce53262147f2180a16f58"
+    },
+    {
+      "header": "level2_terrain_data.hpp",
+      "name": "macros",
+      "type": "TerrainMacroDefinition",
+      "count": 85,
+      "bytes": 850,
+      "path": "level2_terrain_data/macros.bin",
+      "sha256": "40ed35c2f4435680bd031d9f2fd0d222689eb4638b0e039b9ae4e28e778c8421",
+      "schema": {
+        "id": "terrain-macro-v1",
+        "fields": [
+          "width:u8",
+          "height:u8",
+          "tile_offset:u32",
+          "tile_count:u32"
+        ],
+        "tile_resource": "macro_tiles",
+        "record_bytes": 10
+      }
+    },
+    {
+      "header": "level2_terrain_data.hpp",
+      "name": "map_bytes",
+      "type": "uint8_t",
+      "count": 986,
+      "bytes": 986,
+      "path": "level2_terrain_data/map_bytes.bin",
+      "sha256": "fa9de87576cb3238458f36889e27dc6986ea85352643466ebbaa3f7e4f50f787"
+    },
+    {
+      "header": "level2_terrain_data.hpp",
+      "name": "palette_words",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "level2_terrain_data/palette_words.bin",
+      "sha256": "ac43be5f09359a3dc2f116a6e28b4b2106514c9f1134bf19e21a251c4e94523e"
+    },
+    {
+      "header": "level2_terrain_data.hpp",
+      "name": "post_motion_table_bytes",
+      "type": "uint8_t",
+      "count": 172,
+      "bytes": 172,
+      "path": "level2_terrain_data/post_motion_table_bytes.bin",
+      "sha256": "8ef55c1db31213a4548fecaf8e1033cad125e4a798d8cab156dfd849a57c183c"
+    },
+    {
+      "header": "level2_terrain_data.hpp",
+      "name": "quad_words",
+      "type": "uint16_t",
+      "count": 1440,
+      "bytes": 2880,
+      "path": "level2_terrain_data/quad_words.bin",
+      "sha256": "3712121a1166650043028f226864bb82efd208373fadc8d774c21fba5610d311"
+    },
+    {
+      "header": "level2_terrain_data.hpp",
+      "name": "rolo_slope_forward",
+      "type": "uint32_t",
+      "count": 128,
+      "bytes": 512,
+      "path": "level2_terrain_data/rolo_slope_forward.bin",
+      "sha256": "0f468319b361ab9fcf3be4e3d51ddfdcd87790da98076482edbc40605b64e638"
+    },
+    {
+      "header": "level2_terrain_data.hpp",
+      "name": "rolo_slope_reverse",
+      "type": "uint32_t",
+      "count": 128,
+      "bytes": 512,
+      "path": "level2_terrain_data/rolo_slope_reverse.bin",
+      "sha256": "6a709402e535d4ab7b33e8fc5f5f79ed463ea94047e621a7891fcb2d8b7b63c7"
+    },
+    {
+      "header": "level2_terrain_data.hpp",
+      "name": "rolo_slope_run_forward",
+      "type": "uint32_t",
+      "count": 128,
+      "bytes": 512,
+      "path": "level2_terrain_data/rolo_slope_run_forward.bin",
+      "sha256": "0534a91790a23416cde076a1035cd881072735a54a7fa5b6275c1f0de53bc156"
+    },
+    {
+      "header": "level2_terrain_data.hpp",
+      "name": "rolo_slope_run_reverse",
+      "type": "uint32_t",
+      "count": 128,
+      "bytes": 512,
+      "path": "level2_terrain_data/rolo_slope_run_reverse.bin",
+      "sha256": "89a3ba13620580d74a4e0813ab159a0e5efe628f5a8e2a31cc4d4b4a3847a816"
+    },
+    {
+      "header": "level3_terrain_data.hpp",
+      "name": "background_map_bytes",
+      "type": "uint8_t",
+      "count": 192,
+      "bytes": 192,
+      "path": "level3_terrain_data/background_map_bytes.bin",
+      "sha256": "7bce6816205546540786278f98ddab3634a573fdf3da9ce8d18cc1bdc7f21a96"
+    },
+    {
+      "header": "level3_terrain_data.hpp",
+      "name": "bank_patterns",
+      "type": "uint8_t",
+      "count": 28320,
+      "bytes": 28320,
+      "path": "level3_terrain_data/bank_patterns.bin",
+      "sha256": "66a00b3fba3caa446250ae5378f62a8e2d65f416be8891718dc3c2aa5e86d74c"
+    },
+    {
+      "header": "level3_terrain_data.hpp",
+      "name": "common_patterns",
+      "type": "uint8_t",
+      "count": 3424,
+      "bytes": 3424,
+      "path": "level3_terrain_data/common_patterns.bin",
+      "sha256": "81add834541283eadc58acea8ef68baa3d3053da1eb41707864ab16a9f5b9a75"
+    },
+    {
+      "header": "level3_terrain_data.hpp",
+      "name": "history_selector_bytes",
+      "type": "uint8_t",
+      "count": 58,
+      "bytes": 58,
+      "path": "level3_terrain_data/history_selector_bytes.bin",
+      "sha256": "ed136a6b46d88d73f131c933e4cc6cabe602497bb1ce359f9f27d4d0646f1ed2"
+    },
+    {
+      "header": "level3_terrain_data.hpp",
+      "name": "macro_tiles",
+      "type": "uint16_t",
+      "count": 1322,
+      "bytes": 2644,
+      "path": "level3_terrain_data/macro_tiles.bin",
+      "sha256": "4849c82953fdf30f457ed7218871abcbabeac19692dce53262147f2180a16f58"
+    },
+    {
+      "header": "level3_terrain_data.hpp",
+      "name": "macros",
+      "type": "TerrainMacroDefinition",
+      "count": 85,
+      "bytes": 850,
+      "path": "level3_terrain_data/macros.bin",
+      "sha256": "40ed35c2f4435680bd031d9f2fd0d222689eb4638b0e039b9ae4e28e778c8421",
+      "schema": {
+        "id": "terrain-macro-v1",
+        "fields": [
+          "width:u8",
+          "height:u8",
+          "tile_offset:u32",
+          "tile_count:u32"
+        ],
+        "tile_resource": "macro_tiles",
+        "record_bytes": 10
+      }
+    },
+    {
+      "header": "level3_terrain_data.hpp",
+      "name": "map_bytes",
+      "type": "uint8_t",
+      "count": 1376,
+      "bytes": 1376,
+      "path": "level3_terrain_data/map_bytes.bin",
+      "sha256": "ffc57e472570a1272d64e3f3afdeaffde59405d0a4605771ee240394beeb2a24"
+    },
+    {
+      "header": "level3_terrain_data.hpp",
+      "name": "palette_words",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "level3_terrain_data/palette_words.bin",
+      "sha256": "ac43be5f09359a3dc2f116a6e28b4b2106514c9f1134bf19e21a251c4e94523e"
+    },
+    {
+      "header": "level3_terrain_data.hpp",
+      "name": "post_motion_table_bytes",
+      "type": "uint8_t",
+      "count": 172,
+      "bytes": 172,
+      "path": "level3_terrain_data/post_motion_table_bytes.bin",
+      "sha256": "8ef55c1db31213a4548fecaf8e1033cad125e4a798d8cab156dfd849a57c183c"
+    },
+    {
+      "header": "level3_terrain_data.hpp",
+      "name": "quad_words",
+      "type": "uint16_t",
+      "count": 1440,
+      "bytes": 2880,
+      "path": "level3_terrain_data/quad_words.bin",
+      "sha256": "3712121a1166650043028f226864bb82efd208373fadc8d774c21fba5610d311"
+    },
+    {
+      "header": "level3_terrain_data.hpp",
+      "name": "rolo_slope_forward",
+      "type": "uint32_t",
+      "count": 128,
+      "bytes": 512,
+      "path": "level3_terrain_data/rolo_slope_forward.bin",
+      "sha256": "0f468319b361ab9fcf3be4e3d51ddfdcd87790da98076482edbc40605b64e638"
+    },
+    {
+      "header": "level3_terrain_data.hpp",
+      "name": "rolo_slope_reverse",
+      "type": "uint32_t",
+      "count": 128,
+      "bytes": 512,
+      "path": "level3_terrain_data/rolo_slope_reverse.bin",
+      "sha256": "6a709402e535d4ab7b33e8fc5f5f79ed463ea94047e621a7891fcb2d8b7b63c7"
+    },
+    {
+      "header": "level3_terrain_data.hpp",
+      "name": "rolo_slope_run_forward",
+      "type": "uint32_t",
+      "count": 128,
+      "bytes": 512,
+      "path": "level3_terrain_data/rolo_slope_run_forward.bin",
+      "sha256": "0534a91790a23416cde076a1035cd881072735a54a7fa5b6275c1f0de53bc156"
+    },
+    {
+      "header": "level3_terrain_data.hpp",
+      "name": "rolo_slope_run_reverse",
+      "type": "uint32_t",
+      "count": 128,
+      "bytes": 512,
+      "path": "level3_terrain_data/rolo_slope_run_reverse.bin",
+      "sha256": "89a3ba13620580d74a4e0813ab159a0e5efe628f5a8e2a31cc4d4b4a3847a816"
+    },
+    {
+      "header": "level4_terrain_data.hpp",
+      "name": "background_map_bytes",
+      "type": "uint8_t",
+      "count": 192,
+      "bytes": 192,
+      "path": "level4_terrain_data/background_map_bytes.bin",
+      "sha256": "7bce6816205546540786278f98ddab3634a573fdf3da9ce8d18cc1bdc7f21a96"
+    },
+    {
+      "header": "level4_terrain_data.hpp",
+      "name": "bank_patterns",
+      "type": "uint8_t",
+      "count": 28320,
+      "bytes": 28320,
+      "path": "level4_terrain_data/bank_patterns.bin",
+      "sha256": "66a00b3fba3caa446250ae5378f62a8e2d65f416be8891718dc3c2aa5e86d74c"
+    },
+    {
+      "header": "level4_terrain_data.hpp",
+      "name": "common_patterns",
+      "type": "uint8_t",
+      "count": 3424,
+      "bytes": 3424,
+      "path": "level4_terrain_data/common_patterns.bin",
+      "sha256": "81add834541283eadc58acea8ef68baa3d3053da1eb41707864ab16a9f5b9a75"
+    },
+    {
+      "header": "level4_terrain_data.hpp",
+      "name": "history_selector_bytes",
+      "type": "uint8_t",
+      "count": 58,
+      "bytes": 58,
+      "path": "level4_terrain_data/history_selector_bytes.bin",
+      "sha256": "ed136a6b46d88d73f131c933e4cc6cabe602497bb1ce359f9f27d4d0646f1ed2"
+    },
+    {
+      "header": "level4_terrain_data.hpp",
+      "name": "macro_tiles",
+      "type": "uint16_t",
+      "count": 1322,
+      "bytes": 2644,
+      "path": "level4_terrain_data/macro_tiles.bin",
+      "sha256": "4849c82953fdf30f457ed7218871abcbabeac19692dce53262147f2180a16f58"
+    },
+    {
+      "header": "level4_terrain_data.hpp",
+      "name": "macros",
+      "type": "TerrainMacroDefinition",
+      "count": 85,
+      "bytes": 850,
+      "path": "level4_terrain_data/macros.bin",
+      "sha256": "40ed35c2f4435680bd031d9f2fd0d222689eb4638b0e039b9ae4e28e778c8421",
+      "schema": {
+        "id": "terrain-macro-v1",
+        "fields": [
+          "width:u8",
+          "height:u8",
+          "tile_offset:u32",
+          "tile_count:u32"
+        ],
+        "tile_resource": "macro_tiles",
+        "record_bytes": 10
+      }
+    },
+    {
+      "header": "level4_terrain_data.hpp",
+      "name": "map_bytes",
+      "type": "uint8_t",
+      "count": 1138,
+      "bytes": 1138,
+      "path": "level4_terrain_data/map_bytes.bin",
+      "sha256": "e78c0c8755880ac542fb914acfe9da70ccfaa00cad5ebe842b38d969396e69ff"
+    },
+    {
+      "header": "level4_terrain_data.hpp",
+      "name": "palette_words",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "level4_terrain_data/palette_words.bin",
+      "sha256": "ac43be5f09359a3dc2f116a6e28b4b2106514c9f1134bf19e21a251c4e94523e"
+    },
+    {
+      "header": "level4_terrain_data.hpp",
+      "name": "post_motion_table_bytes",
+      "type": "uint8_t",
+      "count": 172,
+      "bytes": 172,
+      "path": "level4_terrain_data/post_motion_table_bytes.bin",
+      "sha256": "8ef55c1db31213a4548fecaf8e1033cad125e4a798d8cab156dfd849a57c183c"
+    },
+    {
+      "header": "level4_terrain_data.hpp",
+      "name": "quad_words",
+      "type": "uint16_t",
+      "count": 1440,
+      "bytes": 2880,
+      "path": "level4_terrain_data/quad_words.bin",
+      "sha256": "3712121a1166650043028f226864bb82efd208373fadc8d774c21fba5610d311"
+    },
+    {
+      "header": "level4_terrain_data.hpp",
+      "name": "rolo_slope_forward",
+      "type": "uint32_t",
+      "count": 128,
+      "bytes": 512,
+      "path": "level4_terrain_data/rolo_slope_forward.bin",
+      "sha256": "0f468319b361ab9fcf3be4e3d51ddfdcd87790da98076482edbc40605b64e638"
+    },
+    {
+      "header": "level4_terrain_data.hpp",
+      "name": "rolo_slope_reverse",
+      "type": "uint32_t",
+      "count": 128,
+      "bytes": 512,
+      "path": "level4_terrain_data/rolo_slope_reverse.bin",
+      "sha256": "6a709402e535d4ab7b33e8fc5f5f79ed463ea94047e621a7891fcb2d8b7b63c7"
+    },
+    {
+      "header": "level4_terrain_data.hpp",
+      "name": "rolo_slope_run_forward",
+      "type": "uint32_t",
+      "count": 128,
+      "bytes": 512,
+      "path": "level4_terrain_data/rolo_slope_run_forward.bin",
+      "sha256": "0534a91790a23416cde076a1035cd881072735a54a7fa5b6275c1f0de53bc156"
+    },
+    {
+      "header": "level4_terrain_data.hpp",
+      "name": "rolo_slope_run_reverse",
+      "type": "uint32_t",
+      "count": 128,
+      "bytes": 512,
+      "path": "level4_terrain_data/rolo_slope_run_reverse.bin",
+      "sha256": "89a3ba13620580d74a4e0813ab159a0e5efe628f5a8e2a31cc4d4b4a3847a816"
+    },
+    {
+      "header": "level8_terrain_data.hpp",
+      "name": "background_map_bytes",
+      "type": "uint8_t",
+      "count": 192,
+      "bytes": 192,
+      "path": "level8_terrain_data/background_map_bytes.bin",
+      "sha256": "7bce6816205546540786278f98ddab3634a573fdf3da9ce8d18cc1bdc7f21a96"
+    },
+    {
+      "header": "level8_terrain_data.hpp",
+      "name": "bank_patterns",
+      "type": "uint8_t",
+      "count": 28320,
+      "bytes": 28320,
+      "path": "level8_terrain_data/bank_patterns.bin",
+      "sha256": "66a00b3fba3caa446250ae5378f62a8e2d65f416be8891718dc3c2aa5e86d74c"
+    },
+    {
+      "header": "level8_terrain_data.hpp",
+      "name": "common_patterns",
+      "type": "uint8_t",
+      "count": 3424,
+      "bytes": 3424,
+      "path": "level8_terrain_data/common_patterns.bin",
+      "sha256": "81add834541283eadc58acea8ef68baa3d3053da1eb41707864ab16a9f5b9a75"
+    },
+    {
+      "header": "level8_terrain_data.hpp",
+      "name": "history_selector_bytes",
+      "type": "uint8_t",
+      "count": 58,
+      "bytes": 58,
+      "path": "level8_terrain_data/history_selector_bytes.bin",
+      "sha256": "ed136a6b46d88d73f131c933e4cc6cabe602497bb1ce359f9f27d4d0646f1ed2"
+    },
+    {
+      "header": "level8_terrain_data.hpp",
+      "name": "macro_tiles",
+      "type": "uint16_t",
+      "count": 1322,
+      "bytes": 2644,
+      "path": "level8_terrain_data/macro_tiles.bin",
+      "sha256": "4849c82953fdf30f457ed7218871abcbabeac19692dce53262147f2180a16f58"
+    },
+    {
+      "header": "level8_terrain_data.hpp",
+      "name": "macros",
+      "type": "TerrainMacroDefinition",
+      "count": 85,
+      "bytes": 850,
+      "path": "level8_terrain_data/macros.bin",
+      "sha256": "40ed35c2f4435680bd031d9f2fd0d222689eb4638b0e039b9ae4e28e778c8421",
+      "schema": {
+        "id": "terrain-macro-v1",
+        "fields": [
+          "width:u8",
+          "height:u8",
+          "tile_offset:u32",
+          "tile_count:u32"
+        ],
+        "tile_resource": "macro_tiles",
+        "record_bytes": 10
+      }
+    },
+    {
+      "header": "level8_terrain_data.hpp",
+      "name": "map_bytes",
+      "type": "uint8_t",
+      "count": 1178,
+      "bytes": 1178,
+      "path": "level8_terrain_data/map_bytes.bin",
+      "sha256": "4817fc80089b8a228c937f973792cb12141f7cae7cbcaeac4ad34ed36d3d9967"
+    },
+    {
+      "header": "level8_terrain_data.hpp",
+      "name": "palette_words",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "level8_terrain_data/palette_words.bin",
+      "sha256": "ac43be5f09359a3dc2f116a6e28b4b2106514c9f1134bf19e21a251c4e94523e"
+    },
+    {
+      "header": "level8_terrain_data.hpp",
+      "name": "post_motion_table_bytes",
+      "type": "uint8_t",
+      "count": 172,
+      "bytes": 172,
+      "path": "level8_terrain_data/post_motion_table_bytes.bin",
+      "sha256": "8ef55c1db31213a4548fecaf8e1033cad125e4a798d8cab156dfd849a57c183c"
+    },
+    {
+      "header": "level8_terrain_data.hpp",
+      "name": "quad_words",
+      "type": "uint16_t",
+      "count": 1440,
+      "bytes": 2880,
+      "path": "level8_terrain_data/quad_words.bin",
+      "sha256": "3712121a1166650043028f226864bb82efd208373fadc8d774c21fba5610d311"
+    },
+    {
+      "header": "level8_terrain_data.hpp",
+      "name": "rolo_slope_forward",
+      "type": "uint32_t",
+      "count": 128,
+      "bytes": 512,
+      "path": "level8_terrain_data/rolo_slope_forward.bin",
+      "sha256": "0f468319b361ab9fcf3be4e3d51ddfdcd87790da98076482edbc40605b64e638"
+    },
+    {
+      "header": "level8_terrain_data.hpp",
+      "name": "rolo_slope_reverse",
+      "type": "uint32_t",
+      "count": 128,
+      "bytes": 512,
+      "path": "level8_terrain_data/rolo_slope_reverse.bin",
+      "sha256": "6a709402e535d4ab7b33e8fc5f5f79ed463ea94047e621a7891fcb2d8b7b63c7"
+    },
+    {
+      "header": "level8_terrain_data.hpp",
+      "name": "rolo_slope_run_forward",
+      "type": "uint32_t",
+      "count": 128,
+      "bytes": 512,
+      "path": "level8_terrain_data/rolo_slope_run_forward.bin",
+      "sha256": "0534a91790a23416cde076a1035cd881072735a54a7fa5b6275c1f0de53bc156"
+    },
+    {
+      "header": "level8_terrain_data.hpp",
+      "name": "rolo_slope_run_reverse",
+      "type": "uint32_t",
+      "count": 128,
+      "bytes": 512,
+      "path": "level8_terrain_data/rolo_slope_run_reverse.bin",
+      "sha256": "89a3ba13620580d74a4e0813ab159a0e5efe628f5a8e2a31cc4d4b4a3847a816"
+    },
+    {
+      "header": "music_sequence_data.hpp",
+      "name": "bytes",
+      "type": "uint8_t",
+      "count": 62979,
+      "bytes": 62979,
+      "path": "music_sequence_data/bytes.bin",
+      "sha256": "08f2417ad1a07367883a8fbd56b810977b4c8c237c3024119d23490255cde878"
+    },
+    {
+      "header": "music_sequence_data.hpp",
+      "name": "cycle",
+      "type": "uint8_t",
+      "count": 16,
+      "bytes": 16,
+      "path": "music_sequence_data/cycle.bin",
+      "sha256": "8d78dd242650ea5e34fdaa48d74cba646a7442981fecd4e78900dc8602646101"
+    },
+    {
+      "header": "music_sequence_data.hpp",
+      "name": "delays",
+      "type": "uint16_t",
+      "count": 6,
+      "bytes": 12,
+      "path": "music_sequence_data/delays.bin",
+      "sha256": "3f1532be6044f116b2deb2c6c886b2d1649060bb353083817f100cf604bb36c0"
+    },
+    {
+      "header": "music_sequence_data.hpp",
+      "name": "level_pairs",
+      "type": "uint8_t",
+      "count": 160,
+      "bytes": 160,
+      "path": "music_sequence_data/level_pairs.bin",
+      "sha256": "46fe682d8812e42d7bcef43534c4c0eaf9bf0836b7a9e53dbb9afd4d9d331f49"
+    },
+    {
+      "header": "music_sequence_data.hpp",
+      "name": "offsets",
+      "type": "uint32_t",
+      "count": 34,
+      "bytes": 136,
+      "path": "music_sequence_data/offsets.bin",
+      "sha256": "1c0a60e6631db0485b25fb9fd8d1b19021969815707be7e0f28330c933be849f"
+    },
+    {
+      "header": "opening_data.hpp",
+      "name": "back",
+      "type": "uint8_t",
+      "count": 35840,
+      "bytes": 35840,
+      "path": "opening_data/back.bin",
+      "sha256": "9035f2f7a342f645bbccbc3a46e8808b1ce1cae88ee498ff6417384529c79192"
+    },
+    {
+      "header": "opening_data.hpp",
+      "name": "colour",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "opening_data/colour.bin",
+      "sha256": "9a54db412f99f4779321580794321cf9fe5999bc216f38f51a2d047a396bd1a9"
+    },
+    {
+      "header": "opening_data.hpp",
+      "name": "font",
+      "type": "uint8_t",
+      "count": 3072,
+      "bytes": 3072,
+      "path": "opening_data/font.bin",
+      "sha256": "57110bfb9428ff1a6e1beb579012d6a25b6388f6c4803431c209ea013692dea1"
+    },
+    {
+      "header": "opening_data.hpp",
+      "name": "front",
+      "type": "uint8_t",
+      "count": 35840,
+      "bytes": 35840,
+      "path": "opening_data/front.bin",
+      "sha256": "91f11bf99f06e42f2f7c6fdf67cd4e58e761b361014aa93e9387598d77382f14"
+    },
+    {
+      "header": "opening_data.hpp",
+      "name": "logo",
+      "type": "uint8_t",
+      "count": 15360,
+      "bytes": 15360,
+      "path": "opening_data/logo.bin",
+      "sha256": "5a3c5855ddb57042aaf95598fc227261aeecfd05dfdb9f614a34ecb875d9c78a"
+    },
+    {
+      "header": "opening_data.hpp",
+      "name": "photo",
+      "type": "uint16_t",
+      "count": 64,
+      "bytes": 128,
+      "path": "opening_data/photo.bin",
+      "sha256": "26e87042ca5a37a01eb1d8ea3a141863a8905b2edfef9a999f80877d3429d6d0"
+    },
+    {
+      "header": "opening_data.hpp",
+      "name": "photo_back",
+      "type": "uint8_t",
+      "count": 35840,
+      "bytes": 35840,
+      "path": "opening_data/photo_back.bin",
+      "sha256": "abdda54efac906392660dbaca7ba22a23eb28f3cc4efc6d4b87fd4f6dc651858"
+    },
+    {
+      "header": "opening_data.hpp",
+      "name": "photo_front",
+      "type": "uint8_t",
+      "count": 35840,
+      "bytes": 35840,
+      "path": "opening_data/photo_front.bin",
+      "sha256": "feff5ed5e9f42f8f61c46411cb238edf0f5028f941aecfbcb4d3ab0ae7aaa4a7"
+    },
+    {
+      "header": "opening_data.hpp",
+      "name": "sprite_pixels",
+      "type": "uint8_t",
+      "count": 30464,
+      "bytes": 30464,
+      "path": "opening_data/sprite_pixels.bin",
+      "sha256": "51845bc77264ed547df02fda9f18cab25929ac12e1817e7848c0e0381cd998cd"
+    },
+    {
+      "header": "opening_data.hpp",
+      "name": "sprites",
+      "type": "Sprite",
+      "count": 34,
+      "bytes": 544,
+      "path": "opening_data/sprites.bin",
+      "sha256": "5ea8a1007262877cbddd61628695e3594379f9806a414c38538241212b8bb4e9",
+      "schema": {
+        "id": "sprite-v1",
+        "fields": [
+          "source:u32",
+          "width:u32",
+          "height:u32",
+          "offset:u32"
+        ],
+        "record_bytes": 16
+      }
+    },
+    {
+      "header": "opening_data.hpp",
+      "name": "startup",
+      "type": "uint8_t",
+      "count": 4178,
+      "bytes": 4178,
+      "path": "opening_data/startup.bin",
+      "sha256": "117c91612f587d7f7b7aa322c7131f1b870a7b7b091b3ec8dbd5f152c0a269bf"
+    },
+    {
+      "header": "palette_effect_data.hpp",
+      "name": "lookup",
+      "type": "uint8_t",
+      "count": 120,
+      "bytes": 120,
+      "path": "palette_effect_data/lookup.bin",
+      "sha256": "c2032bb86eea94ba949c8589be48906d0bf9f6ebacc28a07bb0ff88940f7a0c8"
+    },
+    {
+      "header": "player_animation_data.hpp",
+      "name": "frames",
+      "type": "Frame",
+      "count": 24,
+      "bytes": 528,
+      "path": "player_animation_data/frames.bin",
+      "sha256": "3a22a9c9055aaf484e417e1b066c607ec0e2d01582c58c597cdde1e79dee0342",
+      "schema": {
+        "id": "animation-frame-v1",
+        "fields": [
+          "descriptor:u32",
+          "left_graphics:u32",
+          "right_graphics:u32",
+          "offset_x:i16",
+          "offset_y:i16",
+          "width:u16",
+          "height:u16",
+          "bytes:u16"
+        ],
+        "record_bytes": 22
+      }
+    },
+    {
+      "header": "player_animation_data.hpp",
+      "name": "nodes",
+      "type": "AnimationNode",
+      "count": 43,
+      "bytes": 946,
+      "path": "player_animation_data/nodes.bin",
+      "sha256": "7fc1f612d3277957bc31233ee24dc69be818359475d2fe16a5bd441b049c92fc",
+      "schema": {
+        "id": "animation-node-v1",
+        "fields": [
+          "op:i32",
+          "parameter:u16",
+          "frame:i32",
+          "next:i32",
+          "target:i32",
+          "evidence_address:u32"
+        ],
+        "record_bytes": 22
+      }
+    },
+    {
+      "header": "player_animation_data.hpp",
+      "name": "programs",
+      "type": "AnimationProgram",
+      "count": 12,
+      "bytes": 132,
+      "path": "player_animation_data/programs.bin",
+      "sha256": "91319f0da4a0a72b3ea91c7d01f4645afca80c694deb74705431cf51b639e2df",
+      "schema": {
+        "id": "animation-program-v1",
+        "fields": [
+          "definition:u32",
+          "selector:u16",
+          "delay:u8",
+          "start:i32"
+        ],
+        "record_bytes": 11
+      }
+    },
+    {
+      "header": "player_data.hpp",
+      "name": "collision",
+      "type": "uint8_t",
+      "count": 4096,
+      "bytes": 4096,
+      "path": "player_data/collision.bin",
+      "sha256": "414a331bb2ce9a6eb49cada69ebefce4caafb54eddffad26fc2a1dad01fdcbb2"
+    },
+    {
+      "header": "player_data.hpp",
+      "name": "grid",
+      "type": "uint16_t",
+      "count": 11160,
+      "bytes": 22320,
+      "path": "player_data/grid.bin",
+      "sha256": "a2e89e414fcbc76eeeffd7c94a6ba0cf8183834f2248878bc7fda1dcc4525866"
+    },
+    {
+      "header": "player_data.hpp",
+      "name": "run_forward",
+      "type": "int32_t",
+      "count": 34,
+      "bytes": 136,
+      "path": "player_data/run_forward.bin",
+      "sha256": "08ed0c440e6d8febb1334cffa1a1e96df5872b1f351bbed0a2d152eea4ea2e32"
+    },
+    {
+      "header": "player_data.hpp",
+      "name": "run_reverse",
+      "type": "int32_t",
+      "count": 34,
+      "bytes": 136,
+      "path": "player_data/run_reverse.bin",
+      "sha256": "85ce7e97d63a46112709baeee77248d514557c9dfc5a15106beb809f777b3428"
+    },
+    {
+      "header": "player_data.hpp",
+      "name": "shapes",
+      "type": "uint8_t",
+      "count": 1024,
+      "bytes": 1024,
+      "path": "player_data/shapes.bin",
+      "sha256": "85c60426080d9d33de81ea6eb183896e97425a1356af7dd32dba735b3b5d0fcb"
+    },
+    {
+      "header": "player_data.hpp",
+      "name": "walk_forward",
+      "type": "int32_t",
+      "count": 34,
+      "bytes": 136,
+      "path": "player_data/walk_forward.bin",
+      "sha256": "50f845afe7896d2317c34554967cd80fb6d3d596926c3162ad33df79330ded1c"
+    },
+    {
+      "header": "player_data.hpp",
+      "name": "walk_reverse",
+      "type": "int32_t",
+      "count": 34,
+      "bytes": 136,
+      "path": "player_data/walk_reverse.bin",
+      "sha256": "114da6af44bb70920b902f174d9cecd6da822a73c11538ee4bd790ae298dc1dd"
+    },
+    {
+      "header": "player_terrain_response.hpp",
+      "name": "player_terrain_bob",
+      "type": "uint8_t",
+      "count": 4,
+      "bytes": 4,
+      "path": "direct_runtime_tables/player_terrain_response/player_terrain_bob.bin",
+      "sha256": "f16f6b7f1cd082e72284f88f0b05969cfa0431be25a05508e66cf60b3ea2cf63"
+    },
+    {
+      "header": "score_decimal.hpp",
+      "name": "score_decimal_divisors",
+      "type": "uint32_t",
+      "count": 8,
+      "bytes": 32,
+      "path": "direct_runtime_tables/score_decimal/score_decimal_divisors.bin",
+      "sha256": "652ca39e9310e001c2c4af271610032a5638c58598f727066ccf4e666d424cd4"
+    },
+    {
+      "header": "sound_effect_data.hpp",
+      "name": "descriptors",
+      "type": "uint8_t",
+      "count": 2093,
+      "bytes": 2093,
+      "path": "sound_effect_data/descriptors.bin",
+      "sha256": "617e8b4e32b2e81c0ee24c952268e450c8e0533b7a125472497b3c1f09341e9f"
+    },
+    {
+      "header": "spawn_branch_data.hpp",
+      "name": "kind13",
+      "type": "uint32_t",
+      "count": 2,
+      "bytes": 8,
+      "path": "spawn_branch_data/kind13.bin",
+      "sha256": "c29cda263a304930f26aa19eb8d4f11ed43a0e5a2955092ac596a80096da8579"
+    },
+    {
+      "header": "spawn_branch_data.hpp",
+      "name": "kind4",
+      "type": "uint32_t",
+      "count": 37,
+      "bytes": 148,
+      "path": "spawn_branch_data/kind4.bin",
+      "sha256": "e34ca276fcd6fbefc0a990678620da25936bbe0def79b02d94b6dcfe61e9d185"
+    },
+    {
+      "header": "spawn_branch_data.hpp",
+      "name": "kind5",
+      "type": "uint32_t",
+      "count": 13,
+      "bytes": 52,
+      "path": "spawn_branch_data/kind5.bin",
+      "sha256": "687a842407d441c8521138273456eac5a49e2facf5ba93c922e86515d72fddc6"
+    },
+    {
+      "header": "spawn_branch_data.hpp",
+      "name": "kind6",
+      "type": "uint32_t",
+      "count": 24,
+      "bytes": 96,
+      "path": "spawn_branch_data/kind6.bin",
+      "sha256": "13e6db91636be3f62cf3e9550e39d80992b19ca81f5dfc8b5797c060fb3edaa6"
+    },
+    {
+      "header": "startup_logo_raster.hpp",
+      "name": "caps",
+      "type": "uint8_t",
+      "count": 9,
+      "bytes": 9,
+      "path": "direct_runtime_tables/startup_logo_raster/caps.bin",
+      "sha256": "47b27af1478461bb204a61b5c2fe00044024b3396a73d97566c515739d1690aa"
+    },
+    {
+      "header": "startup_logo_raster.hpp",
+      "name": "heights",
+      "type": "uint8_t",
+      "count": 9,
+      "bytes": 9,
+      "path": "direct_runtime_tables/startup_logo_raster/heights.bin",
+      "sha256": "310d320087f61d8da1012242cdc288e70ebc81d9a643ab16a35d66a0de52c86c"
+    },
+    {
+      "header": "startup_logo_raster.hpp",
+      "name": "slopes",
+      "type": "uint8_t",
+      "count": 27,
+      "bytes": 27,
+      "path": "direct_runtime_tables/startup_logo_raster/slopes.bin",
+      "sha256": "0ed1ad26b8f2107c08cfa7b44a40d15b3f50a836f7b2dd4072e9d73bfbea3779"
+    },
+    {
+      "header": "status_hud_templates.hpp",
+      "name": "status_hud_templates",
+      "type": "uint8_t",
+      "count": 40,
+      "bytes": 40,
+      "path": "direct_runtime_tables/status_hud_templates/status_hud_templates.bin",
+      "sha256": "46494a02801825f2a06b5d9028dc0a7d0aa3b52b62953ff33499b199269e90ed"
+    },
+    {
+      "header": "suction_particle_data.hpp",
+      "name": "graphics",
+      "type": "Graphic",
+      "count": 3,
+      "bytes": 60,
+      "path": "suction_particle_data/graphics.bin",
+      "sha256": "ecae1144c60c6ea62ace2363c88fe4f2b5f9ffd1f016bcaa891a3ed1aef5eb0a",
+      "schema": {
+        "id": "graphic-v1",
+        "fields": [
+          "width:u32",
+          "height:u32",
+          "frame_size:u32",
+          "first:u32",
+          "palette:u32"
+        ],
+        "record_bytes": 20
+      }
+    },
+    {
+      "header": "suction_particle_data.hpp",
+      "name": "patterns",
+      "type": "uint8_t",
+      "count": 4608,
+      "bytes": 4608,
+      "path": "suction_particle_data/patterns.bin",
+      "sha256": "04404271a241f398bdd4fea693f93304af76d2308a7ad08cb1e36758afccd86a"
+    },
+    {
+      "header": "timed_projectile_phases.hpp",
+      "name": "timed_projectile_wave",
+      "type": "int8_t",
+      "count": 16,
+      "bytes": 16,
+      "path": "direct_runtime_tables/timed_projectile_phases/timed_projectile_wave.bin",
+      "sha256": "e2c1fab77cf1cbebbc02d27edd963d78de586ead92ac501af9ad75da4ecc4544"
+    },
+    {
+      "header": "world_bunny_data.hpp",
+      "name": "frames",
+      "type": "Frame",
+      "count": 5,
+      "bytes": 110,
+      "path": "world_bunny_data/frames.bin",
+      "sha256": "c44c222896493c9ebf9b13163f2f59bf86e722eff835ed14a6be1ae51e6d6ad4",
+      "schema": {
+        "id": "animation-frame-v1",
+        "fields": [
+          "descriptor:u32",
+          "left_graphics:u32",
+          "right_graphics:u32",
+          "offset_x:i16",
+          "offset_y:i16",
+          "width:u16",
+          "height:u16",
+          "bytes:u16"
+        ],
+        "record_bytes": 22
+      }
+    },
+    {
+      "header": "world_bunny_data.hpp",
+      "name": "nodes",
+      "type": "AnimationNode",
+      "count": 9,
+      "bytes": 198,
+      "path": "world_bunny_data/nodes.bin",
+      "sha256": "d58cec6903fdf277801d2346b0fccd7e027efc0b170bc439f876858f502478cb",
+      "schema": {
+        "id": "animation-node-v1",
+        "fields": [
+          "op:i32",
+          "parameter:u16",
+          "frame:i32",
+          "next:i32",
+          "target:i32",
+          "evidence_address:u32"
+        ],
+        "record_bytes": 22
+      }
+    },
+    {
+      "header": "world_bunny_data.hpp",
+      "name": "programs",
+      "type": "AnimationProgram",
+      "count": 1,
+      "bytes": 11,
+      "path": "world_bunny_data/programs.bin",
+      "sha256": "fe91a73427db1d8373a3738d4070e2fa1e1a799a20d8017ffacbce2d624556e5",
+      "schema": {
+        "id": "animation-program-v1",
+        "fields": [
+          "definition:u32",
+          "selector:u16",
+          "delay:u8",
+          "start:i32"
+        ],
+        "record_bytes": 11
+      }
+    },
+    {
+      "header": "world_cursor_data.hpp",
+      "name": "frames",
+      "type": "Frame",
+      "count": 12,
+      "bytes": 264,
+      "path": "world_cursor_data/frames.bin",
+      "sha256": "4b9cec3c07e3704da5f12d5008b4df2f14b1d20d3106a959f22cdec7d9bfe348",
+      "schema": {
+        "id": "animation-frame-v1",
+        "fields": [
+          "descriptor:u32",
+          "left_graphics:u32",
+          "right_graphics:u32",
+          "offset_x:i16",
+          "offset_y:i16",
+          "width:u16",
+          "height:u16",
+          "bytes:u16"
+        ],
+        "record_bytes": 22
+      }
+    },
+    {
+      "header": "world_cursor_data.hpp",
+      "name": "nodes",
+      "type": "AnimationNode",
+      "count": 17,
+      "bytes": 374,
+      "path": "world_cursor_data/nodes.bin",
+      "sha256": "be4f1b3e1394f10da9a4272b9fc5b24b2fce1c9013e87ecbdadf02c7d88cdec2",
+      "schema": {
+        "id": "animation-node-v1",
+        "fields": [
+          "op:i32",
+          "parameter:u16",
+          "frame:i32",
+          "next:i32",
+          "target:i32",
+          "evidence_address:u32"
+        ],
+        "record_bytes": 22
+      }
+    },
+    {
+      "header": "world_cursor_data.hpp",
+      "name": "programs",
+      "type": "AnimationProgram",
+      "count": 4,
+      "bytes": 44,
+      "path": "world_cursor_data/programs.bin",
+      "sha256": "6eca5e203db4f24a295d2a2d664ab401df9eb3578ba3258bcff30d2e3dff1bfe",
+      "schema": {
+        "id": "animation-program-v1",
+        "fields": [
+          "definition:u32",
+          "selector:u16",
+          "delay:u8",
+          "start:i32"
+        ],
+        "record_bytes": 11
+      }
+    },
+    {
+      "header": "world_map.hpp",
+      "name": "world_map_absent_edges",
+      "type": "uint16_t",
+      "count": 4,
+      "bytes": 8,
+      "path": "direct_runtime_tables/world_map/world_map_absent_edges.bin",
+      "sha256": "54525cf242b94ee056c010fc32a0ee6c9b49f91a960d51ccfea24823fd66aaed"
+    },
+    {
+      "header": "world_map.hpp",
+      "name": "world_map_missing_next_to_present",
+      "type": "uint16_t",
+      "count": 4,
+      "bytes": 8,
+      "path": "direct_runtime_tables/world_map/world_map_missing_next_to_present.bin",
+      "sha256": "c7ab17b4da1526f7ffc68dda77bf678fecf7ec2840bb03dcba55f75949f066c0"
+    },
+    {
+      "header": "world_map.hpp",
+      "name": "world_map_present_next_to_missing",
+      "type": "uint16_t",
+      "count": 4,
+      "bytes": 8,
+      "path": "direct_runtime_tables/world_map/world_map_present_next_to_missing.bin",
+      "sha256": "7456e0710a6b9d228a724e3108b3497b54da816239ee0584e016d672f4cb15e3"
+    },
+    {
+      "header": "world_map_data.hpp",
+      "name": "common_patterns",
+      "type": "uint8_t",
+      "count": 3424,
+      "bytes": 3424,
+      "path": "world_map_data/common_patterns.bin",
+      "sha256": "81add834541283eadc58acea8ef68baa3d3053da1eb41707864ab16a9f5b9a75"
+    },
+    {
+      "header": "world_map_data.hpp",
+      "name": "common_quads",
+      "type": "uint8_t",
+      "count": 224,
+      "bytes": 224,
+      "path": "world_map_data/common_quads.bin",
+      "sha256": "399d612fedcf4a7ea68a06982ff2f8ac22191352cb63734405987b6ecb76d908"
+    },
+    {
+      "header": "world_map_data.hpp",
+      "name": "completed_marker",
+      "type": "uint8_t",
+      "count": 128,
+      "bytes": 128,
+      "path": "world_map_data/completed_marker.bin",
+      "sha256": "912f33cf4f5a6cb2b8bf321360a5fb087d9076792f67910fbf943beb215ecbc3"
+    },
+    {
+      "header": "world_map_data.hpp",
+      "name": "completion_selectors",
+      "type": "uint8_t",
+      "count": 80,
+      "bytes": 80,
+      "path": "world_map_data/completion_selectors.bin",
+      "sha256": "961e62b4c13b7e6a00cfe749a648fab43d74d13b296ef1b80403504ad7dcc742"
+    },
+    {
+      "header": "world_map_data.hpp",
+      "name": "foreground",
+      "type": "uint8_t",
+      "count": 650,
+      "bytes": 650,
+      "path": "world_map_data/foreground.bin",
+      "sha256": "3d492372401a1c0ca7b712513ddc6ff66d593638f20838205f82b31029479a38"
+    },
+    {
+      "header": "world_map_data.hpp",
+      "name": "graphics",
+      "type": "uint8_t",
+      "count": 20096,
+      "bytes": 20096,
+      "path": "world_map_data/graphics.bin",
+      "sha256": "ce277c8f09c420c8e223c567d62ea264685cfe4790885cc48d1708609ab603d8"
+    },
+    {
+      "header": "world_map_data.hpp",
+      "name": "macros",
+      "type": "uint8_t",
+      "count": 2662,
+      "bytes": 2662,
+      "path": "world_map_data/macros.bin",
+      "sha256": "872e638d6e8a4cd17ba07ed8396b6f6f7475fa8e11fe7a855c5659f21734bdb0"
+    },
+    {
+      "header": "world_map_data.hpp",
+      "name": "palette",
+      "type": "uint8_t",
+      "count": 128,
+      "bytes": 128,
+      "path": "world_map_data/palette.bin",
+      "sha256": "7070fa5ef9caa4ae15278071782e4eee8f9cfcf7439dfdef6795aa2208022d7b"
+    },
+    {
+      "header": "world_map_data.hpp",
+      "name": "palette_cycle",
+      "type": "uint8_t",
+      "count": 14,
+      "bytes": 14,
+      "path": "world_map_data/palette_cycle.bin",
+      "sha256": "fd5833cc132badbc04137bea0a8c5debb76efcfcf323b22253175164f5cdce3f"
+    },
+    {
+      "header": "world_map_data.hpp",
+      "name": "pieces",
+      "type": "Piece",
+      "count": 80,
+      "bytes": 880,
+      "path": "world_map_data/pieces.bin",
+      "sha256": "3ade4b635c61193aff2caac912750e33e038dd0d1b9deb72f98f401cb1eb296e",
+      "schema": {
+        "id": "map-piece-v1",
+        "fields": [
+          "selector:u8",
+          "group:u8",
+          "row:u8",
+          "column:u8",
+          "stride:u8",
+          "xbase:u8",
+          "edges:u8",
+          "neighbors:u8[4]"
+        ],
+        "record_bytes": 11
+      }
+    },
+    {
+      "header": "world_map_data.hpp",
+      "name": "quads",
+      "type": "uint8_t",
+      "count": 2080,
+      "bytes": 2080,
+      "path": "world_map_data/quads.bin",
+      "sha256": "65476c1bd62a294697aa46925dc08b1d85647a25c35e42e47ca5201619e708a7"
+    },
+    {
+      "header": "world_map_data.hpp",
+      "name": "return_coordinates",
+      "type": "uint8_t",
+      "count": 160,
+      "bytes": 160,
+      "path": "world_map_data/return_coordinates.bin",
+      "sha256": "332542ec347002542584571f723650312a5a50d3b9f4acb0bb879d57b0765332"
+    },
+    {
+      "header": "world_route_data.hpp",
+      "name": "descriptors",
+      "type": "Descriptor",
+      "count": 32,
+      "bytes": 192,
+      "path": "world_route_data/descriptors.bin",
+      "sha256": "af2fed8cc1f25060ce9334f7a45584eb6c44288b6c8b28414ff2125444107066",
+      "schema": {
+        "id": "route-descriptor-v1",
+        "fields": [
+          "pointer:u32",
+          "negate_x:u8",
+          "negate_y:u8"
+        ],
+        "record_bytes": 6
+      }
+    },
+    {
+      "header": "world_route_data.hpp",
+      "name": "route_bytes",
+      "type": "uint8_t",
+      "count": 124,
+      "bytes": 124,
+      "path": "world_route_data/route_bytes.bin",
+      "sha256": "b40e031b0c53082e9936f5c953da8f940ceff84b7b1aaf08eb653eabc5014996"
+    },
+    {
+      "header": "world_route_data.hpp",
+      "name": "streams",
+      "type": "Stream",
+      "count": 6,
+      "bytes": 60,
+      "path": "world_route_data/streams.bin",
+      "sha256": "d21a6dbeca62237a34b239ea79ab83d2591ba70af143f725a0e77cb8026b686b",
+      "schema": {
+        "id": "route-stream-v1",
+        "fields": [
+          "pointer:u32",
+          "terminator:u32",
+          "pairs:u16"
+        ],
+        "record_bytes": 10
+      }
+    },
+    {
+      "header": "world_tile_animation_data.hpp",
+      "name": "patterns",
+      "type": "uint8_t",
+      "count": 1024,
+      "bytes": 1024,
+      "path": "world_tile_animation_data/patterns.bin",
+      "sha256": "ce5274fc64268f951a3fbba5115513f0aa985d08f3dd9ac62b2511f5090d204f"
+    },
+    {
+      "header": "world_tile_animation_data.hpp",
+      "name": "sequences",
+      "type": "uint8_t",
+      "count": 10,
+      "bytes": 10,
+      "path": "world_tile_animation_data/sequences.bin",
+      "sha256": "a938f7bd6a904a9c024e8ff5dddc7e6d5d3e815b691c97ee12808405496c40f0"
+    },
+    {
+      "header": "world_tile_animation_data.hpp",
+      "name": "tracks",
+      "type": "Track",
+      "count": 2,
+      "bytes": 48,
+      "path": "world_tile_animation_data/tracks.bin",
+      "sha256": "0b7999eba5768e685219760e10b932a55a632041136520a5fe4ba2f328071455",
+      "schema": {
+        "id": "tile-track-v1",
+        "fields": [
+          "cache_byte_offset:u32",
+          "delay:u32",
+          "first:u32",
+          "bytes:u32",
+          "sequence_first:u32",
+          "sequence_count:u32"
+        ],
+        "record_bytes": 24
+      }
+    }
+  ],
+  "excluded_structured_arrays": [],
+  "resource_count": 514,
+  "total_binary_bytes": 1225363,
+  "expanded_numeric_arrays": 458,
+  "derived_arrays_to_rebuild": [
+    {
+      "header": "first_enemy_definition_data.hpp",
+      "name": "allocations",
+      "type": "ActorChainDefinition",
+      "count": 3
+    }
+  ],
+  "structured_schema_version": 1
+}
+

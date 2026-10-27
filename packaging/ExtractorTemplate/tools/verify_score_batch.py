@@ -1,0 +1,18 @@
+import hashlib,json,re
+from pathlib import Path
+from m68k_static import Decoder
+from verify_leaf_routines import PIN
+p=Path(__file__).resolve().parents[1];root=p.parents[1];rom=(p/'local/rolo.md').read_bytes();assert hashlib.sha256(rom).hexdigest()==PIN
+rp=root/'work/score-batch-results.json';r=json.loads(rp.read_text());assert r['passed'] and r['997E']+r['excluded_wrap_domain']==81920 and r['EF68']==262144
+sources=['src/core/score_award.hpp','src/core/score_effect.hpp','src/core/first_enemy_definition_data.hpp','src/core/actor_state.hpp','tests/score_batch_verification_tests.cpp'];exe=root/'work/score_batch_verification_tests.exe';assert exe.stat().st_mtime>=max((p/s).stat().st_mtime for s in sources)
+dep='docs/stage9/leaf-routine-verification.json';assert any(x['address']==0x9a04 for x in json.loads((p/dep).read_text())['records'])
+assert rom[0x99d6:0x99e2].hex()=='000f4240001e8480ffffffff'
+wave=rom[0xe468:0xe478];text=(p/'src/core/first_enemy_definition_data.hpp').read_text();match=re.search(r'score_wave\{\{(.*?)\}\}',text,re.S);assert match;assert bytes(int(x.strip())%256 for x in match[1].split(',') if x.strip())==wave
+records=[]
+for a,e,name,contract in [(0x997e,0x99c6,'Score threshold and extra-life progression','AddamountLONGtototalwrapped. Unsignedthreshold<=total awardsone9A04lifeandadvancestable. Tableoffset0firstadvances4/threshold2million;offset4sentineladvanceslivethresholdbymillionandretainsoffset4. Repeatuntilthreshold>total.'),(0xef68,0xefa8,'Score effect motion and one-time award','BYTE46zero initializesFFandBYTE50=50, readsdefinitionLONG28andrequests997Escoreonce. WaveE468indexedBYTE50AND15signextendsBYTE;addWORDX,subtract1WORDY,decrementBYTE50;BPLonlymeanspostdecrement<128,else116FF. Preserveotheractorfields.')]:
+ c=a;ins=[]
+ while c<e:
+  i=Decoder(rom,c).decode();ins.append(i);c+=i['size']
+ assert c==e
+ records.append(dict(address=a,hex=f'{a:06X}',end_exclusive=e,original_bytes=rom[a:e].hex(),status='verified green: local '+name,verification_status='verified',native_sources=['src/core/score_award.hpp'] if a==0x997e else ['src/core/score_effect.hpp'],instruction_evidence=ins,checked_cases=r[f'{a:X}'],contract=contract,proof='Completeinstructionspansreviewedwithinline99D6tableexcludedasdata. ThresholdROMconstantsandnative16BYTEwavepinned. Independentclosed-formthreshold/lifeoraclecomparesallscorestatefields; lifeformulaaccountsfornegativeBYTEwrapandpositive99cap. All256lives across8totals/8amounts/5thresholdfixtures; invalidwrapdomaincounted/excluded. Effectall256initgatesx256timersx4scorefixturescomparesall130actorbytes,one-timeaward/readcounts,preawardinitializedstateandactualscore/lifecomposition.',scope='Localtypedscore/actorAPI. Validthresholdoffset0/1millionoroffset4/multiplesofmillion>=2million; postadditiontotal<4294000000ensuresnooverflowingthreshold/nontermination. Originalwider/malformed/table/wrapexceptiondomainsandcallerprovenanceremainamber. Effectvalidimmutablewave/read-onlydefinitionandscoreAPI; HUDpublication, sounddevice, lifetime/frames/CPUtemporaryABI excluded.'))
+report=dict(rom_sha256=PIN,source_sha256={s:hashlib.sha256((p/s).read_bytes()).hexdigest() for s in sources+[dep]},data_ranges=[dict(start=0x99d6,end_exclusive=0x99e2,bytes=rom[0x99d6:0x99e2].hex()),dict(start=0xe468,end_exclusive=0xe478,bytes=wave.hex())],records=records,test_executable_sha256=hashlib.sha256(exe.read_bytes()).hexdigest(),results_sha256=hashlib.sha256(rp.read_bytes()).hexdigest());(p/'docs/stage9/score-batch-verification.json').write_text(json.dumps(report,indent=2)+'\n');print('Score progression and effect local contracts verified in declared threshold domain.')

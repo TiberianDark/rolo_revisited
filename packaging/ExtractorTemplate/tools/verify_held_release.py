@@ -1,0 +1,15 @@
+"""Original held-object release and stored-object spawn caller contract."""
+import hashlib,json
+from pathlib import Path
+from inventory_rom import ROM_HASH
+from m68k_static import Decoder
+p=Path(__file__).resolve().parents[1];root=p.parents[1];rom=(p/'local/rolo.md').read_bytes();assert hashlib.sha256(rom).hexdigest()==ROM_HASH
+rp=root/'work/held-release-results.json';r=json.loads(rp.read_text(encoding='utf-8-sig'));assert r=={'passed':True,'7B74':524288}
+sources=['src/core/held_object_release.hpp','src/core/actor_reservations.hpp','src/core/actor_definition.hpp','src/core/actor_allocation.hpp','src/core/actor_state.hpp','tests/held_release_verification_tests.cpp'];exe=root/'work/held_release_verification_tests.exe';assert exe.stat().st_mtime>=max((p/s).stat().st_mtime for s in sources)
+inv=json.loads((p/'docs/stage9/inventory.json').read_text(encoding='utf-8'));accepted={a for item in inv['routines'] for a in item['blocks']};at=0x7b74;items=[]
+while at<0x7c74:
+ assert at in accepted;i=Decoder(rom,at).decode();items.append(i);at+=i['size']
+assert at==0x7c74
+record=dict(address=0x7b74,hex='007B74',end_exclusive=0x7c74,original_bytes=rom[0x7b74:0x7c74].hex(),instruction_evidence=items,verification_status='verified',status='verified green: local held-object release',native_sources=[sources[0]],checked_cases=524288,contract='Base84head47zero skip; clear47first. Storedcount0: clearhead46/126.1,saveheldidentitythenC54Czero,reserve8E3A; definition7bit2 choosesoriginalcallbackelseB498,125ANDDD,62LONGzero/122zero,58LONG80000,121facing±1. Storedcountpositive:head46FF/126.1clear,countBYTE--,onzeroC548zero/head46zerowhenC54Cempty. Spawnoriginaldefinition atintegerbaseXY+headoffsets(+12X) withfacing,lowfractions0; failedspawn no rollback. Successreserveandhorizontal80000launchonly; otherfactoryfields retained.',proof='Independentbyte/state/pool andorderedservice model,524288WORDposition/offset/flag/count/capacity/alias/factory cases. Capturedobjectaliasesbase/head/other; allBYTEheldflags/countervalues,9reservationcursorpositions inclfullandpre-reservedactors. Storedspawn failurepreservespartialfactorychanges/count/headlatches; callbackupdatesglobalsafterspawnnotundone. Compare48actorrecords,reservationnodes/freestack/cursor,heldglobals/events. OriginalcompleteboundariesandWORDnegation/SWAPlaunchpositionsreviewed.',scope='Local validbase/head/heldidentities,finite8nodereservationsandimmutabledefinition lookup/factoryservice. Nonzerohead47+count0requiresvalidheld; invalidnullheldoutsideoriginaladmission. Factoryallocation/graphics/diagnosticcontext separatelyverified/delegated; fullsuction/capture/animations/callerownership/CPUABIremainexternal. No wholetrunkinteractionclaim.')
+report=dict(rom_sha256=ROM_HASH,source_sha256={s:hashlib.sha256((p/s).read_bytes()).hexdigest() for s in sources},records=[record],test_executable_sha256=hashlib.sha256(exe.read_bytes()).hexdigest(),results_sha256=hashlib.sha256(rp.read_bytes()).hexdigest())
+(p/'docs/stage9/held-release-verification.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8');print('7B74 held-object release local contract verified.')

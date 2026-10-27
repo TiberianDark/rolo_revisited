@@ -1,0 +1,14 @@
+import hashlib,json
+from pathlib import Path
+from m68k_static import Decoder
+from verify_leaf_routines import PIN
+p=Path(__file__).resolve().parents[1];root=p.parents[1];rom=(p/'local/rolo.md').read_bytes();assert hashlib.sha256(rom).hexdigest()==PIN
+rp=root/'work/object-contact-state-results.json';r=json.loads(rp.read_text());assert r['passed'] and r['8EAA']==8192
+sources=['src/core/actor_object_contact.hpp','src/core/actor_defeat.hpp','src/core/actor_state.hpp','tests/object_contact_state_verification_tests.cpp'];exe=root/'work/object_contact_state_verification_tests.exe';assert exe.stat().st_mtime>=max((p/s).stat().st_mtime for s in sources)
+deps=['docs/stage9/object-overlap-verification.json','docs/stage9/actor-defeat-verification.json'];assert any(x['address']==0x8f22 for x in json.loads((p/deps[0]).read_text())['records']);assert json.loads((p/deps[1]).read_text())['records'][0]['address']==0x97ac
+c=0x8eaa;ins=[]
+while c<0x8f22:
+ i=Decoder(rom,c).decode();ins.append(i);c+=i['size']
+assert c==0x8f22
+record=dict(address=0x8eaa,hex='008EAA',end_exclusive=0x8f22,original_bytes=rom[0x8eaa:0x8f22].hex(),status='verified green: local object contact state and defeat-service contract',verification_status='verified',native_sources=['src/core/actor_object_contact.hpp'],instruction_evidence=ins,checked_cases=r['8EAA'],contract='Orderedreservationroots/linkchains: first8F22matchonly. No matchclearsbody125bit6,false. Definitiontype24setsmatched126bit2and97ACcanredirectreturnedactor;otherwiseNEG.Bmatched121. Setreturned125bit6,body74returnedlowhandle,body125bit6. Oldbodybit6suppressesdamage/soundonly;newhitrequests30sound,subtracts2BYTE127; originalBHI means oldcounter>2skip97ACelsebodydefeat. Trueonanymatch.',proof='Reviewed full original range including BSET old-bit condition and SUBQ.B/BHI borrow/zero semantics. Geometry/chainquery anddefeatlocaldependencies pinned. Independent first-match/list/stateoracle acrossall8overlappartitions,two typeclasses,priorlatchandall256counter/directionbytes. Actual97AChelperexerciseslinkredirectandbodydefeat; comparesall130bytesoffourrecords,handle andrequestcounts.',scope='Local actor and ordered-list API withstablefinitechains, valid returnedactorhandle, type24definitionWORD32nonzero. 8F22 geometry separatelycertified; 97ACsecondaryallocation/sounddevice/serviceproducerpublication remain separate. Rawreservationlist integrity, wideraliases, scheduler andCPUtemporaryregister/CCRABI excluded.')
+report=dict(rom_sha256=PIN,source_sha256={s:hashlib.sha256((p/s).read_bytes()).hexdigest() for s in sources+deps},records=[record],test_executable_sha256=hashlib.sha256(exe.read_bytes()).hexdigest(),results_sha256=hashlib.sha256(rp.read_bytes()).hexdigest());(p/'docs/stage9/object-contact-state-verification.json').write_text(json.dumps(report,indent=2)+'\n');print('Object contact local state/service contract verified.')

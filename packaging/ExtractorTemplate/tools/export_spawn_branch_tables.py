@@ -1,0 +1,7 @@
+from pathlib import Path
+import hashlib,struct
+p=Path(__file__).resolve().parents[1];r=(p/'local/rolo.md').read_bytes();assert hashlib.sha256(r).hexdigest()=='9478d47cc1883df42f3714ea485aedd71b541274eb45a3aa7c49f4a3518305e9'
+lines=['#pragma once','#include <array>','#include <cstdint>','namespace rolo::spawn_branch_data {']
+for kind,address,count in [(4,0x46c6,37),(5,0x4762,13),(6,0x47ba,24),(13,0x48fc,2)]:lines.append('inline constexpr std::array<std::uint32_t,%d> kind%d{{%s}};'%(count,kind,','.join('0x%x'%struct.unpack_from('>I',r,address+i*4)[0] for i in range(count))))
+lines+=['}'];(p/'src/core/spawn_branch_data.hpp').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+f=p/'src/core/spawn_branch_family.hpp';s=f.read_text(encoding='utf-8').replace('#include "core/actor_spawn_factory.hpp"','#include "core/actor_spawn_factory.hpp"\n#include "core/spawn_branch_data.hpp"').replace(' std::span<const std::uint32_t> definitions,SpawnBranchServices& services){',' SpawnBranchServices& services){');s=s.replace(' services.allocate(actor_spawn_factory_request(input,definitions));',' std::span<const std::uint32_t> definitions;\n switch(kind){case 4:definitions=spawn_branch_data::kind4;break;case 5:definitions=spawn_branch_data::kind5;break;case 6:definitions=spawn_branch_data::kind6;break;case 13:definitions=spawn_branch_data::kind13;break;}\n services.allocate(actor_spawn_factory_request(input,definitions));',1);f.write_text(s,encoding='utf-8')

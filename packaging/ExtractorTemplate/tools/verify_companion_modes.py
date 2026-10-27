@@ -1,0 +1,18 @@
+"""Companion air, stacking and overflow caller modes."""
+import hashlib,json
+from pathlib import Path
+from inventory_rom import ROM_HASH
+from m68k_static import Decoder
+p=Path(__file__).resolve().parents[1];root=p.parents[1];rom=(p/'local/rolo.md').read_bytes();assert hashlib.sha256(rom).hexdigest()==ROM_HASH
+rp=root/'work/companion-modes-results.json';r=json.loads(rp.read_text(encoding='utf-8-sig'));assert r=={'passed':True,'A9B0':327680,'AA4A':327680,'A92E':262144,'ADD0':262144}
+sources=['src/core/level1_companion_motion.hpp','src/core/level1_companions.hpp','src/core/actor_motion.hpp','src/core/actor_terrain.hpp','src/core/actor_state.hpp','tests/companion_modes_verification_tests.cpp','tests/companion_motion_fixture.hpp'];exe=root/'work/companion_modes_verification_tests.exe';assert exe.stat().st_mtime>=max((p/s).stat().st_mtime for s in sources)
+inv=json.loads((p/'docs/stage9/inventory.json').read_text(encoding='utf-8'));accepted={a for x in inv['routines'] for a in x['blocks']};records=[]
+
+for start,end,contract in [(0xa92e,0xa9b0,'Copy history target XY/facing/selector then base velocity fields. Horizontal then ceiling. Wall or ceiling bit sets c50e=slot-1 and changes this/later live slots to A9B0, clearing ground bit.'),(0xa9b0,0xaa4a,'Inactive restore gate; history target, gravity, horizontal pursuit, integration, horizontal/ceiling/land, animation. Ground immediately selects AA4A; otherwise signed target crossing and signed slot admission select A92E.'),(0xaa4a,0xab28,'Inactive restore gate; clear46 bits1..3. Two ceiling queries govern jump inhibit49; gravity then pursuit. Newly requested jump emits sound10 before integration/collision/land/selector. Signed landing interval and signed slot gate choose A92E.'),(0xadd0,0xae86,'Inactive retirement byte but no early return; gravity then one-time escape initialization, controlled speed+2 signed upper clamp15, repeated-wall facing reversal or jump request, integration/collisions/land, clear46bits1..3 and animation.') ]:
+ at=start;items=[]
+ while at<end:
+  assert at in accepted;i=Decoder(rom,at).decode();items.append(i);at+=i['size']
+ assert at==end
+ records.append(dict(address=start,hex=f'{start:06X}',end_exclusive=end,original_bytes=rom[start:end].hex(),instruction_evidence=items,verification_status='verified',status='verified green: local companion movement modes',native_sources=[sources[0]],checked_cases=r[f'{start:04X}'],contract=contract,proof='Independent caller branch/order models compare all48 actor records, slot state and ordered service events. 262144 mode fixtures per entry plus65536 explicit target-crossing fixtures for each air mode cover successful/rejected landing intervals, signed slot counts, facing/velocity/inactive gates, null/repeated slot records, collision/landing mutations and sound order. Child history-target, gravity/integration, pursuit, ceiling, jump and selector contracts reused independently of caller decisions.',scope='Local finite valid slots1..3, aligned history/ring extents and stable base/controlled identities. C494/C498 target scratch remains stable during child service calls; represented by typed target. Inactive restore and collision/landing/ROM sound are explicit handoffs, not whole service fidelity. No full companion scene certificate.'))
+report=dict(rom_sha256=ROM_HASH,source_sha256={s:hashlib.sha256((p/s).read_bytes()).hexdigest() for s in sources},records=records,test_executable_sha256=hashlib.sha256(exe.read_bytes()).hexdigest(),results_sha256=hashlib.sha256(rp.read_bytes()).hexdigest())
+(p/'docs/stage9/companion-modes-verification.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8');print('A92E/A9B0/AA4A/ADD0 verified.')

@@ -1,0 +1,12 @@
+import hashlib,json
+from pathlib import Path
+from m68k_static import Decoder
+from verify_leaf_routines import PIN
+p=Path(__file__).resolve().parents[1];root=p.parents[1];rom=(p/'local/rolo.md').read_bytes();assert hashlib.sha256(rom).hexdigest()==PIN
+rpath=root/'work/player-contact-results.json';r=json.loads(rpath.read_text());assert r['passed'] and r['9012']==2097152;sources=['src/core/actor_contact.hpp','src/core/actor_state.hpp','tests/player_contact_verification_tests.cpp'];exe=root/'work/player_contact_verification_tests.exe';assert exe.stat().st_mtime>=max((p/s).stat().st_mtime for s in sources)
+c=0x9012;ins=[]
+while c<0x90a0:
+ i=Decoder(rom,c).decode();ins.append(i);c+=i['size']
+assert c==0x90a0 and ins[-1]['mnemonic']=='RTS' and all(i['flow']!='call' for i in ins)
+record=dict(address=0x9012,hex='009012',end_exclusive=0x90a0,original_bytes=rom[0x9012:0x90a0].hex(),status='verified green: local player-contact rectangle and latch contract',verification_status='verified',native_sources=['src/core/actor_contact.hpp'],instruction_evidence=ins,checked_cases=2097152,contract='WidthWORD36zero reject. Controlledleft/right use signedASRwidth/2; topY-height. BodyoffsetY34negatedif119bit4, offsetX32negatedif118bit3. Wrappedbodyedges includeinset8/16; eachnegativeWORDedge rejects, elseunsignedinclusiveaxiscomparisons. BYTE123=FFforhitelse0; onmissonlyclear129. NativeboolreplacesoriginalD6 nonzero/zero; allotherdataunchanged.',proof='Complete9012..90A0 staticinstruction/branch review, no callees. Independentcombinedrectangleoracle uses signedintegerhalf andmodularedge arithmetic. All65536bodyX/flag118/119pairs across16normal/wrap/signedwidth/height/offsetfixtures andbothcontrolledalias/disjointdomains. Full130bytebodycomparison andcontrolledpreservation. Bothhit/miss, zero-width, equality andnegativeedge partitions covered. Modular lineartransforms andexactinclusivecomparison mapinteriorvalues.',scope='Validbodyandcontrolledactor data; callerhasresolvedglobalC4E0to suppliedcontrolledreference. TemporaryCPUregister/CCR/ABI replacedbydeclaredAPI. Damage/responses, pointerpublication,lifetime andtimingnotcertified.')
+report=dict(rom_sha256=PIN,source_sha256={s:hashlib.sha256((p/s).read_bytes()).hexdigest() for s in sources},records=[record],test_executable_sha256=hashlib.sha256(exe.read_bytes()).hexdigest(),results_sha256=hashlib.sha256(rpath.read_bytes()).hexdigest());(p/'docs/stage9/player-contact-verification.json').write_text(json.dumps(report,indent=2)+'\n');print('Sharedplayercontactgeometryandlatchesverified.')

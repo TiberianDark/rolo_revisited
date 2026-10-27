@@ -1,0 +1,20 @@
+"""Original terrain camera crossing, refill and coordinate handoffs."""
+import hashlib,json
+from pathlib import Path
+from inventory_rom import ROM_HASH
+from m68k_static import Decoder
+p=Path(__file__).resolve().parents[1];root=p.parents[1];rom=(p/'local/rolo.md').read_bytes();assert hashlib.sha256(rom).hexdigest()==ROM_HASH
+rp=root/'work/terrain-camera-results.json';r=json.loads(rp.read_text(encoding='utf-8-sig'));assert r=={'passed':True,'72D0':524288,'7292':524288,'72A2':524288,'7588':524288}
+sources=['src/core/terrain_camera_update.hpp','src/core/actor_state.hpp','tests/terrain_camera_verification_tests.cpp'];exe=root/'work/terrain_camera_verification_tests.exe';assert exe.stat().st_mtime>=max((p/s).stat().st_mtime for s in sources)
+inv=json.loads((p/'docs/stage9/inventory.json').read_text(encoding='utf-8'));accepted={a for item in inv['routines'] for a in item['blocks']};records=[]
+specs=[(0x72d0,0x743c,[(0x72d0,0x743c),(0x75b0,0x75d0)],'Terrain camera crossing phase','Loadplane12/14toF2CA/F2CC; resetdeltas/directions. UpdatepreviousXtile22first; oldnegativefullrefillbeforeYpreviousupdate. Signedwrappedtile deltasflagdirection; abs>2fullrefill; otherwise(delta-1)<<4 intermediateincrement. Verticalbeforehorizontal; each1/2tilephase publishes7588 thenmatchingrow/columnservice withlivecoordinates; final26=-X,28=Y. RefillclearBEFORE24=Y>>4 thenringcoords/fullrefill/publishservice.'),(0x7292,0x72a2,[(0x7292,0x72a2)],'Foreground camera wrapper','Selectforegrounddescriptor explicitlythroughnativeargument; tail72D0. F302rawactiveplanealias isreplacedbytypedselection.'),(0x72a2,0x72d0,[(0x72a2,0x72d0),(0x7424,0x743c)],'Background camera wrapper','C546zero runs72D0normally. Nonzero/old22nonnegative skipsallstreamingandpreservesglobals, writes26/28only. Nonzero/old22negative saves18LONGXY,zerosboth, runs72D0thenrestoresoriginalXYandfinalscroll26/28. Otherplane/globalupdatesremainfromtemporaryzero-camera refill.'),(0x7588,0x75b0,[(0x7588,0x75b0)],'Terrain ring coordinate publication','F372=(plane18&3F0)>>3; F374=(plane20&plane10)<<3WORD. Otherdescriptor/globalsunchanged; originalVDP8F02 autoincrementrequest externaltypedpublicationbinding.')]
+for start,end,ranges,name,contract in specs:
+ items=[];evidence=[]
+ for lo,hi in ranges:
+  at=lo
+  while at<hi:
+   assert at in accepted;i=Decoder(rom,at).decode();items.append(i);at+=i['size']
+  assert at==hi;evidence.append(dict(start=lo,end_exclusive=hi,original_bytes=rom[lo:hi].hex()))
+ records.append(dict(address=start,hex=f'{start:06X}',end_exclusive=end,original_bytes=rom[start:end].hex(),instruction_evidence=items,code_ranges=evidence,verification_status='verified',status='verified green: local '+name,native_sources=[sources[0]],checked_cases=r[f'{start:X}'],contract=contract,proof='All65536cameraXWORDs x8previousdelta/refill/servicepartitioncases for4APIs. Independentcounted-crossing/targetcoordinate model comparesall130descriptorbytes,allglobals,orderedserviceeventsandstateatsubcall. AllWORDY/masks/flagBYTEpatterns,oldnegativeX,1/2/>2tilemotionbothaxes,backgroundnonzerogateandtemporarysave/restore. ClearservicechangesY before24reload; refillservicechangescoordinatesbeforefinalpublish. Fulloriginalbranches/prefixreviewed.',scope='Local typedselectedplane andstablefiniteexplicitrefill/row/columnservices. Fullrefillserviceincludes4096and75D0..7666displaypublication; thosebodysemanticsaremappedexternalservices, notcertifiedbyorchestrationtest. RawVDPtiming/activeF302pointeralias/CPUABI, actualplaneproducers andfullMAPintegrationremainexternal. Servicecallbackskeepdelta/flagloopsfinite. Notwholeterrainstreamingfidelity.'))
+report=dict(rom_sha256=ROM_HASH,source_sha256={s:hashlib.sha256((p/s).read_bytes()).hexdigest() for s in sources},records=records,test_executable_sha256=hashlib.sha256(exe.read_bytes()).hexdigest(),results_sha256=hashlib.sha256(rp.read_bytes()).hexdigest())
+(p/'docs/stage9/terrain-camera-verification.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8');print('Four terrain camera local contracts verified.')

@@ -1,0 +1,11 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Rolo actor state access inventory</title>
+<style>body{font:16px system-ui;background:#151b23;color:#eef3fa;margin:24px}input,select{padding:8px;margin:8px}td,th{padding:8px;border-bottom:1px solid #435164;text-align:left}a{color:#93d4ff}table{border-collapse:collapse;width:100%}</style>
+<h1>Actor state accesses</h1><p>Static A5 operand candidates. Actor identity and helper effects remain unproved.</p><p><a href="inventory.html">Routine inventory</a> · <a href="../STAGE9.md">Roadmap</a></p>
+<label>Actor byte offset <input id="offset" type="number" min="0" max="129" placeholder="All; includes wider overlaps"></label>
+<label>Role <select id="role"><option value="">All</option><option>read</option><option>write</option><option>read_modify_write</option><option>address</option><option>unknown</option></select></label>
+<label>Search <input id="q" placeholder="Instruction, operand or hexadecimal owner"></label><p id="count"></p>
+<table><thead><tr><th>Site</th><th>Offset</th><th>Width</th><th>Role</th><th>Instruction</th><th>Owners</th></tr></thead><tbody id="rows"></tbody></table>
+<script>const data=PAYLOAD;const $=id=>document.getElementById(id);const hex=n=>'$'+n.toString(16).toUpperCase();const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const refs=data.fields.flatMap(f=>f.references);
+function render(){const offset=$('offset').value,role=$('role').value,q=$('q').value.toLowerCase();const rows=refs.filter(r=>(offset===''||(r.width!=null&&r.offset<=Number(offset)&&Number(offset)<r.offset+r.width))&&(!role||r.access===role)&&(!q||(JSON.stringify(r)+' '+hex(r.site)+' '+r.owners.map(hex).join(' ')).toLowerCase().includes(q)));$('count').textContent=rows.length+' matching operand candidates';$('rows').innerHTML=rows.map(r=>'<tr>'+[hex(r.site),r.offset,r.width??'unknown',r.access,r.mnemonic+' '+r.operands,r.owners.map(hex).join(', ')].map(v=>'<td>'+esc(v)+'</td>').join('')+'</tr>').join('');}
+$('offset').oninput=render;$('role').onchange=render;$('q').oninput=render;render();</script></html>

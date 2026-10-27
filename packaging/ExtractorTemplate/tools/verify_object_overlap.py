@@ -1,0 +1,13 @@
+import hashlib,json
+from pathlib import Path
+from m68k_static import Decoder
+from verify_leaf_routines import PIN
+p=Path(__file__).resolve().parents[1];root=p.parents[1];rom=(p/'local/rolo.md').read_bytes();assert hashlib.sha256(rom).hexdigest()==PIN
+rpath=root/'work/object-overlap-results.json';r=json.loads(rpath.read_text());assert r['passed'] and r['8F22']==1048576;sources=['src/core/actor_object_contact.hpp','src/core/actor_contact.hpp','src/core/actor_state.hpp','tests/object_overlap_verification_tests.cpp'];exe=root/'work/object_overlap_verification_tests.exe';assert exe.stat().st_mtime>=max((p/s).stat().st_mtime for s in sources)
+c=0x8f22;ins=[]
+while c<0x8f74:
+ i=Decoder(rom,c).decode();ins.append(i);c+=i['size']
+assert c==0x8f74 and all(i['flow']!='call' for i in ins) and ins[-1]['mnemonic']=='RTS'
+assert 'hit=actor_find_object_overlap(body,root,' in (p/sources[0]).read_text()
+record=dict(address=0x8f22,hex='008F22',end_exclusive=0x8f74,original_bytes=rom[0x8f22:0x8f74].hex(),status='verified green: local linked-object overlap query contract',verification_status='verified',native_sources=['src/core/actor_object_contact.hpp'],instruction_evidence=ins,checked_cases=1048576,contract='ComputebodywrappedWORD rectangle usingASRwidth/2; candidaterectangle uses same signedhalfwidth. Unsignedinclusive vertical/horizontalbounds rejectasoriginal. Returnfirstoverlappingactorinorderedvalidfinitechain; onlyreadnextLONG84aftermiss. Noactorwrites. Nativepointer/nullreplacesmatchedA0/D6 nonzero/zeroAPI.',proof='Fulloriginal8F22..8F74 reviewed, includingloop8F6C whichwasnotpartofpreviousperpairhelper. One million nativechaincases acrossall65536bodyX values, signedwidth/height/position boundaryfixtures, orderedthreeactors. Independent signed-integer-half andmodularcoordinateoracle; comparefirstmatchandnextreadcount plusall130bytesofbodyandcandidates. Branchpartitions correspondinclusiveunsignedcomparisons; modularlineartransformsproveinteriorinputs. Inductionextendsfirstmatchorderingtoanyvalidfinitechain.',scope='Validfiniteactorchain; nativeNextserviceonlyreturnsoriginalLONG84 successor. Malformed/cycliclinks excluded. CPUtemporaryregisters/CCR/ABI replacedbydeclaredqueryAPI. Callercontacteffects, rootlistpublication andscheduler remainseparate.')
+report=dict(rom_sha256=PIN,source_sha256={s:hashlib.sha256((p/s).read_bytes()).hexdigest() for s in sources},records=[record],test_executable_sha256=hashlib.sha256(exe.read_bytes()).hexdigest(),results_sha256=hashlib.sha256(rpath.read_bytes()).hexdigest());(p/'docs/stage9/object-overlap-verification.json').write_text(json.dumps(report,indent=2)+'\n');print('Originallinkedobjectqueryverified; nativeobjectcontactusescertifiedhelper.')

@@ -1,0 +1,17 @@
+"""Platform attachment geometry, live roster traversal and callback alias."""
+import hashlib,json
+from pathlib import Path
+from inventory_rom import ROM_HASH
+from m68k_static import Decoder
+p=Path(__file__).resolve().parents[1];root=p.parents[1];rom=(p/'local/rolo.md').read_bytes();assert hashlib.sha256(rom).hexdigest()==ROM_HASH
+rp=root/'work/platform-contact-results.json';r=json.loads(rp.read_text(encoding='utf-8-sig'));assert r==dict(passed=True,**{k:524288 for k in ['90A0','90D2','9132','B804']})
+sources=['src/core/actor_platform_contact.hpp','src/core/actor_contact.hpp','src/core/actor_allocation.hpp','src/core/actor_state.hpp','tests/platform_contact_verification_tests.cpp'];exe=root/'work/platform_contact_verification_tests.exe';assert exe.stat().st_mtime>=max((p/s).stat().st_mtime for s in sources)
+inv=json.loads((p/'docs/stage9/inventory.json').read_text(encoding='utf-8'));accepted={a for x in inv['routines'] for a in x['blocks']};records=[]
+for start,end,contract in [(0x90a0,0x90d2,'Visit base first then three live companion slots, skip null/already-attached actors. No initial body123 clear: later visited candidates can overwrite earlier contact result; all-skipped preserves prior result.'),(0x90d2,0x9132,'Platform left uses signed halfwidth; wrapped relative X/Y N guards precede signed width and height+16 strict bounds. Admit publishes candidate98=platform then restores candidate via8A68. Only live candidate124.5 keeps attachment and sets platform123FF; otherwise clears candidate98 and platform123.'),(0x9132,0x9196,'Controlled actor98nonzero returns preserving platform123. Same X/N guards, Ytop relative N then subtract candidateheight+8 adjustment; signed <=platformheight gate. Admit publishes link, calls8A68, unconditionally sets platform123FF; rejection clears link/contact.'),(0xb804,0xb80a,'Exact callback alias: invoke90A0 then return, preserving its complete state effects and ordered service handoffs.')]:
+ at=start;items=[]
+ while at<end:
+  assert at in accepted;i=Decoder(rom,at).decode();items.append(i);at+=i['size']
+ assert at==end
+ records.append(dict(address=start,hex=f'{start:06X}',end_exclusive=end,original_bytes=rom[start:end].hex(),instruction_evidence=items,verification_status='verified',status='verified green: local platform attachment',native_sources=[sources[0]],checked_cases=524288,contract=contract,proof='All65536 signed/wrapped extent patterns and8 gate/identity fixtures per entry. Independent relative-rectangle and ordered pool model covers inside/equal/outside edges, negative widths/heights, self/platform/controlled aliases, repeated/null slots, occupied links and preservation on skips. Restore service can alter attachment bit/link and later roster/control identities. Compare all48 actor records, complete roster and ordered callback observation.',scope='Local valid stable platform/candidate records and finite three-slot roster;8A68 restore is an explicit mutating native service boundary. New typed translation available for later playable moving-platform callbacks; full8A68 player response, terrain/platform motion and scene admission not certified.'))
+report=dict(rom_sha256=ROM_HASH,source_sha256={s:hashlib.sha256((p/s).read_bytes()).hexdigest() for s in sources},records=records,test_executable_sha256=hashlib.sha256(exe.read_bytes()).hexdigest(),results_sha256=hashlib.sha256(rp.read_bytes()).hexdigest())
+(p/'docs/stage9/platform-contact-verification.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8');print('Four platform attachment contracts verified.')

@@ -1,0 +1,16 @@
+import hashlib,json
+from pathlib import Path
+from m68k_static import Decoder
+from verify_leaf_routines import PIN
+p=Path(__file__).resolve().parents[1];root=p.parents[1];rom=(p/'local/rolo.md').read_bytes();assert hashlib.sha256(rom).hexdigest()==PIN
+rp=root/'work/pickup-callbacks-results.json';r=json.loads(rp.read_text());assert r['passed'] and r['9958']==r['99E2']==327680 and r['B702']==262144
+sources=['src/core/level1_collectibles.hpp','src/core/actor_definition.hpp','src/core/score_award.hpp','src/core/actor_state.hpp','tests/pickup_callbacks_verification_tests.cpp'];exe=root/'work/pickup_callbacks_verification_tests.exe';assert exe.stat().st_mtime>=max((p/s).stat().st_mtime for s in sources)
+deps=['docs/stage9/leaf-routine-verification.json','docs/stage9/player-contact-verification.json'];assert any(x['address']==0x9a04 for x in json.loads((p/deps[0]).read_text())['records']);assert json.loads((p/deps[1]).read_text())['records'][0]['address']==0x9012
+records=[]
+for a,e,name,contract in [(0x9958,0x997e,'Scored pickup state and score/sound requests','Actorcallback42B7C0,set125bit2;requestscoredefinitionLONG28then sound15. Preserveallotheractorfields;997Escore/global/HUDsideeffectsare separate serviceboundary.'),(0x99e2,0x9a04,'Extra-life pickup state and requests','Requestsound64beforeactorwrites;callback42B7C0,set125bit2;9A04adds1toBYTEliveswithoriginalsignedpositive>99cap. Preserveallotheractorfields.'),(0xb702,0xb714,'Bounded Level1 pickup callback dispatch','9012contact;zeroreturnswithoutdefinitionread/callback. Nonzero definitionLONG22callback dispatches9958or99E2inreviewednativeLevel1domain. Exactcallee actor/global/request contractscompose; broadercallbackdomainsremainopen.')]:
+ c=a;ins=[]
+ while c<e:
+  i=Decoder(rom,c).decode();ins.append(i);c+=i['size']
+ assert c==e
+ records.append(dict(address=a,hex=f'{a:06X}',end_exclusive=e,original_bytes=rom[a:e].hex(),status='verified green: local '+name,verification_status='verified',native_sources=['src/core/level1_collectibles.hpp'],instruction_evidence=ins,checked_cases=r[f'{a:X}'],contract=contract,proof='Complete original spansreviewed. Nativecallbacks extractedwithoutbehaviourchangeandusedbyexistingdispatch. Independentfield/byte-addoraclechecksall130bytes,lives,orderedrequestsandstatevisibletoeachservice. Directcallbacks:65536valuefixturesx5flagboundaries. Dispatch:all256livesx256flagbytesx2callbacksxhit/missusingactualcertified9012. Randomseedpreserved; definitionreadcount gatedbycontact; leaf9A04dependency pinned.',scope='Localactor/requestAPI withimmutabledefinition, stabletypedactorsanddisjointlives. B702certificateonlycallback9958/99E2; fulloriginalindirectcalltargetclosure remainsopen. Score/HUD/sounddevices, allocator/retirement/scheduler andCPUtemporaryregister/CCRABI excluded.'))
+report=dict(rom_sha256=PIN,source_sha256={s:hashlib.sha256((p/s).read_bytes()).hexdigest() for s in sources+deps},records=records,test_executable_sha256=hashlib.sha256(exe.read_bytes()).hexdigest(),results_sha256=hashlib.sha256(rp.read_bytes()).hexdigest());(p/'docs/stage9/pickup-callbacks-verification.json').write_text(json.dumps(report,indent=2)+'\n');print('Three pickup local contracts verified; broader dispatch and score services remain separate.')

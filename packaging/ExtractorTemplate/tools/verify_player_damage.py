@@ -1,0 +1,14 @@
+import hashlib,json
+from pathlib import Path
+from m68k_static import Decoder
+from verify_leaf_routines import PIN
+p=Path(__file__).resolve().parents[1];root=p.parents[1];rom=(p/'local/rolo.md').read_bytes();assert hashlib.sha256(rom).hexdigest()==PIN
+rp=root/'work/player-damage-results.json';r=json.loads(rp.read_text());assert r['passed'] and r['96C6']==327680
+sources=['src/core/actor_contact.hpp','src/core/actor_defeat.hpp','src/core/actor_state.hpp','tests/player_damage_verification_tests.cpp'];exe=root/'work/player_damage_verification_tests.exe';assert exe.stat().st_mtime>=max((p/s).stat().st_mtime for s in sources)
+dep='docs/stage9/actor-defeat-verification.json';assert json.loads((p/dep).read_text())['records'][0]['address']==0x97ac
+c=0x96c6;ins=[]
+while c<0x97ac:
+ i=Decoder(rom,c).decode();ins.append(i);c+=i['size']
+assert c==0x97ac
+record=dict(address=0x96c6,hex='0096C6',end_exclusive=0x97ac,original_bytes=rom[0x96c6:0x97ac].hex(),status='verified green: local contact damage/latch and defeat-service contract',verification_status='verified',native_sources=['src/core/actor_contact.hpp'],instruction_evidence=ins,checked_cases=r['96C6'],contract='Groundedcontrolled ornegativeC515withsignedcontrolledY>wrappedactorTop+16enters976C. WithC512zero, definitionbit0/actiongate/hitgatesblock;otherwisesetC517FF,return1. Primarydamage rejectsactor129/hitgates;requestsound30,knockbackcontrolled122FF/62LONG65E00/set124bit4/clear106/set72FFFF. Definitionbit4selectsparent76elseactor;settarget129FF. Negativesignedhitcounter127returns0unchangedcounter;otherwisedecrementBYTEwrapped, zero requests97AC,return-1.',proof='Completecanonical96C6..97ACand976Cinlinebranchreviewed. SignedCMPuses original endpoints afterwrappededge calculation. All256gate combinations x256counterbytes x4relevantdefinitionbitpartitions plusall65536controlledYpositions forverticaledgegate. Independent branch/stateoraclecomparesall130bytesofactor/control/parent,allglobals,return andserviceevent/readcounts. 97AC local dependency source/hash pinned; tests exerciseactualcertifieddefeathelperwithno secondaryallocation.',scope='Local actor/global API withdistinctstablecontrolled/contact/parentrecords, immutabledefinitionand explicit sound/defeatserviceboundaries. Sounddevice and97ACsecondaryallocation are separate unverified contracts; servicecallbacks must preservecaller/control identities andtypedlifetime. Wideralias/caller/scheduler/CPUABI excluded. Not full enemy/contact lifecycle certification.')
+report=dict(rom_sha256=PIN,source_sha256={s:hashlib.sha256((p/s).read_bytes()).hexdigest() for s in sources+[dep]},records=[record],test_executable_sha256=hashlib.sha256(exe.read_bytes()).hexdigest(),results_sha256=hashlib.sha256(rp.read_bytes()).hexdigest());(p/'docs/stage9/player-damage-verification.json').write_text(json.dumps(report,indent=2)+'\n');print('Player damage local actor/global/service contract verified.')
