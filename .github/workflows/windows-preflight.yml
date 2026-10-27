@@ -36,3 +36,11 @@ jobs:
 
       - name: Build native preview
         run: cmake --build build --config Release --target rolo_native
+
+      - name: Upload unsigned preview for verification
+        uses: actions/upload-artifact@v4
+        with:
+          name: rolo-native-static-preview
+          path: build/Release/rolo_native.exe
+          if-no-files-found: error
+          retention-days: 7
