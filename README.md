@@ -18,6 +18,7 @@ A full playthrough and complete parity with the original game are not establishe
 
 ## Contents
 
+- [Scale of the project](#scale-of-the-project)
 - [What it includes](#what-it-includes)
 - [Your own ROM](#your-own-rom)
 - [Download and play](#download-and-play)
@@ -27,6 +28,39 @@ A full playthrough and complete parity with the original game are not establishe
 - [Building from source](#building-from-source)
 - [Reporting a problem](#reporting-a-problem)
 - [Credits and licences](#credits-and-licences)
+
+## Scale of the project
+
+A 512 KiB cartridge holds a substantial amount of interconnected code and data.
+The preserved analysis checkpoint maps **747 original routine entry points to
+native C++ implementations across 205 implementation headers**. That work covers
+startup, rendering, terrain streaming, cameras, actor management, movement,
+collision, animation, companions, world-map routes, scoring and sound interfaces.
+
+| Work recorded | Count |
+|---|---:|
+| Original routine entry points with native C++ source links | **747** |
+| Decoded 68000 instructions in the analysis inventory | **16,191** |
+| Recorded call sites | **1,438** |
+| Actor definitions / distinct actor handlers | **192 / 65** |
+| Catalogued animation-frame descriptors / graphics variants | **466 / 581** |
+| Candidate animation programs catalogued | **332** |
+| Decoded tile patterns / decoded graphics banks | **5,362 / 8** |
+| Map layers catalogued and rendered / selector slots | **160 / 80** |
+| Unique foreground/background layouts catalogued | **87** |
+| Music-data sources catalogued | **31** |
+| External runtime array resources / generated graphics packs | **514 / 8** |
+
+The recorded verification checkpoint marks **745 payload contracts and two reviewed
+native platform substitutions** as verified within their stated local scopes.
+Its level-1 analysis subset contains **434 entries**, including 12 sound-interface
+entries. The external array pack also passed byte-for-byte reserialization of all
+514 resources.
+
+These are counts from the tracked analysis and asset catalogues. Selector slots
+include variants and screens; graphics variants can share artwork. Scoped routine
+verification does not establish a completed playthrough or full-game fidelity.
+See [the count definitions and evidence](docs/PROJECT_SCALE.md).
 
 ## What it includes
 
