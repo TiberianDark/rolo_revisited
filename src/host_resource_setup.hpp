@@ -11,27 +11,8 @@
 
 namespace rolo {
 inline std::filesystem::path saved_resource_root(const std::filesystem::path& app_root) {
-    // An optional local locator lets an existing installation reuse its data.
-    // Distribution archives omit this machine-specific file.
-    std::ifstream locator(app_root / "RoloResources.path", std::ios::binary);
-    std::string location;
-    if (std::getline(locator, location)) {
-        if (!location.empty() && location.back() == '\r') location.pop_back();
-        if (!location.empty()) {
-            const auto root = std::filesystem::u8path(location);
-            return std::filesystem::absolute(root.is_absolute() ? root : app_root / root);
-        }
-    }
-    if (std::filesystem::exists(app_root / "resources-v1" / "manifest.json"))
-        return app_root / "resources-v1";
-    if (std::filesystem::exists(app_root / "manifest.json")) return app_root;
-    const auto length = GetEnvironmentVariableW(L"LOCALAPPDATA", nullptr, 0);
-    if (!length) throw std::runtime_error("Windows could not locate your local application data folder.");
-    std::wstring directory(length, L'\0');
-    const auto copied = GetEnvironmentVariableW(L"LOCALAPPDATA", directory.data(), length);
-    if (!copied || copied >= length) throw std::runtime_error("Windows could not read your local application data folder.");
-    directory.resize(copied);
-    return std::filesystem::path(directory) / "RoloToTheRescue" / "resources-v1";
+    // Keep each portable installation self-contained, including first-run extraction.
+    return app_root / "resources-v1";
 }
 
 inline void check_external_asset_files(const std::filesystem::path& root) {
