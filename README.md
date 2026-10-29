@@ -98,12 +98,13 @@ not a claim that every game-derived constant has been cleared for publication.
 
 ## Download and play
 
-There is **no public release yet**. Repository collaborators can obtain development
-packages from [GitHub Actions](https://github.com/nigelwhittaker98-glitch/rolo_revisited/actions/workflows/windows-preflight.yml).
+The first **[v0.1-beta portable Windows release](https://github.com/nigelwhittaker98-glitch/rolo_revisited/releases/tag/v0.1-beta)** is available to repository collaborators. The repository remains private.
+Download `Rolo-Revisited-0.1-beta-portable-Windows-x64.zip` from its Assets section.
+GitHub's automatic source-code archives are for development, not playing.
 
-1. Open a **successful** Windows development build and download its
-   `rolo-revisited-windows-dev` artifact. Choose a run from the current source;
-   older runs uploaded only an engine EXE.
+Additional development packages are available from [GitHub Actions](https://github.com/nigelwhittaker98-glitch/rolo_revisited/actions/workflows/windows-preflight.yml).
+
+1. Download the portable Windows ZIP from the beta release's **Assets** section.
 2. Extract the whole ZIP into a folder. Keep `runtime`, `ExtractorTemplate`,
    `prepare_resources.py` and the other supplied files beside the game.
 3. Double-click **RoloGame.exe**. On first launch, choose your supported ROM and
