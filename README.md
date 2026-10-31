@@ -299,5 +299,7 @@ Third-party components include:
 - [YMFM](https://github.com/aaronsgiles/ymfm) by Aaron Giles — BSD 3-Clause; [licence text](third_party/ymfm/LICENSE).
 - [CPython](https://www.python.org/) — Python Software Foundation licence; the runtime's licence is included in packaged builds.
 
+- **CRT effect:** inspired by [Timothy Lottes' CRT-Lottes shader](https://github.com/libretro/slang-shaders/blob/master/crt/shaders/crt-lottes.slang), released into the public domain. Rolo uses an SDL rendering adaptation of its Gaussian beam and phosphor-mask approach, with its own Light and Classic presets. The attribution notice is included in portable builds as `LICENSES/CRT-Lottes-NOTICE.txt`.
+
 No project-wide open-source licence or trusted-publisher signature is claimed.
 
