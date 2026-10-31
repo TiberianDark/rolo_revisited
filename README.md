@@ -127,20 +127,6 @@ unlocked are not rolled back.
 The CRT effect is an SDL rendering adaptation inspired by Timothy Lottes'
 public-domain CRT work, rather than an exact shader port.
 
-### Restored presentation and gameplay fixes
-
-- **Final-boss head hits.** Corrected publication of the boss's vulnerable
-  animation frame so head hits can damage him.
-- **Final-boss electric attack.** Corrected a reversed terrain check that
-  kept the first electric attack too high in the arena.
-- **Game Over screen.** Replaced the placeholder with the game font,
-  score, completion display and restart/load prompts.
-- **Ending artwork and story.** Restored the original complete-ending
-  bedroom illustration and large story font, extracted from the player's ROM,
-  with complete and partial ending branches.
-- **Reliable menu redraw.** Fixed the first companion-menu redraw being
-  cropped on Direct3D 12 after leaving a narrow arena.
-
 ### Easier setup
 
 - **Launch the precompiled EXE.** First run opens a Windows file picker for your
@@ -148,8 +134,6 @@ public-domain CRT work, rather than an exact shader port.
   Later launches reuse those resources.
 - **No local build or separate Python installation.** The portable package
   includes the setup runtime.
-- **Save-preserving resource upgrades.** The extractor can add the ending
-  artwork while retaining existing campaign saves.
 
 ## Your own ROM
 
@@ -218,9 +202,6 @@ Each save slot has its own campaign and achievement files:
 
 - `rolo-slot-1.sav` through `rolo-slot-3.sav`
 - `rolo-achievements-slot-1.sav` through `rolo-achievements-slot-3.sav`
-
-An existing `rolo-progress.sav` imports into Save 1 without removing the original.
-Back up `resources-v1` to keep your campaign progress.
 
 The CRT preference is saved in `crt-settings.txt` beside the EXE. Renderer
 preferences use SDL's preference folder. Setup errors are recorded in `setup.log`
