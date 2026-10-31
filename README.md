@@ -20,6 +20,7 @@ A full playthrough and complete parity with the original game are not establishe
 
 - [Scale of the project](#scale-of-the-project)
 - [What it includes](#what-it-includes)
+- [Quality-of-life improvements](#quality-of-life-improvements)
 - [Your own ROM](#your-own-rom)
 - [Download and play](#download-and-play)
 - [Controls](#controls)
@@ -78,6 +79,103 @@ See [the count definitions and evidence](docs/PROJECT_SCALE.md).
 
 These describe the current implementation, not a guarantee that every scene or
 gameplay path is complete. See the [status notes](docs/STATUS.md).
+
+## Quality-of-life improvements
+
+The latest local portable build is **beta 0.1.11**. The GitHub release linked below
+is still **v0.1-beta**; the later improvements listed here have been implemented
+and checked locally but are not yet included in that uploaded release.
+
+### Saves and completion
+
+- **Three independent save slots (0.1.9).** Press Enter/Start at the title to open
+  three wooden save boxes. Choose with the keyboard, controller or mouse.
+  Each slot has its own campaign progress and local achievements.
+- **Completion at a glance (0.1.9).** Every slot shows jigsaw, animal-rescue and
+  overall completion percentages: 70 campaign jigsaw nodes and 168 animal
+  placements. Overall completion gives equal weight to the two totals.
+- **Unique rescue tracking (0.1.9).** Partial level rescues count, and rescuing the
+  same cage again does not inflate your total.
+- **Continue your existing campaign (0.1.9).** The previous single save imports
+  into Save 1 while the original file is retained. Unreadable slots are protected
+  from accidental replacement.
+- **Map checkpoint saves.** F5/F9 save and load world-map progress; automatic map
+  checkpoints use the selected profile. These are campaign saves, not instant
+  saves of any gameplay frame.
+- **Keep playing after the ending (0.1.8).** After either ending, return to the
+  world map with progress, score and lives preserved. Revisit levels to collect
+  missing jigsaw pieces and rescue remaining animals instead of starting over.
+- **Portable resources and saves (0.1 beta).** Extracted resources and campaign
+  saves live in `resources-v1` beside the EXE. Keep that folder when updating or
+  moving your installation.
+
+### Rewind
+
+- **Hold to rewind (0.1.6).** Hold **LB/L1** on a controller or **Backspace** on
+  the keyboard to rewind up to 300 gameplay frames, about five seconds at 60 Hz.
+  Release the button to resume play.
+- **Undo recent mistakes.** Rewind restores actors, projectiles, score, lives,
+  terrain changes and transport state, including a recent death or Game Over
+  while history is available. Animal-rescue statistics rewind too.
+- **Stable scenery (0.1.10).** Fixed widescreen backgrounds retain their position
+  through rewind and same-level respawns.
+
+Rewind history clears when opening the companion menu or changing levels/entering
+transitions. Music is muted during rewind. Saved files and achievements already
+unlocked are not rolled back.
+
+### Picture and controls
+
+- **Widescreen and display options.** F8 provides widescreen, fullscreen, VSync
+  and graphics-renderer selection; F11 toggles fullscreen directly.
+- **Wider companion menu (0.1.4).** The green jigsaw background fills the
+  widescreen menu area while its panels remain centred.
+- **Wider fixed-room scenery (0.1.5).** Decorative scenery extends into the
+  side gaps inside the wooden frame, including the final-boss arena.
+- **Optional CRT appearance (0.1.7, enhanced in 0.1.11).** Choose **Off**,
+  **Light** or **Classic** in F8. Light adds gentle softness; Classic adds wider
+  pixel blending, a stronger beam/mask effect and glow. Off stays sharp.
+  The choice is remembered in `crt-settings.txt` beside the EXE.
+- **Clear menus and frame (0.1.11).** Save-slot, companion and settings menus
+  stay clear with CRT enabled, as do the wooden frame, logo and host controls.
+  Software rendering uses the sharp picture.
+- **Keyboard and controller support.** SDL gamepads support movement, actions,
+  menu navigation and the rewind shoulder button.
+- **Local achievements.** View achievements with F7; the three-slot build keeps
+  them separate for each campaign.
+
+The CRT effect is an SDL rendering adaptation inspired by Timothy Lottes'
+public-domain CRT work, rather than an exact shader port.
+
+### Restored presentation and gameplay fixes
+
+- **Final-boss head hits (0.1.1).** Corrected publication of the boss's vulnerable
+  animation frame so head hits can damage him.
+- **Final-boss electric attack (0.1.3).** Corrected a reversed terrain check that
+  kept the first electric attack too high in the arena.
+- **Game Over screen (0.1.2).** Replaced the placeholder with the game font,
+  score, completion display and restart/load prompts.
+- **Ending artwork and story (0.1.8).** Restored the original complete-ending
+  bedroom illustration and large story font, extracted from the player's ROM,
+  with complete and partial ending branches.
+- **Reliable menu redraw (0.1.11).** Fixed the first companion-menu redraw being
+  cropped on Direct3D 12 after leaving a narrow arena.
+
+### Easier setup
+
+- **Launch the precompiled EXE.** First run opens a Windows file picker for your
+  supported ROM, validates it and extracts the required resources automatically.
+  Later launches reuse those resources.
+- **No local build or separate Python installation.** The portable package
+  includes the setup runtime.
+- **Save-preserving resource upgrades.** The newer extractor can add the ending
+  artwork while retaining existing campaign saves.
+
+Local checks cover save-slot isolation and migration, completion counts,
+deterministic rewind/replay across five levels, recent-death restoration, both
+ending branches and return-to-map progress. CRT checks passed on Direct3D 11,
+Direct3D 12 and Vulkan. Controller rewind was checked with an SDL virtual
+controller; broader physical-controller testing and full-game parity remain open.
 
 ## Your own ROM
 
