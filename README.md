@@ -1,6 +1,6 @@
 # Rolo Revisited
 
-[![Windows build](https://github.com/nigelwhittaker98-glitch/rolo_revisited/actions/workflows/windows-preflight.yml/badge.svg)](https://github.com/nigelwhittaker98-glitch/rolo_revisited/actions/workflows/windows-preflight.yml)
+[![Windows build](https://github.com/TiberianDark/rolo_revisited/actions/workflows/windows-preflight.yml/badge.svg)](https://github.com/TiberianDark/rolo_revisited/actions/workflows/windows-preflight.yml)
 ![Platform: Windows x64](https://img.shields.io/badge/platform-Windows%20x64-0078D4)
 
 A native Windows project for **Rolo to the Rescue**, the Mega Drive / Genesis game.
@@ -153,7 +153,7 @@ the original file unchanged.
 
 ## Download and play
 
-1. Open [Releases](https://github.com/nigelwhittaker98-glitch/rolo_revisited/releases)
+1. Open [Releases](https://github.com/TiberianDark/rolo_revisited/releases)
    and download the portable Windows ZIP from the release's **Assets** section.
    GitHub's automatic source-code archives are for development.
 2. Extract the whole ZIP into a writable folder and keep all supplied files together.
