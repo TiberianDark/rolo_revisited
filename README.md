@@ -15,11 +15,11 @@ on later launches. You do not compile anything to play a packaged build.
 
 | Title screen | First-level gameplay |
 |:---:|:---:|
-| ![Rolo Revisited title screen](docs/screenshots/title.png) | ![Rolo in the first forest level](docs/screenshots/forest.png) |
+| ![Rolo Revisited title screen](docs/screenshots/title.png) | ![Rolo in the first forest level](https://raw.githubusercontent.com/TiberianDark/rolo_revisited/f1593a7d735c2dc2b32800b4f621a4b31c39840f/docs/screenshots/forest.png) |
 
 | Save selection | Circus arena |
 |:---:|:---:|
-| ![Three save slots with jigsaw and animal completion percentages](docs/screenshots/save-slots.png) | ![Rolo facing the circus boss](docs/screenshots/boss.png) |
+| ![Three save slots with jigsaw and animal completion percentages](docs/screenshots/save-slots.png) | ![Rolo facing the circus boss](https://raw.githubusercontent.com/TiberianDark/rolo_revisited/f1593a7d735c2dc2b32800b4f621a4b31c39840f/docs/screenshots/boss.png) |
 
 ## Contents
 
