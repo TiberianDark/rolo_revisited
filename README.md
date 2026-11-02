@@ -11,8 +11,19 @@ The aim is simple: open a precompiled program, choose your own ROM once, and pla
 The EXE extracts the resources it needs on your PC and finds them automatically
 on later launches. You do not compile anything to play a packaged build.
 
+## Screenshots
+
+| Title screen | First-level gameplay |
+|:---:|:---:|
+| ![Rolo Revisited title screen](docs/screenshots/title.png) | ![Rolo in the first forest level](docs/screenshots/forest.png) |
+
+| Save selection | Circus arena |
+|:---:|:---:|
+| ![Three save slots with jigsaw and animal completion percentages](docs/screenshots/save-slots.png) | ![Rolo facing the circus boss](docs/screenshots/boss.png) |
+
 ## Contents
 
+- [Screenshots](#screenshots)
 - [Scale of the project](#scale-of-the-project)
 - [What it includes](#what-it-includes)
 - [Quality-of-life improvements](#quality-of-life-improvements)
